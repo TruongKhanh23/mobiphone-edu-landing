@@ -1,5 +1,6 @@
 <template>
   <div class="relative w-full h-screen overflow-hidden">
+    <LoadingModal :isOpen="isOpenLoadingModal" />
     <!-- Video background -->
     <video
       autoplay
@@ -46,11 +47,17 @@
 </template>
 
 <script>
+import LoadingModal from "@/components/LoadingModal.vue";
+import handlePopup from "@/composables/loadingModal/index.js";
 import videoCloudBackground from "@/assets/video-cloud-background.mp4";
 export default {
   name: "App",
+  components: {
+    LoadingModal,
+  },
   setup() {
-    return { videoCloudBackground };
+    const { isOpenLoadingModal } = handlePopup();
+    return { videoCloudBackground, LoadingModal, isOpenLoadingModal };
   },
 };
 </script>
