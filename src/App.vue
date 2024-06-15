@@ -1,32 +1,42 @@
 <template>
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <!-- <Navigator /> -->
-    <div
-      class="max-w-3xl mx-auto my-6 flex flex-col items-center justify-center text-center"
+  <div class="relative w-full h-screen overflow-hidden">
+    <!-- Video background -->
+    <video
+      autoplay
+      loop
+      muted
+      class="absolute top-0 left-0 w-full h-full object-cover"
     >
-      <div>
-        <img :src="logoMobiEdu" class="w-36 mb-4" alt="Mobi Edu Logo" />
+      <source :src="videoCloudBackground" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Content over the video -->
+    <div
+      class="relative z-10 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
+    >
+      <div class="text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Welcome to Mobiphone Edu
+        </h1>
+        <p class="text-lg md:text-2xl">
+          Enhancing your learning experience with cutting-edge technology
+        </p>
       </div>
-      <div>
-        <p>Welcome to Mobiphone Edu Landing Page</p>
-      </div>
-      <!-- <router-view /> -->
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import logoMobiEdu from "@/assets/logo-mobi-edu.png";
-
-//import Navigator from "./components/shared/Navigator.vue";
-
-export default defineComponent({
-  // components: {
-  //   Navigator,
-  // },
+<script>
+import videoCloudBackground from "@/assets/video-cloud-background.mp4";
+export default {
+  name: "App",
   setup() {
-    return { logoMobiEdu };
+    return { videoCloudBackground };
   },
-});
+};
 </script>
+
+<style scoped>
+/* Optional: Additional styles */
+</style>
