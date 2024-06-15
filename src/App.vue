@@ -1,8 +1,9 @@
 <template>
   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <Navigator />
+    <!-- <Navigator /> -->
     <div class="max-w-3xl mx-auto my-6">
-      <router-view />
+      <p class="text-center">Welcome to Mobiphone Edu Landing Page</p>
+      <!-- <router-view /> -->
     </div>
   </div>
 </template>
