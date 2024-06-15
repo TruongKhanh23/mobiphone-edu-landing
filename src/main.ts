@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import Antd from "ant-design-vue";
 import { Button } from "ant-design-vue";
+import LoadingModal from "@/components/LoadingModal.vue";
 import App from "./App.vue";
 import { routes } from "./routes";
 import "./index.css";
@@ -35,4 +36,5 @@ if (import.meta.hot) {
 app.use(router);
 app.use(Antd);
 app.use(Button);
+app.use(LoadingModal);
 app.mount("#app");
