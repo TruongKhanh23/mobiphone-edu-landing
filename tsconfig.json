@@ -2,14 +2,19 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "baseUrl": ".",
     "moduleResolution": "node",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "experimentalDecorators": true,
     "lib": ["dom", "esnext"],
     "types": ["vite/client", "node"],
-    "allowJs": true,
+    "allowJs": true
   },
   "exclude": ["node_modules", "dist", "public"]
 }
