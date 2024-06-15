@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import logoMobiEdu from "../../assets/logo-mobi-edu.png";
+import logoMobiEdu from "@/assets/logo-mobi-edu.png";
 
 //import Navigator from "./components/shared/Navigator.vue";
 
