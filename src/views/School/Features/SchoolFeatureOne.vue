@@ -7,14 +7,7 @@
     @ok="handleOk"
     @cancel="handleCancel"
   >
-    <a-menu
-      :selectedKeys="current"
-      @update:selected-keys="(val: string[]) => (current = val)"
-      mode="horizontal"
-      :items="items"
-      class="flex items-center justify-center"
-    />
-    <img :src="infographicHealthLong" alt="long image" class="w-full h-auto" />
+    <img :src="inforgraphic1" alt="long image" class="w-full h-auto" />
   </a-modal>
 </template>
 
@@ -23,13 +16,12 @@ import { h, ref } from "vue";
 import { Modal, Menu, MenuProps } from "ant-design-vue";
 import { AppstoreOutlined } from "@ant-design/icons-vue";
 
-import infographicHealthLong from "@/assets/image/infographic-health-long.png";
+import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 
 export default {
   name: "ModalContent",
   components: {
     AModal: Modal,
-    AMenu: Menu,
   },
   props: {
     handleOk: Function,
@@ -41,7 +33,7 @@ export default {
       {
         key: "mail",
         icon: () => h(AppstoreOutlined),
-        label: "Tính năng 1",
+        label: "Tính năng 1 - Tầng 3",
         title: "Tính năng 1",
       },
       {
@@ -61,7 +53,7 @@ export default {
     return {
       current,
       items,
-      infographicHealthLong,
+      inforgraphic1,
     };
   },
 };
