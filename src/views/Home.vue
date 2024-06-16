@@ -57,7 +57,7 @@
 import { ref } from "vue";
 import LoadingModal from "@/components/LoadingModal.vue";
 import videoCloudBackground from "@/assets/video-cloud-background.mp4";
-import SchoolSecondFloor from "@/views/SchoolSecondFloor.vue";
+import SchoolSecondFloor from "@/views/School/SchoolSecondFloor.vue";
 import { handlePopup, open, close } from "@/composables/loadingModal/index.js";
 import "@/assets/css/home.css";
 
