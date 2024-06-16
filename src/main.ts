@@ -6,6 +6,7 @@ import LoadingModal from "@/components/LoadingModal.vue";
 import App from "./App.vue";
 import { routes } from "./routes";
 import "./index.css";
+import "./global.css";
 import "ant-design-vue/dist/reset.css";
 
 const app = createApp(App);

@@ -1,0 +1,45 @@
+.custom-modal {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+.ant-modal-close {
+  top: 10px !important;
+}
+.ant-modal-body {
+  height: 80vh !important; /* Adjust this value as needed */
+  overflow-y: auto !important;
+  border-radius: 8px !important;
+  &:hover {
+    &::-webkit-scrollbar-track {
+      @apply block rounded-lg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply block;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    @apply w-2.5 h-2.5;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply hidden px-1 bg-[white];
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply hidden bg-[#C4DDEC] rounded-full;
+
+    &:hover {
+      @apply bg-[black];
+    }
+  }
+}
+.ant-modal-content {
+  padding: 0 !important;
+}
+.ant-modal-header {
+  padding: 20px 24px !important;
+}
