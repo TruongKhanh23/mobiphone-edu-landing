@@ -1,6 +1,5 @@
 <template>
   <a-modal
-    :visible="visible"
     class="custom-modal"
     width="80%"
     height="80%"
@@ -13,6 +12,7 @@
       @update:selected-keys="(val: string[]) => (current = val)"
       mode="horizontal"
       :items="items"
+      class="flex items-center justify-center"
     />
     <img :src="infographicHealthLong" alt="long image" class="w-full h-auto" />
   </a-modal>
@@ -21,7 +21,7 @@
 <script lang="ts">
 import { h, ref } from "vue";
 import { Modal, Menu, MenuProps } from "ant-design-vue";
-import { MailOutlined, AppstoreOutlined } from "@ant-design/icons-vue";
+import { AppstoreOutlined } from "@ant-design/icons-vue";
 
 import infographicHealthLong from "@/assets/image/infographic-health-long.png";
 
@@ -32,10 +32,6 @@ export default {
     AMenu: Menu,
   },
   props: {
-    visible: {
-      type: Boolean,
-      required: true,
-    },
     handleOk: Function,
     handleCancel: Function,
   },
@@ -44,21 +40,21 @@ export default {
     const items = ref<MenuProps["items"]>([
       {
         key: "mail",
-        icon: () => h(MailOutlined),
-        label: "Navigation One",
-        title: "Navigation One",
+        icon: () => h(AppstoreOutlined),
+        label: "Tính năng 1",
+        title: "Tính năng 1",
       },
       {
         key: "app",
         icon: () => h(AppstoreOutlined),
-        label: "Navigation Two",
-        title: "Navigation Two",
+        label: "Tính năng 2",
+        title: "Tính năng 2",
       },
       {
         key: "three",
         icon: () => h(AppstoreOutlined),
-        label: "Navigation Three",
-        title: "Navigation Three",
+        label: "Tính năng 3",
+        title: "Tính năng 3",
       },
     ]);
 
