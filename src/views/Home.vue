@@ -1,6 +1,11 @@
 <template>
   <div class="relative w-full h-screen overflow-hidden">
     <LoadingModal :isOpen="isOpenLoadingModal" />
+    <SchoolSecondFloor
+      :visible="isOpenSchool"
+      :handleOk="handleCloseSchoolSecondFloor"
+      :handleCancel="handleCloseSchoolSecondFloor"
+    />
     <!-- Video background -->
     <video
       autoplay
@@ -19,11 +24,13 @@
         <a-button
           class="deparment border-2 border-[#ffffff] bg-[skyblue]"
           type="primary"
+          @click="onClickButton"
           >Sở/ phòng</a-button
         >
         <a-button
           class="school border-2 border-[#ffffff] bg-[skyblue]"
           type="primary"
+          @click="openSchoolSecondFloor"
           >Trường học</a-button
         >
         <a-button
@@ -46,56 +53,55 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { ref } from "vue";
 import LoadingModal from "@/components/LoadingModal.vue";
-import handlePopup from "@/composables/loadingModal/index.js";
 import videoCloudBackground from "@/assets/video-cloud-background.mp4";
+import SchoolSecondFloor from "@/views/School/SchoolSecondFloor.vue";
+import { handlePopup, open, close } from "@/composables/loadingModal/index.js";
+import "@/assets/css/home.css";
+
 export default {
   name: "App",
   components: {
     LoadingModal,
+    SchoolSecondFloor,
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup();
-    return { videoCloudBackground, LoadingModal, isOpenLoadingModal };
+    const isOpenSecondFloor = ref(false);
+    const isOpenSchool = ref<boolean>(false);
+
+    function onClickButton() {
+      isOpenSecondFloor.value = open();
+      console.log("On Click");
+    }
+    function handleCloseSecondFloor() {
+      isOpenSecondFloor.value = close();
+    }
+    const openSchoolSecondFloor = () => {
+      console.log("click show modal");
+      isOpenSchool.value = true;
+    };
+    const handleCloseSchoolSecondFloor = () => {
+      console.log("Ok clicked");
+      isOpenSchool.value = false;
+    };
+
+    return {
+      videoCloudBackground,
+      isOpenLoadingModal,
+      isOpenSecondFloor,
+      isOpenSchool,
+      onClickButton,
+      handleCloseSecondFloor,
+      handleCloseSchoolSecondFloor,
+      openSchoolSecondFloor,
+    };
   },
 };
 </script>
 
-<style scoped>
-/* Optional: Additional styles */
-.deparment {
-  position: absolute;
-  top: 25%;
-  left: 75%;
-  transform: translate(-75%, -25%);
-}
-
-.school {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  transform: translate(-75%, -25%);
-}
-
-.teacher {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-75%, -25%);
-}
-
-.student {
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  transform: translate(-75%, -25%);
-}
-
-.mobiEdu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-75%, -25%);
-}
+<style>
+/* Các styles tùy chỉnh cho component App.vue có thể được thêm vào đây */
 </style>
