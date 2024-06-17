@@ -8,14 +8,14 @@
 .school {
   position: absolute;
   top: 25%;
-  left: 25%;
-  transform: translate(-75%, -25%);
+  left: 45%;
+  transform: translate(-75%, -45%);
 }
 
 .teacher {
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 35%;
   transform: translate(-75%, -25%);
 }
 
