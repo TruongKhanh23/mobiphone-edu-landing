@@ -20,7 +20,10 @@
       <a-button class="student border-2 border-white bg-skyblue" type="primary"
         >Học sinh</a-button
       >
-      <a-button class="mobiEdu border-2 border-white bg-skyblue" type="primary"
+      <a-button
+        class="mobiEdu border-2 border-white bg-skyblue"
+        type="primary"
+        @click="openMobiEduSecondFloor"
         >MobiEdu</a-button
       >
     </div>
@@ -32,7 +35,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ObjectsTitle",
-  emits: ["clickButton", "openSchoolSecondFloor"],
+  emits: ["clickButton", "openSchoolSecondFloor", "openMobiEduSecondFloor"],
   setup(_, { emit }) {
     const onClickButton = () => {
       emit("clickButton");
@@ -40,10 +43,14 @@ export default defineComponent({
     const openSchoolSecondFloor = () => {
       emit("openSchoolSecondFloor");
     };
+    const openMobiEduSecondFloor = () => {
+      emit("openMobiEduSecondFloor");
+    };
 
     return {
       onClickButton,
       openSchoolSecondFloor,
+      openMobiEduSecondFloor,
     };
   },
 });

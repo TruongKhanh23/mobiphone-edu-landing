@@ -85,7 +85,7 @@ export default {
     const openSchoolFeatureOne = () => {
       console.log("click open school feature one");
       isOpenSchoolFeatureOne.value = true;
-      current.value = "";
+      current.value = [""];
     };
     const handleCloseSchoolFeatureOne = () => {
       console.log("Ok clicked Close School Feature One");
