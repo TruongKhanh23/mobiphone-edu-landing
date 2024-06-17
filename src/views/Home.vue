@@ -10,38 +10,10 @@
     <VideoBackground />
 
     <!-- Content over the video -->
-    <div class="relative z-1 flex items-center justify-center w-full h-full">
-      <div class="text-center text-white">
-        <!-- Positioned Image -->
-        <a-button
-          class="deparment border-2 border-white bg-skyblue"
-          type="primary"
-          @click="onClickButton"
-          >Sở/ phòng</a-button
-        >
-        <a-button
-          class="school border-2 border-white bg-skyblue"
-          type="primary"
-          @click="openSchoolSecondFloor"
-          >Trường học</a-button
-        >
-        <a-button
-          class="teacher border-2 border-white bg-skyblue"
-          type="primary"
-          >Giáo viên</a-button
-        >
-        <a-button
-          class="student border-2 border-white bg-skyblue"
-          type="primary"
-          >Học sinh</a-button
-        >
-        <a-button
-          class="mobiEdu border-2 border-white bg-skyblue"
-          type="primary"
-          >MobiEdu</a-button
-        >
-      </div>
-    </div>
+    <ObjectsTitle
+      @clickButton="onClickButton"
+      @openSchoolSecondFloor="openSchoolSecondFloor"
+    />
 
     <!-- Left Right Bar Icon -->
     <LeftRightBarIcon />
@@ -56,6 +28,7 @@ import { handlePopup, open, close } from "@/composables/loadingModal/index.js";
 import "@/assets/css/home.css";
 import VideoBackground from "@/views/Home/VideoBackground.vue";
 import LeftRightBarIcon from "@/views/Home/LeftRightBarIcon.vue";
+import ObjectsTitle from "@/views/Home/ObjectsTitle.vue";
 
 export default {
   name: "App",
@@ -64,6 +37,7 @@ export default {
     SchoolSecondFloor,
     VideoBackground,
     LeftRightBarIcon,
+    ObjectsTitle,
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup();
