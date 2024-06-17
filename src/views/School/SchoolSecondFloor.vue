@@ -1,8 +1,8 @@
 <template>
   <a-modal
     class="custom-modal"
-    width="80%"
-    height="80%"
+    width="93%"
+    height="93%"
     footer=""
     @ok="handleOk"
     @cancel="handleCancel"
