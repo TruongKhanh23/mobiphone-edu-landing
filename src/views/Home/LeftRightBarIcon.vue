@@ -17,7 +17,7 @@
     <!-- Popup -->
     <div
       v-if="isPopupVisible"
-      class="absolute top-1/2 left-12 w-1/5 max-h-4/5 overflow-y-auto bg-white bg-opacity-90 p-5 shadow-lg transform -translate-y-1/2 z-50 rounded-lg"
+      class="absolute top-1/2 left-12 w-1/6 max-h-4/5 overflow-y-auto bg-white bg-opacity-90 p-5 shadow-lg transform -translate-y-1/2 z-50 rounded-lg"
       :style="{ height: popupHeight }"
     >
       <p>{{ randomText }}</p>
@@ -32,6 +32,7 @@ import contributeIcon from "@/assets/icon/contribute-icon.png";
 import networkIcon from "@/assets/icon/network-icon.png";
 import personIcon from "@/assets/icon/person-icon.png";
 import settingIcon from "@/assets/icon/setting-icon.png";
+import leftRightBarData from "@/assets/data/leftRightBarData.json";
 
 export default {
   name: "LeftRightBarIcon",
@@ -49,13 +50,7 @@ export default {
       settingIcon,
     ];
 
-    const texts = [
-      "Random text 1",
-      "Random text 2",
-      "Random text 3",
-      "Random text 4",
-      "Random text 5",
-    ];
+    const texts = leftRightBarData.texts;
 
     const showPopup = (index: number) => {
       if (activeIconIndex.value === index) {
