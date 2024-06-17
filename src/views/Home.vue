@@ -6,6 +6,11 @@
       :handleOk="handleCloseSchoolSecondFloor"
       :handleCancel="handleCloseSchoolSecondFloor"
     />
+    <MobiEduSecondFloor
+      :visible="isOpenMobiEdu"
+      :handleOk="handleCloseMobiEduSecondFloor"
+      :handleCancel="handleCloseMobiEduSecondFloor"
+    />
     <!-- Video background -->
     <VideoBackground />
 
@@ -13,6 +18,7 @@
     <ObjectsTitle
       @clickButton="onClickButton"
       @openSchoolSecondFloor="openSchoolSecondFloor"
+      @openMobiEduSecondFloor="openMobiEduSecondFloor"
     />
 
     <!-- Left Right Bar Icon -->
@@ -24,7 +30,8 @@
 import { ref } from "vue";
 import LoadingModal from "@/components/LoadingModal.vue";
 import SchoolSecondFloor from "@/views/School/SchoolSecondFloor.vue";
-import { handlePopup, open, close } from "@/composables/loadingModal/index.js";
+import MobiEduSecondFloor from "@/views/MobiEdu/MobiEduSecondFloor.vue";
+import { handlePopup, open } from "@/composables/loadingModal/index.js";
 import "@/assets/css/home.css";
 import VideoBackground from "@/views/Home/VideoBackground.vue";
 import LeftRightBarIcon from "@/views/Home/LeftRightBarIcon.vue";
@@ -35,6 +42,7 @@ export default {
   components: {
     LoadingModal,
     SchoolSecondFloor,
+    MobiEduSecondFloor,
     VideoBackground,
     LeftRightBarIcon,
     ObjectsTitle,
@@ -43,14 +51,13 @@ export default {
     const { isOpenLoadingModal } = handlePopup();
     const isOpenSecondFloor = ref(false);
     const isOpenSchool = ref<boolean>(false);
+    const isOpenMobiEdu = ref<boolean>(false);
 
     function onClickButton() {
       isOpenSecondFloor.value = open();
       console.log("On Click");
     }
-    function handleCloseSecondFloor() {
-      isOpenSecondFloor.value = close();
-    }
+
     const openSchoolSecondFloor = () => {
       console.log("click show modal");
       isOpenSchool.value = true;
@@ -60,14 +67,25 @@ export default {
       isOpenSchool.value = false;
     };
 
+    const openMobiEduSecondFloor = () => {
+      console.log("openMobiEduSecondFloor");
+      isOpenMobiEdu.value = true;
+    };
+    const handleCloseMobiEduSecondFloor = () => {
+      console.log("handleCloseMobiEduSecondFloor");
+      isOpenMobiEdu.value = false;
+    };
+
     return {
       isOpenLoadingModal,
       isOpenSecondFloor,
       isOpenSchool,
+      isOpenMobiEdu,
       onClickButton,
-      handleCloseSecondFloor,
       handleCloseSchoolSecondFloor,
       openSchoolSecondFloor,
+      openMobiEduSecondFloor,
+      handleCloseMobiEduSecondFloor,
     };
   },
 };
