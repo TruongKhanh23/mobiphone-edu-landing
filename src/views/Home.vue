@@ -7,15 +7,7 @@
       :handleCancel="handleCloseSchoolSecondFloor"
     />
     <!-- Video background -->
-    <video
-      autoplay
-      loop
-      muted
-      class="absolute top-0 left-0 w-full h-full object-cover"
-    >
-      <source :src="videoCloudBackground" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <VideoBackground />
 
     <!-- Content over the video -->
     <div class="relative z-1 flex items-center justify-center w-full h-full">
@@ -79,7 +71,6 @@
 <script lang="ts">
 import { ref } from "vue";
 import LoadingModal from "@/components/LoadingModal.vue";
-import videoCloudBackground from "@/assets/video-cloud-background.mp4";
 import SchoolSecondFloor from "@/views/School/SchoolSecondFloor.vue";
 import { handlePopup, open, close } from "@/composables/loadingModal/index.js";
 import "@/assets/css/home.css";
@@ -88,11 +79,14 @@ import contributeIcon from "@/assets/icon/contribute-icon.png";
 import networkIcon from "@/assets/icon/network-icon.png";
 import personIcon from "@/assets/icon/person-icon.png";
 import settingIcon from "@/assets/icon/setting-icon.png";
+import VideoBackground from "@/views/Home/VideoBackground.vue";
+
 export default {
   name: "App",
   components: {
     LoadingModal,
     SchoolSecondFloor,
+    VideoBackground,
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup();
@@ -147,7 +141,6 @@ export default {
     };
 
     return {
-      videoCloudBackground,
       isOpenLoadingModal,
       isOpenSecondFloor,
       isOpenSchool,
