@@ -7,36 +7,35 @@
     @ok="handleOk"
     @cancel="handleCancel"
   >
-    <a-menu
-      :selectedKeys="current"
-      mode="horizontal"
-      :items="items"
-      class="flex items-center justify-center"
-      @click="handleClick"
-    />
     <SchoolFeatureOne
       :visible="isOpenSchoolFeatureOne"
       :handleOk="handleCloseSchoolFeatureOne"
       :handleCancel="handleCloseSchoolFeatureOne"
       class="z-20"
     />
-    <img :src="infographicHealthLong" alt="long image" class="w-full h-auto" />
+    <div v-for="(item, index) in dataImage" :key="index">
+      <img
+        :src="item"
+        alt="image"
+        class="w-full h-auto cursor-pointer"
+        @click="handleClick"
+      />
+    </div>
   </a-modal>
 </template>
 
 <script lang="ts">
-import { h, ref } from "vue";
-import { Modal, Menu, MenuProps } from "ant-design-vue";
-import { AppstoreOutlined } from "@ant-design/icons-vue";
+import { ref } from "vue";
+import { Modal } from "ant-design-vue";
 import SchoolFeatureOne from "@/views/School/Features/SchoolFeatureOne.vue";
 
-import infographicHealthLong from "@/assets/image/infographic-health-long.png";
+import schoolHighlightFeatures from "@/assets/image/school-hightlight-features.png";
+import schoolOtherInfo from "@/assets/image/school-other-info.png";
 
 export default {
   name: "ModalContent",
   components: {
     AModal: Modal,
-    AMenu: Menu,
     SchoolFeatureOne,
   },
   props: {
@@ -45,60 +44,28 @@ export default {
   },
   setup() {
     const isOpenSchoolFeatureOne = ref<boolean>(false);
-    const current = ref<string[]>([""]);
-    const items = ref<MenuProps["items"]>([
-      {
-        key: "feature-one",
-        icon: () => h(AppstoreOutlined),
-        label: "Tính năng 1",
-        title: "Tính năng 1",
-      },
-      {
-        key: "feature-two",
-        icon: () => h(AppstoreOutlined),
-        label: "Tính năng 2",
-        title: "Tính năng 2",
-      },
-      {
-        key: "feature-three",
-        icon: () => h(AppstoreOutlined),
-        label: "Tính năng 3",
-        title: "Tính năng 3",
-      },
-    ]);
-    const handleClick: MenuProps["onClick"] = (e) => {
+    const dataImage = [schoolHighlightFeatures, schoolOtherInfo];
+
+    const handleClick = () => {
       //console.log("click", e);
-      const { key } = e;
-      switch (key) {
-        case "feature-one":
-          openSchoolFeatureOne();
-          break;
-        case "feature-two":
-          console.log("feature-two");
-          break;
-        case "feature-three":
-          console.log("feature-three");
-          break;
-      }
+      openSchoolFeatureOne();
     };
 
-    const openSchoolFeatureOne = () => {
-      console.log("click open school feature one");
-      isOpenSchoolFeatureOne.value = true;
-      current.value = [""];
-    };
     const handleCloseSchoolFeatureOne = () => {
       console.log("Ok clicked Close School Feature One");
       isOpenSchoolFeatureOne.value = false;
     };
 
+    const openSchoolFeatureOne = () => {
+      console.log("click open school feature one");
+      isOpenSchoolFeatureOne.value = true;
+    };
+
     return {
       isOpenSchoolFeatureOne,
-      current,
-      items,
-      infographicHealthLong,
-      handleClick,
+      dataImage,
       openSchoolFeatureOne,
+      handleClick,
       handleCloseSchoolFeatureOne,
     };
   },
