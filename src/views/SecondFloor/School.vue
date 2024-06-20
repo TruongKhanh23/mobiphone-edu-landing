@@ -20,7 +20,7 @@
 <script lang="ts">
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
-import SchoolFeatureOne from "@/views/School/Features/SchoolFeatureOne.vue";
+import SchoolFeatureOne from "@/views/ThirdFloor/School/SchoolFeatureOne.vue";
 
 import schoolHighlightFeatures from "@/assets/image/school-hightlight-features.png";
 import schoolOtherInfo from "@/assets/image/school-other-info.png";

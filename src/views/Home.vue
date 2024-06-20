@@ -1,12 +1,12 @@
 <template>
   <div class="relative w-full h-screen overflow-hidden font-robotoRegular">
     <LoadingModal :isOpen="isOpenLoadingModal" />
-    <SchoolSecondFloor
+    <School
       :visible="isOpenSchool"
       :handleOk="handleCloseSchoolSecondFloor"
       :handleCancel="handleCloseSchoolSecondFloor"
     />
-    <MobiEduSecondFloor
+    <MobiEdu
       :visible="isOpenMobiEdu"
       :handleOk="handleCloseMobiEduSecondFloor"
       :handleCancel="handleCloseMobiEduSecondFloor"
@@ -29,11 +29,7 @@
     <VideoBackground />
 
     <!-- Content over the video -->
-    <ObjectsTitle
-      @clickButton="onClickButton"
-      @openSchoolSecondFloor="openSchoolSecondFloor"
-      @openMobiEduSecondFloor="openMobiEduSecondFloor"
-    />
+    <ObjectsTitle @clickButton="onClickButton" />
 
     <!-- Left Right Bar Icon -->
     <LeftRightBarIcon />
@@ -43,9 +39,9 @@
 <script lang="ts">
 import { ref } from "vue";
 import LoadingModal from "@/components/LoadingModal.vue";
-import SchoolSecondFloor from "@/views/School/SchoolSecondFloor.vue";
-import MobiEduSecondFloor from "@/views/MobiEdu/MobiEduSecondFloor.vue";
-import { handlePopup, open } from "@/composables/loadingModal/index.js";
+import School from "@/views/SecondFloor/School.vue";
+import MobiEdu from "@/views/SecondFloor/MobiEdu.vue";
+import { handlePopup } from "@/composables/loadingModal/index.js";
 import "@/assets/css/home.css";
 import VideoBackground from "@/views/Home/VideoBackground.vue";
 import LeftRightBarIcon from "@/views/Home/LeftRightBarIcon.vue";
@@ -55,8 +51,8 @@ export default {
   name: "App",
   components: {
     LoadingModal,
-    SchoolSecondFloor,
-    MobiEduSecondFloor,
+    School,
+    MobiEdu,
     VideoBackground,
     LeftRightBarIcon,
     ObjectsTitle,
@@ -67,24 +63,40 @@ export default {
     const isOpenSchool = ref<boolean>(false);
     const isOpenMobiEdu = ref<boolean>(false);
 
-    function onClickButton() {
-      isOpenSecondFloor.value = open();
-      console.log("On Click");
+    function onClickButton(value: string) {
+      switch (value) {
+        case "student":
+          console.log("Handling click on Student button");
+          // Xử lý khi click vào button Học sinh
+          break;
+        case "department":
+          console.log("Handling click on Department button");
+          // Xử lý khi click vào button Sở/ phòng
+          break;
+        case "school":
+          console.log("Handling click on School button");
+          isOpenSchool.value = true;
+          // Xử lý khi click vào button Trường học
+          break;
+        case "teacher":
+          console.log("Handling click on Teacher button");
+          // Xử lý khi click vào button Giáo viên
+          break;
+        case "mobiEdu":
+          console.log("Handling click on MobiEdu button");
+          isOpenMobiEdu.value = true;
+          // Xử lý khi click vào button MobiEdu
+          break;
+        default:
+          console.warn(`Unhandled button click with value: ${value}`);
+      }
     }
 
-    const openSchoolSecondFloor = () => {
-      console.log("click show modal");
-      isOpenSchool.value = true;
-    };
     const handleCloseSchoolSecondFloor = () => {
       console.log("Ok clicked");
       isOpenSchool.value = false;
     };
 
-    const openMobiEduSecondFloor = () => {
-      console.log("openMobiEduSecondFloor");
-      isOpenMobiEdu.value = true;
-    };
     const handleCloseMobiEduSecondFloor = () => {
       console.log("handleCloseMobiEduSecondFloor");
       isOpenMobiEdu.value = false;
@@ -97,8 +109,6 @@ export default {
       isOpenMobiEdu,
       onClickButton,
       handleCloseSchoolSecondFloor,
-      openSchoolSecondFloor,
-      openMobiEduSecondFloor,
       handleCloseMobiEduSecondFloor,
     };
   },
