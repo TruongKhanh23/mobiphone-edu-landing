@@ -31,16 +31,50 @@
         </div>
       </div>
       <div class="feature-two">
-        <div class="border-4 border-white w-[30vw] h-40 bg-[red]"></div>
+        <div class="w-[23vw] h-40 hover:scale-110">
+          <div class="text-right font-black text-4xl text-[#EEBE3A]">02</div>
+          <div class="w-[75%]">
+            <div class="font-bold text-justify text-[#0C9DEE] italic">
+              Hệ thống quản lý học tập và giảng dạy hiệu quả.
+            </div>
+            <div class="text-right text-sm">Cải tiến và hiện đại hóa.</div>
+          </div>
+        </div>
       </div>
       <div class="feature-three">
-        <div class="border-4 border-white w-[30vw] h-40 bg-[red]"></div>
+        <div class="w-[23vw] h-40 hover:scale-110">
+          <div class="text-right font-black text-4xl text-[#EEBE3A]">03</div>
+          <div class="w-[75%]">
+            <div class="font-bold text-justify text-[#0C9DEE] italic">
+              Tích hợp công nghệ tiên tiến.
+            </div>
+            <div class="text-right text-sm">
+              Đem lại trải nghiệm học tập tốt nhất.
+            </div>
+          </div>
+        </div>
       </div>
       <div class="feature-four">
-        <div class="border-4 border-white w-[25vw] h-40 bg-[red]"></div>
+        <div class="w-[23vw] h-40 hover:scale-110">
+          <div class="text-right font-black text-4xl text-[#EEBE3A]">04</div>
+          <div class="w-[75%]">
+            <div class="font-bold text-justify text-[#0C9DEE] italic">
+              Tạo dựng cộng đồng học tập trực tuyến.
+            </div>
+            <div class="text-right text-sm">Kết nối giáo viên và học sinh.</div>
+          </div>
+        </div>
       </div>
       <div class="feature-five">
-        <div class="border-4 border-white w-[25vw] h-40 bg-[red]"></div>
+        <div class="w-[23vw] h-40 hover:scale-110">
+          <div class="text-right font-black text-4xl text-[#EEBE3A]">05</div>
+          <div class="w-[75%]">
+            <div class="font-bold text-justify text-[#0C9DEE] italic">
+              Hỗ trợ học tập suốt đời.
+            </div>
+            <div class="text-right text-sm">Đảm bảo chất lượng giáo dục.</div>
+          </div>
+        </div>
       </div>
     </div>
     <div @click="handleClick" class="image-container mt-[-10px]">
