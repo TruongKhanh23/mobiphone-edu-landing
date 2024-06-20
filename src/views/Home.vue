@@ -21,12 +21,14 @@
       class="absolute top-[5%] left-1/2 transform -translate-x-1/2 flex flex-col z-10 text-center font-robotoBold"
     >
       <div>
-        <h1 class="text-2xl font-bold text-[#004E8D] !mb-0">
+        <h1 class="text-2xl font-bold text-white !mb-0">
           Bộ giải pháp quản lí E-learning của mobiEdu
         </h1>
         <p class="text-white font-bold text-sm">
-          <span>Quản lí chất lượng giáo dục và hỗ trợ mọi đối tượng</span><br />
-          <span class="text-white font-bold">trong quá trình dạy và học.</span>
+          <span
+            >Quản lí chất lượng giáo dục và hỗ trợ mọi đối tượng trong quá trình
+            dạy và học.</span
+          > 
         </p>
       </div>
     </div>
