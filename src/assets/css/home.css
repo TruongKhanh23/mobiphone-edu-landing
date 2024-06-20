@@ -1,28 +1,28 @@
 .deparment {
   position: absolute;
   top: 25%;
-  left: 75%;
+  left: 60%;
   transform: translate(-75%, -25%);
 }
 
 .school {
+  position: absolute;
+  top: 48%;
+  left: 65%;
+  transform: translate(-75%, -25%);
+}
+
+.teacher {
   position: absolute;
   top: 25%;
   left: 45%;
   transform: translate(-75%, -45%);
 }
 
-.teacher {
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  transform: translate(-75%, -25%);
-}
-
 .student {
   position: absolute;
-  top: 50%;
-  left: 75%;
+  top: 30%;
+  left: 35%;
   transform: translate(-75%, -25%);
 }
 
