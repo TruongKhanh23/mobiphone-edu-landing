@@ -25,7 +25,7 @@
         backgroundRepeat: 'no-repeat',
       }"
     >
-      <h1 class="text-[#2E418B] font-bold text-lg">
+      <h1 class="text-white font-bold text-lg">
         {{ randomText.title }}
       </h1>
       <p class="text-white text-sm" v-html="formattedDescription"></p>
