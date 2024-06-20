@@ -42,8 +42,6 @@ import Features from "@/components/Department/Features.vue"; // Import component
 import Benefits from "@/components/Department/Benefits.vue";
 import SellingPoint from "@/components/Department/SellingPoint.vue";
 
-import circleFeatures from "@/assets/image/circle-features.png";
-
 import backgroundDepartmentFeatures from "@/assets/image/background-department-features.png";
 import backgroundDepartmentBenefits from "@/assets/image/background-department-benefits.png";
 import backgroundDepartmentStrong from "@/assets/image/background-department-strong.png";
@@ -80,7 +78,6 @@ export default {
 
     return {
       isOpenDepartmentFeatureOne,
-      circleFeatures,
       backgroundDepartmentStrong,
       backgroundDepartmentBenefits,
       backgroundDepartmentFeatures,
