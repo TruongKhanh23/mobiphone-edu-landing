@@ -8,17 +8,17 @@
         @click="onClickButton"
         >Sở/ phòng</a-button
       >
-      <a-button
-        class="school border-2 border-white bg-skyblue"
-        type="primary"
-        @click="openSchoolSecondFloor"
-        >Trường học</a-button
-      >
       <a-button class="teacher border-2 border-white bg-skyblue" type="primary"
         >Giáo viên</a-button
       >
       <a-button class="student border-2 border-white bg-skyblue" type="primary"
         >Học sinh</a-button
+      >
+      <a-button
+        class="school border-2 border-white bg-skyblue"
+        type="primary"
+        @click="openSchoolSecondFloor"
+        >Trường học</a-button
       >
       <a-button
         class="mobiEdu border-2 border-white bg-skyblue"
