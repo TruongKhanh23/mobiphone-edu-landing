@@ -13,4 +13,6 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  outputDir: "dist", // Thư mục đầu ra cho các tệp tĩnh
+  publicPath: "/",
 };
