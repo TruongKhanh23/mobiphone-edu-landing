@@ -42,8 +42,6 @@ import Features from "@/components/Department/Features.vue"; // Import component
 import Benefits from "@/components/Department/Benefits.vue";
 import SellingPoint from "@/components/Department/SellingPoint.vue";
 
-import departmentHighlightFeatures from "@/assets/image/department-hightlight-features.png";
-import departmentOtherInfo from "@/assets/image/department-other-info.png";
 import circleFeatures from "@/assets/image/circle-features.png";
 
 import backgroundDepartmentFeatures from "@/assets/image/background-department-features.png";
@@ -65,7 +63,6 @@ export default {
   },
   setup() {
     const isOpenDepartmentFeatureOne = ref<boolean>(false);
-    const dataImage = [departmentHighlightFeatures, departmentOtherInfo];
 
     const handleClick = () => {
       openDepartmentFeatureOne();
@@ -83,7 +80,6 @@ export default {
 
     return {
       isOpenDepartmentFeatureOne,
-      dataImage,
       circleFeatures,
       backgroundDepartmentStrong,
       backgroundDepartmentBenefits,
