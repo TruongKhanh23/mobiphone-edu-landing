@@ -9,6 +9,11 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
         robotoRegular: ["Roboto Regular", ...defaultTheme.fontFamily.sans],
         robotoBold: ["Roboto Bold", ...defaultTheme.fontFamily.sans],
+        montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        montserratExtraBold: [
+          "Montserrat ExtraBold",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
     },
   },

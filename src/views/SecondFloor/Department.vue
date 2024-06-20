@@ -6,7 +6,24 @@
       :handleCancel="handleCloseDepartmentFeatureOne"
       class="z-20"
     />
-    <div class="background-image" @click="handleClick"></div>
+    <div @click="handleClick" class="image-container">
+      <img
+        :src="backgroundDepartmentFeatures"
+        alt="backgroundDepartmentFeatures"
+      />
+      <div class="overlay-text">Text for Features</div>
+    </div>
+    <div @click="handleClick" class="image-container">
+      <img
+        :src="backgroundDepartmentBenefits"
+        alt="backgroundDepartmentBenefits"
+      />
+      <div class="overlay-text">Text for Benefits</div>
+    </div>
+    <div @click="handleClick" class="image-container">
+      <img :src="backgroundDepartmentStrong" alt="backgroundDepartmentStrong" />
+      <div class="overlay-text">Text for Strong</div>
+    </div>
   </AntModal>
 </template>
 
@@ -18,6 +35,10 @@ import DepartmentFeatureOne from "@/views/ThirdFloor/Department/DepartmentFeatur
 import departmentHighlightFeatures from "@/assets/image/department-hightlight-features.png";
 import departmentOtherInfo from "@/assets/image/department-other-info.png";
 import circleFeatures from "@/assets/image/circle-features.png";
+
+import backgroundDepartmentFeatures from "@/assets/image/background-department-features.png";
+import backgroundDepartmentBenefits from "@/assets/image/background-department-benefits.png";
+import backgroundDepartmentStrong from "@/assets/image/background-department-strong.png";
 
 export default {
   name: "ModalContent",
@@ -51,6 +72,9 @@ export default {
       isOpenDepartmentFeatureOne,
       dataImage,
       circleFeatures,
+      backgroundDepartmentStrong,
+      backgroundDepartmentBenefits,
+      backgroundDepartmentFeatures,
       openDepartmentFeatureOne,
       handleClick,
       handleCloseDepartmentFeatureOne,
@@ -60,13 +84,27 @@ export default {
 </script>
 
 <style scoped>
-.background-image {
+.image-container {
+  position: relative;
   width: 100%;
-  height: 100%;
-  background-image: url("@/assets/image/background-department.svg");
-  background-size: cover;
-  background-position: center;
   cursor: pointer;
-  overflow: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Nền đen mờ để chữ dễ đọc hơn */
+  padding: 10px;
+  border-radius: 5px;
 }
 </style>
