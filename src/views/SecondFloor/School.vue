@@ -1,12 +1,5 @@
 <template>
-  <a-modal
-    class="custom-modal"
-    width="93%"
-    height="93%"
-    footer=""
-    @ok="handleOk"
-    @cancel="handleCancel"
-  >
+  <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <SchoolFeatureOne
       :visible="isOpenSchoolFeatureOne"
       :handleOk="handleCloseSchoolFeatureOne"
@@ -21,13 +14,13 @@
         @click="handleClick"
       />
     </div>
-  </a-modal>
+  </AntModal>
 </template>
 
 <script lang="ts">
 import { ref } from "vue";
-import { Modal } from "ant-design-vue";
-import SchoolFeatureOne from "@/views/School/Features/SchoolFeatureOne.vue";
+import AntModal from "@/components/reusable/AntModal.vue";
+import SchoolFeatureOne from "@/views/ThirdFloor/School/SchoolFeatureOne.vue";
 
 import schoolHighlightFeatures from "@/assets/image/school-hightlight-features.png";
 import schoolOtherInfo from "@/assets/image/school-other-info.png";
@@ -35,7 +28,7 @@ import schoolOtherInfo from "@/assets/image/school-other-info.png";
 export default {
   name: "ModalContent",
   components: {
-    AModal: Modal,
+    AntModal,
     SchoolFeatureOne,
   },
   props: {

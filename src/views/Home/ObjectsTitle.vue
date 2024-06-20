@@ -5,25 +5,31 @@
       <a-button
         class="deparment border-2 border-white bg-skyblue"
         type="primary"
-        @click="onClickButton"
+        @click="onClickButton('deparment')"
         >Sở/ phòng</a-button
       >
-      <a-button class="teacher border-2 border-white bg-skyblue" type="primary"
+      <a-button
+        class="teacher border-2 border-white bg-skyblue"
+        type="primary"
+        @click="onClickButton('teacher')"
         >Giáo viên</a-button
       >
-      <a-button class="student border-2 border-white bg-skyblue" type="primary"
+      <a-button
+        class="student border-2 border-white bg-skyblue"
+        type="primary"
+        @click="onClickButton('student')"
         >Học sinh</a-button
       >
       <a-button
         class="school border-2 border-white bg-skyblue"
+        @click="onClickButton('school')"
         type="primary"
-        @click="openSchoolSecondFloor"
         >Trường học</a-button
       >
       <a-button
         class="mobiEdu border-2 border-white bg-skyblue"
+        @click="onClickButton('mobiEdu')"
         type="primary"
-        @click="openMobiEduSecondFloor"
         >MobiEdu</a-button
       >
     </div>
@@ -37,20 +43,12 @@ export default defineComponent({
   name: "ObjectsTitle",
   emits: ["clickButton", "openSchoolSecondFloor", "openMobiEduSecondFloor"],
   setup(_, { emit }) {
-    const onClickButton = () => {
-      emit("clickButton");
-    };
-    const openSchoolSecondFloor = () => {
-      emit("openSchoolSecondFloor");
-    };
-    const openMobiEduSecondFloor = () => {
-      emit("openMobiEduSecondFloor");
+    const onClickButton = (value: "") => {
+      emit("clickButton", value);
     };
 
     return {
       onClickButton,
-      openSchoolSecondFloor,
-      openMobiEduSecondFloor,
     };
   },
 });
