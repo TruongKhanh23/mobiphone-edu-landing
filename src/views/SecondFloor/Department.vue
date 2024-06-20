@@ -29,7 +29,7 @@
     </div>
     <div @click="handleClick" class="image-container">
       <img :src="backgroundDepartmentStrong" alt="backgroundDepartmentStrong" />
-      <div class="overlay-text">Text for Strong</div>
+      <SellingPoint />
     </div>
   </AntModal>
 </template>
@@ -40,6 +40,7 @@ import AntModal from "@/components/reusable/AntModal.vue";
 import DepartmentFeatureOne from "@/views/ThirdFloor/Department/DepartmentFeatureOne.vue";
 import Features from "@/components/Department/Features.vue"; // Import component Features
 import Benefits from "@/components/Department/Benefits.vue";
+import SellingPoint from "@/components/Department/SellingPoint.vue";
 
 import departmentHighlightFeatures from "@/assets/image/department-hightlight-features.png";
 import departmentOtherInfo from "@/assets/image/department-other-info.png";
@@ -56,6 +57,7 @@ export default {
     DepartmentFeatureOne,
     Features,
     Benefits,
+    SellingPoint,
   },
   props: {
     handleOk: Function,
