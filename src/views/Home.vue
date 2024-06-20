@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden font-robotoRegular">
     <LoadingModal :isOpen="isOpenLoadingModal" />
     <SchoolSecondFloor
       :visible="isOpenSchool"
@@ -13,7 +13,7 @@
     />
     <!-- Home Title -->
     <div
-      class="absolute top-[5%] left-1/2 transform -translate-x-1/2 flex flex-col z-10 text-center"
+      class="absolute top-[5%] left-1/2 transform -translate-x-1/2 flex flex-col z-10 text-center font-robotoBold"
     >
       <div>
         <h1 class="text-2xl font-bold text-[#004E8D] !mb-0">
