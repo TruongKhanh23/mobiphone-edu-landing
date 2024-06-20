@@ -25,7 +25,7 @@
         :src="backgroundDepartmentBenefits"
         alt="backgroundDepartmentBenefits"
       />
-      <div class="overlay-text">Text for Benefits</div>
+      <Benefits />
     </div>
     <div @click="handleClick" class="image-container">
       <img :src="backgroundDepartmentStrong" alt="backgroundDepartmentStrong" />
@@ -39,6 +39,7 @@ import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
 import DepartmentFeatureOne from "@/views/ThirdFloor/Department/DepartmentFeatureOne.vue";
 import Features from "@/components/Department/Features.vue"; // Import component Features
+import Benefits from "@/components/Department/Benefits.vue";
 
 import departmentHighlightFeatures from "@/assets/image/department-hightlight-features.png";
 import departmentOtherInfo from "@/assets/image/department-other-info.png";
@@ -53,7 +54,8 @@ export default {
   components: {
     AntModal,
     DepartmentFeatureOne,
-    Features, // Đăng ký component Features để sử dụng
+    Features,
+    Benefits,
   },
   props: {
     handleOk: Function,
