@@ -1,6 +1,11 @@
 <template>
   <div class="relative w-full h-screen overflow-hidden font-robotoRegular">
     <LoadingModal :isOpen="isOpenLoadingModal" />
+    <Department
+      :visible="isOpenDepartment"
+      :handleOk="handleCloseDepartmentSecondFloor"
+      :handleCancel="handleCloseDepartmentSecondFloor"
+    />
     <School
       :visible="isOpenSchool"
       :handleOk="handleCloseSchoolSecondFloor"
@@ -40,6 +45,7 @@
 import { ref } from "vue";
 import LoadingModal from "@/components/LoadingModal.vue";
 import School from "@/views/SecondFloor/School.vue";
+import Department from "@/views/SecondFloor/Department.vue";
 import MobiEdu from "@/views/SecondFloor/MobiEdu.vue";
 import { handlePopup } from "@/composables/loadingModal/index.js";
 import "@/assets/css/home.css";
@@ -53,6 +59,7 @@ export default {
     LoadingModal,
     School,
     MobiEdu,
+    Department,
     VideoBackground,
     LeftRightBarIcon,
     ObjectsTitle,
@@ -61,9 +68,12 @@ export default {
     const { isOpenLoadingModal } = handlePopup();
     const isOpenSecondFloor = ref(false);
     const isOpenSchool = ref<boolean>(false);
+    const isOpenDepartment = ref<boolean>(false);
     const isOpenMobiEdu = ref<boolean>(false);
 
     function onClickButton(value: string) {
+      console.log("receive emit success: ", value);
+
       switch (value) {
         case "student":
           console.log("Handling click on Student button");
@@ -71,6 +81,7 @@ export default {
           break;
         case "department":
           console.log("Handling click on Department button");
+          isOpenDepartment.value = true;
           // Xử lý khi click vào button Sở/ phòng
           break;
         case "school":
@@ -92,6 +103,11 @@ export default {
       }
     }
 
+    const handleCloseDepartmentSecondFloor = () => {
+      console.log("Ok clicked");
+      isOpenDepartment.value = false;
+    };
+
     const handleCloseSchoolSecondFloor = () => {
       console.log("Ok clicked");
       isOpenSchool.value = false;
@@ -107,9 +123,11 @@ export default {
       isOpenSecondFloor,
       isOpenSchool,
       isOpenMobiEdu,
+      isOpenDepartment,
       onClickButton,
       handleCloseSchoolSecondFloor,
       handleCloseMobiEduSecondFloor,
+      handleCloseDepartmentSecondFloor,
     };
   },
 };

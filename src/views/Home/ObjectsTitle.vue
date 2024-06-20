@@ -3,9 +3,9 @@
     <div class="text-center text-white">
       <!-- Positioned Image -->
       <a-button
-        class="deparment border-2 border-white bg-skyblue"
+        class="department border-2 border-white bg-skyblue"
         type="primary"
-        @click="onClickButton('deparment')"
+        @click="onClickButton('department')"
         >Sở/ phòng</a-button
       >
       <a-button
@@ -44,6 +44,7 @@ export default defineComponent({
   emits: ["clickButton", "openSchoolSecondFloor", "openMobiEduSecondFloor"],
   setup(_, { emit }) {
     const onClickButton = (value: "") => {
+      console.log("on Click Object Title", value);
       emit("clickButton", value);
     };
 
