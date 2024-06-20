@@ -5,15 +5,19 @@
       :key="index"
       :class="`benefit-${index + 1}`"
     >
-      <div class="w-[23vw] h-40 hover:scale-110">
-        <div :class="benefit.numberClass">
+      <div
+        :class="`${benefit.parentClass} hover:scale-110 border-2 border-white bg-white text-black shadow-effect flex rounded-md items-center justify-center`"
+      >
+        <!--Column 1 30%-->
+        <div :class="`${benefit.numberClass} w-3/10`">
           {{ benefit.number }}
         </div>
-        <div :class="benefit.contentClass">
+        <!-- Column 2 70%-->
+        <div :class="`${benefit.contentClass} w-7/10 ml-6`">
           <div :class="benefit.titleClass">
             {{ benefit.title }}
           </div>
-          <div :class="benefit.descriptionClass">
+          <div v-if="benefit.description" :class="benefit.descriptionClass">
             {{ benefit.description }}
           </div>
         </div>
@@ -32,30 +36,32 @@ export default defineComponent({
     const benefits = [
       {
         number: "01",
-        title: "Tích hợp công nghệ tiên tiến.",
-        description: "Đem lại trải nghiệm học tập tốt nhất.",
-        numberClass: "text-left font-black text-4xl text-white",
+        title: "Đánh giá hiệu quả giáo dục thông",
+        description: "qua báo cáo & thống kê.",
+        numberClass: "text-left font-black text-4xl",
         contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
+        titleClass: "font-bold text-center italic",
+        descriptionClass: "text-center text-sm",
+        parentClass: "w-[35vw] h-[13vh]",
       },
       {
         number: "02",
-        title: "Tạo dựng cộng đồng học tập trực tuyến.",
-        description: "Kết nối giáo viên và học sinh.",
-        numberClass: "text-left font-black text-4xl text-white",
+        title: "Đánh giá hiệu quả giáo dục thông",
+        description: "qua báo cáo & thống kê.",
+        numberClass: "text-left font-black text-4xl",
         contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
+        titleClass: "font-bold text-center italic",
+        descriptionClass: "text-center text-sm",
+        parentClass: "w-[35vw] h-[13vh]",
       },
       {
         number: "03",
-        title: "Hỗ trợ học tập suốt đời.",
-        description: "Đảm bảo chất lượng giáo dục.",
-        numberClass: "text-left font-black text-4xl text-white",
+        title: "Hỗ trợ quản lý hệ thống giáo dục.",
+        numberClass: "text-left font-black text-4xl",
         contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
+        titleClass: "font-bold text-center italic",
+        descriptionClass: "text-center text-sm",
+        parentClass: "w-[35vw] h-[13vh]",
       },
     ];
 
@@ -69,8 +75,8 @@ export default defineComponent({
 <style scoped>
 .benefit-1 {
   position: absolute;
-  top: 83%;
-  left: 78%;
+  top: 68%;
+  left: 60%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
@@ -79,8 +85,8 @@ export default defineComponent({
 }
 .benefit-2 {
   position: absolute;
-  top: 60%;
-  left: 86%;
+  top: 50%;
+  left: 70%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
@@ -90,11 +96,14 @@ export default defineComponent({
 .benefit-3 {
   position: absolute;
   top: 30%;
-  left: 80%;
+  left: 65%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
+}
+.shadow-effect {
+  box-shadow: 10px 10px 0 rgb(92, 190, 254), 0 4px 10px rgb(92, 190, 254);
 }
 </style>
