@@ -27,7 +27,7 @@
       />
       <Benefits />
     </div>
-    <div @click="handleClick" class="image-container">
+    <div @click="handleClick" class="image-container mt-[-10px]">
       <img :src="backgroundDepartmentStrong" alt="backgroundDepartmentStrong" />
       <SellingPoint />
     </div>
@@ -42,9 +42,9 @@ import Features from "@/components/Department/Features.vue"; // Import component
 import Benefits from "@/components/Department/Benefits.vue";
 import SellingPoint from "@/components/Department/SellingPoint.vue";
 
-import backgroundDepartmentFeatures from "@/assets/image/background-department-features.png";
-import backgroundDepartmentBenefits from "@/assets/image/background-department-benefits.png";
-import backgroundDepartmentStrong from "@/assets/image/background-department-strong.png";
+import backgroundDepartmentFeatures from "@/assets/image/background-department-features.svg";
+import backgroundDepartmentBenefits from "@/assets/image/background-department-benefits.svg";
+import backgroundDepartmentStrong from "@/assets/image/background-department-strong.svg";
 
 export default {
   name: "ModalContent",

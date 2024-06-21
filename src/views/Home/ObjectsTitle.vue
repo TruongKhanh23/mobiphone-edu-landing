@@ -2,36 +2,26 @@
   <div class="relative z-1 flex items-center justify-center w-full h-full">
     <div class="text-center text-white">
       <!-- Positioned Image -->
-      <a-button
-        class="department border-2 border-white bg-skyblue"
-        type="primary"
+      <button
+        class="department bg-skyblue min-h-[5vh] min-w-[24vh] rounded-lg"
         @click="onClickButton('department')"
-        >Sở/ phòng</a-button
-      >
-      <a-button
-        class="teacher border-2 border-white bg-skyblue"
-        type="primary"
+      ></button>
+      <button
+        class="teacher bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg"
         @click="onClickButton('teacher')"
-        >Giáo viên</a-button
-      >
-      <a-button
-        class="student border-2 border-white bg-skyblue"
-        type="primary"
+      ></button>
+      <button
+        class="student bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg"
         @click="onClickButton('student')"
-        >Học sinh</a-button
-      >
-      <a-button
-        class="school border-2 border-white bg-skyblue"
+      ></button>
+      <button
+        class="school bg-skyblue min-h-[5vh] min-w-[25vh] rounded-lg"
         @click="onClickButton('school')"
-        type="primary"
-        >Trường học</a-button
-      >
-      <a-button
-        class="mobiEdu border-2 border-white bg-skyblue"
+      ></button>
+      <button
+        class="mobiEdu bg-skyblue min-h-[5vh] min-w-[15vh] rounded-lg"
         @click="onClickButton('mobiEdu')"
-        type="primary"
-        >MobiEdu</a-button
-      >
+      ></button>
     </div>
   </div>
 </template>
