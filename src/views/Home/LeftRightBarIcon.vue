@@ -17,7 +17,7 @@
     <!-- Popup -->
     <div
       v-if="isPopupVisible"
-      class="absolute top-1/2 left-12 w-1/5 max-h-4/5 overflow-y-auto p-5 shadow-lg transform -translate-y-1/2 z-50 rounded-lg"
+      class="absolute top-1/2 left-12 w-1/5 max-h-4/5 overflow-y-auto p-5 shadow-lg transform -translate-y-1/2 z-10 rounded-lg"
       :style="{
         height: popupHeight,
         backgroundImage: `url(${backgroundPopupDesription})`,

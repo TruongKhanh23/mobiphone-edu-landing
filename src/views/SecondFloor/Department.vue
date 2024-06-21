@@ -1,5 +1,6 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
+    <LoadingModal :isOpen="isOpenLoadingModal" />
     <DepartmentFeature
       :visible="isOpenDepartmentFeature"
       :handleOk="handleCloseDepartmentFeature"
@@ -46,6 +47,8 @@ import backgroundDepartmentFeatures from "@/assets/image/background-department-f
 import backgroundDepartmentBenefits from "@/assets/image/background-department-benefits.svg";
 import backgroundDepartmentStrong from "@/assets/image/background-department-strong.svg";
 
+import { handlePopup } from "@/composables/loadingModal/index.js";
+
 export default {
   name: "ModalContent",
   components: {
@@ -60,6 +63,7 @@ export default {
     handleCancel: Function,
   },
   setup() {
+    const { isOpenLoadingModal } = handlePopup();
     const isOpenDepartmentFeature = ref<boolean>(false);
 
     const handleClick = () => {
@@ -87,6 +91,7 @@ export default {
     };
 
     return {
+      isOpenLoadingModal,
       isOpenDepartmentFeature,
       backgroundDepartmentStrong,
       backgroundDepartmentBenefits,

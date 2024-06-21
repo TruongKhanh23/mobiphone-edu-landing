@@ -7,6 +7,9 @@
 .ant-modal-close {
   top: 10px !important;
 }
+.ant-modal-close-x {
+  color: white !important;
+}
 .ant-modal-body {
   height: 92vh !important; /* Adjust this value as needed */
   overflow-y: auto !important;
