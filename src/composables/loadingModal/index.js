@@ -10,7 +10,7 @@ export function handlePopup() {
     setTimeout(() => {
       isOpenLoadingModal.value = false;
       document.body.style.removeProperty("overflow");
-    }, 0);
+    }, 1000);
   });
 
   return {

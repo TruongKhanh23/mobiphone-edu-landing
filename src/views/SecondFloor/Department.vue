@@ -1,7 +1,8 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
+    <LoadingModal :isOpen="isOpenLoadingModal" />
     <DepartmentFeature
-      :visible="isOpenDepartmentFeature"
+      :open="isOpenDepartmentFeature"
       :handleOk="handleCloseDepartmentFeature"
       :handleCancel="handleCloseDepartmentFeature"
       class="z-20"
@@ -38,28 +39,33 @@
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
 import DepartmentFeature from "@/views/ThirdFloor/Department/DepartmentFeature.vue";
-import Features from "@/components/Department/Features.vue"; // Import component Features
+import Features from "@/components/Department/Features.vue";
 import Benefits from "@/components/Department/Benefits.vue";
 import SellingPoint from "@/components/Department/SellingPoint.vue";
+import LoadingModal from "@/components/LoadingModal.vue"; // Import LoadingModal
 
 import backgroundDepartmentFeatures from "@/assets/image/background-department-features.svg";
 import backgroundDepartmentBenefits from "@/assets/image/background-department-benefits.svg";
 import backgroundDepartmentStrong from "@/assets/image/background-department-strong.svg";
 
+import { handlePopup } from "@/composables/loadingModal/index.js";
+
 export default {
-  name: "ModalContent",
+  name: "Department",
   components: {
     AntModal,
     DepartmentFeature,
     Features,
     Benefits,
     SellingPoint,
+    LoadingModal, // Đăng ký LoadingModal như một component
   },
   props: {
     handleOk: Function,
     handleCancel: Function,
   },
   setup() {
+    const { isOpenLoadingModal } = handlePopup();
     const isOpenDepartmentFeature = ref<boolean>(false);
 
     const handleClick = () => {
@@ -87,6 +93,7 @@ export default {
     };
 
     return {
+      isOpenLoadingModal,
       isOpenDepartmentFeature,
       backgroundDepartmentStrong,
       backgroundDepartmentBenefits,
