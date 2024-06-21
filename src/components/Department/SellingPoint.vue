@@ -3,7 +3,7 @@
     <div
       v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
-      :class="`sellingPoint-${index + 1}`"
+      :class="`sellingPoint-${index + 1} cursor-pointer`"
     >
       <div :class="`${sellingPoint.parentClass} hover:scale-110`">
         <div
