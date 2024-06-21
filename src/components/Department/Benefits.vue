@@ -13,7 +13,7 @@
           <img :src="benefit.icon" :class="benefit.iconClass" />
         </div>
         <!-- Column 2 70%-->
-        <div :class="`${benefit.contentClass} w-7/10 ml-6`">
+        <div :class="`${benefit.contentClass} w-7/10 ml-2`">
           <div :class="benefit.titleClass">
             {{ benefit.title }}
           </div>
@@ -39,12 +39,12 @@ export default defineComponent({
     const benefits = [
       {
         icon: statistic,
-        title: "Đánh giá hiệu quả giáo dục thông",
-        description: "qua báo cáo & thống kê.",
+        title:
+          "Đánh giá toàn diện và thúc đẩy chuyển đổi số nhanh chóng & dễ dàng",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic",
-        descriptionClass: "text-center text-sm",
+        titleClass: "font-bold text-left italic text-lg",
+        descriptionClass: "text-center text-sm px-6",
         parentClass: "w-[35vw] h-[13vh]",
       },
       {
@@ -53,8 +53,8 @@ export default defineComponent({
         description: "qua báo cáo & thống kê.",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic",
-        descriptionClass: "text-center text-sm",
+        titleClass: "font-bold text-center italic text-lg",
+        descriptionClass: "text-center text-lg",
         parentClass: "w-[35vw] h-[13vh]",
       },
       {
@@ -62,7 +62,7 @@ export default defineComponent({
         title: "Hỗ trợ quản lý hệ thống giáo dục.",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic",
+        titleClass: "font-bold text-center italic text-lg",
         descriptionClass: "text-center text-sm",
         parentClass: "w-[35vw] h-[13vh]",
       },
@@ -79,30 +79,27 @@ export default defineComponent({
 .benefit-1 {
   position: absolute;
   top: 68%;
-  left: 60%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
 }
 .benefit-2 {
   position: absolute;
-  top: 50%;
-  left: 70%;
+  top: 46%;
+  left: 60%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
 }
 .benefit-3 {
   position: absolute;
-  top: 30%;
-  left: 65%;
+  top: 25%;
+  left: 55%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
 }

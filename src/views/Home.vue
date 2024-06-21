@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen overflow-hidden font-robotoRegular">
+  <div class="relative w-full h-screen overflow-hidden">
     <LoadingModal :isOpen="isOpenLoadingModal" />
     <Department
       :visible="isOpenDepartment"
@@ -28,7 +28,7 @@
           <span
             >Quản lí chất lượng giáo dục và hỗ trợ mọi đối tượng trong quá trình
             dạy và học.</span
-          > 
+          >
         </p>
       </div>
     </div>
