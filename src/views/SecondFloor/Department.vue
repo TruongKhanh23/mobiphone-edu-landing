@@ -1,12 +1,12 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
-    <DepartmentFeatureOne
-      :visible="isOpenDepartmentFeatureOne"
-      :handleOk="handleCloseDepartmentFeatureOne"
-      :handleCancel="handleCloseDepartmentFeatureOne"
+    <DepartmentFeature
+      :visible="isOpenDepartmentFeature"
+      :handleOk="handleCloseDepartmentFeature"
+      :handleCancel="handleCloseDepartmentFeature"
       class="z-20"
     />
-    <div @click="handleClick" class="image-container overflow-hidden">
+    <div class="image-container overflow-hidden">
       <img
         :src="backgroundDepartmentFeatures"
         alt="backgroundDepartmentFeatures"
@@ -18,16 +18,16 @@
       </div>
 
       <!-- Sử dụng component Features -->
-      <Features />
+      <Features @featureClick="handleOnClick" />
     </div>
-    <div @click="handleClick" class="image-container mt-[-10px]">
+    <div class="image-container mt-[-10px]">
       <img
         :src="backgroundDepartmentBenefits"
         alt="backgroundDepartmentBenefits"
       />
       <Benefits />
     </div>
-    <div @click="handleClick" class="image-container mt-[-10px]">
+    <div class="image-container mt-[-10px]">
       <img :src="backgroundDepartmentStrong" alt="backgroundDepartmentStrong" />
       <SellingPoint />
     </div>
@@ -37,7 +37,7 @@
 <script lang="ts">
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
-import DepartmentFeatureOne from "@/views/ThirdFloor/Department/DepartmentFeatureOne.vue";
+import DepartmentFeature from "@/views/ThirdFloor/Department/DepartmentFeature.vue";
 import Features from "@/components/Department/Features.vue"; // Import component Features
 import Benefits from "@/components/Department/Benefits.vue";
 import SellingPoint from "@/components/Department/SellingPoint.vue";
@@ -50,7 +50,7 @@ export default {
   name: "ModalContent",
   components: {
     AntModal,
-    DepartmentFeatureOne,
+    DepartmentFeature,
     Features,
     Benefits,
     SellingPoint,
@@ -60,30 +60,41 @@ export default {
     handleCancel: Function,
   },
   setup() {
-    const isOpenDepartmentFeatureOne = ref<boolean>(false);
+    const isOpenDepartmentFeature = ref<boolean>(false);
 
     const handleClick = () => {
-      openDepartmentFeatureOne();
+      openDepartmentFeature();
     };
 
-    const handleCloseDepartmentFeatureOne = () => {
-      console.log("Ok clicked Close Department Feature One");
-      isOpenDepartmentFeatureOne.value = false;
+    const handleCloseDepartmentFeature = () => {
+      console.log("Ok clicked Close Department Feature");
+      isOpenDepartmentFeature.value = false;
     };
 
-    const openDepartmentFeatureOne = () => {
-      console.log("click open department feature one");
-      isOpenDepartmentFeatureOne.value = true;
+    const openDepartmentFeature = () => {
+      console.log("click open department feature");
+      isOpenDepartmentFeature.value = true;
+    };
+
+    const handleOnClick = (featureNumber: number) => {
+      console.log(`Feature ${featureNumber} clicked`);
+      if (featureNumber === 1) {
+        openDepartmentFeature();
+      } else if (featureNumber === 2) {
+        openDepartmentFeature();
+        console.log("Feature 2 clicked");
+      }
     };
 
     return {
-      isOpenDepartmentFeatureOne,
+      isOpenDepartmentFeature,
       backgroundDepartmentStrong,
       backgroundDepartmentBenefits,
       backgroundDepartmentFeatures,
-      openDepartmentFeatureOne,
+      openDepartmentFeature,
       handleClick,
-      handleCloseDepartmentFeatureOne,
+      handleCloseDepartmentFeature,
+      handleOnClick,
     };
   },
 };
@@ -93,7 +104,6 @@ export default {
 .image-container {
   position: relative;
   width: 100%;
-  cursor: pointer;
 }
 
 .image-container img {
@@ -101,18 +111,6 @@ export default {
   height: auto;
 }
 
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Nền đen mờ để chữ dễ đọc hơn */
-  padding: 10px;
-  border-radius: 5px;
-}
 .feature-title {
   position: absolute;
   top: 12%;
