@@ -14,9 +14,9 @@ const router = createRouter({
   routes: import.meta.hot ? [] : routes,
 });
 
-if (import.meta.hot) {
-  const removeRoutes = [];
+let removeRoutes: (() => void)[] = []; // Chỉ định kiểu dữ liệu của mảng removeRoutes
 
+if (import.meta.hot) {
   for (const route of routes) {
     removeRoutes.push(router.addRoute(route));
   }
@@ -25,7 +25,7 @@ if (import.meta.hot) {
 if (import.meta.hot) {
   import.meta.hot?.accept("./routes.ts", ({ routes }) => {
     for (const removeRoute of removeRoutes) removeRoute();
-    removeRoutes = [];
+    removeRoutes = []; // Gán lại giá trị sau khi đã khai báo là let
     for (const route of routes) {
       removeRoutes.push(router.addRoute(route));
     }
@@ -34,5 +34,5 @@ if (import.meta.hot) {
 }
 
 app.use(router);
-app.use(Antd); // Đã đủ để áp dụng Ant Design Vue và các thành phần của nó
+app.use(Antd);
 app.mount("#app");
