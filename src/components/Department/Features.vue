@@ -3,7 +3,8 @@
     <div
       v-for="(feature, index) in features"
       :key="index"
-      :class="`feature-${index + 1}`"
+      :class="`feature-${index + 1} cursor-pointer`"
+      @click="handleFeatureClick(index + 1)"
     >
       <div class="hover:scale-110" :class="feature.parentClass">
         <div :class="`font-black ${feature.numberClass}`">
@@ -27,8 +28,8 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Features",
-  setup() {
-    // Đoạn text của các tính năng
+  emits: ["featureClick"], // Declare the emitted event
+  setup(_, { emit }) {
     const features = [
       {
         number: "01",
@@ -84,8 +85,13 @@ export default defineComponent({
       },
     ];
 
+    const handleFeatureClick = (featureNumber: number) => {
+      emit("featureClick", featureNumber);
+    };
+
     return {
       features,
+      handleFeatureClick,
     };
   },
 });

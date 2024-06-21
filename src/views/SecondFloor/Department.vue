@@ -6,7 +6,7 @@
       :handleCancel="handleCloseDepartmentFeatureOne"
       class="z-20"
     />
-    <div @click="handleClick" class="image-container overflow-hidden">
+    <div class="image-container overflow-hidden">
       <img
         :src="backgroundDepartmentFeatures"
         alt="backgroundDepartmentFeatures"
@@ -18,16 +18,16 @@
       </div>
 
       <!-- Sử dụng component Features -->
-      <Features />
+      <Features @featureClick="handleOnClick" />
     </div>
-    <div @click="handleClick" class="image-container mt-[-10px]">
+    <div class="image-container mt-[-10px]">
       <img
         :src="backgroundDepartmentBenefits"
         alt="backgroundDepartmentBenefits"
       />
       <Benefits />
     </div>
-    <div @click="handleClick" class="image-container mt-[-10px]">
+    <div class="image-container mt-[-10px]">
       <img :src="backgroundDepartmentStrong" alt="backgroundDepartmentStrong" />
       <SellingPoint />
     </div>
@@ -76,6 +76,16 @@ export default {
       isOpenDepartmentFeatureOne.value = true;
     };
 
+    const handleOnClick = (featureNumber: number) => {
+      console.log(`Feature ${featureNumber} clicked`);
+      if (featureNumber === 1) {
+        openDepartmentFeatureOne();
+      } else if (featureNumber === 2) {
+        openDepartmentFeatureOne();
+        console.log("Feature 2 clicked");
+      }
+    };
+
     return {
       isOpenDepartmentFeatureOne,
       backgroundDepartmentStrong,
@@ -84,6 +94,7 @@ export default {
       openDepartmentFeatureOne,
       handleClick,
       handleCloseDepartmentFeatureOne,
+      handleOnClick,
     };
   },
 };
@@ -93,7 +104,6 @@ export default {
 .image-container {
   position: relative;
   width: 100%;
-  cursor: pointer;
 }
 
 .image-container img {
