@@ -15,7 +15,7 @@
           alt="backgroundDepartmentFeatures"
         />
         <div
-          class="feature-title font-montserratExtraBold font-black text-4xl text-[#D7DEFF]"
+          class="department-title font-montserratExtraBold font-black text-4xl text-[#D7DEFF]"
         >
           TÍNH NĂNG
         </div>
@@ -127,7 +127,7 @@ export default {
   height: auto;
 }
 
-.feature-title {
+.department-title {
   position: absolute;
   top: 12%;
   left: 16%;
