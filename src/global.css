@@ -14,30 +14,24 @@
   height: 92vh !important; /* Adjust this value as needed */
   overflow-y: auto !important;
   border-radius: 8px !important;
-  &:hover {
-    &::-webkit-scrollbar-track {
-      @apply block rounded-lg;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      @apply block;
-    }
-  }
-
   &::-webkit-scrollbar {
-    @apply w-2.5 h-2.5;
+    width: 5px;
+    height: 2.5px;
   }
 
   &::-webkit-scrollbar-track {
-    @apply hidden px-1 bg-[white];
+    background: #021929;
+    padding: 1px;
   }
 
   &::-webkit-scrollbar-thumb {
-    @apply hidden bg-[#C4DDEC] rounded-full;
+    background: #c4ddec;
+    border-radius: 9999px; /* This makes it fully rounded */
+  }
 
-    &:hover {
-      @apply bg-[black];
-    }
+  /* Optional: If you want to change the scrollbar thumb color on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: black;
   }
 }
 .ant-modal-content {
