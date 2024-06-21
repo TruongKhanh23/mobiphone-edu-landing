@@ -1,31 +1,32 @@
 <template>
-  <div>
+  <div
+    class="flex flex-wrap justify-center items-center space-x-16 benefit-school"
+  >
     <div
       v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
-      :class="`sellingPoint-${index + 1} cursor-pointer`"
+      :class="`sellingPoint-${index + 1} cursor-pointer shadow-effect`"
     >
-      <div :class="`${sellingPoint.parentClass} hover:scale-110`">
-        <div
-          v-if="sellingPoint.number"
-          :class="`font-black text-4xl ${sellingPoint.numberClass}`"
-        >
-          {{ sellingPoint.number }}
-        </div>
-        <div>
-          <div :class="`${sellingPoint.titleClass}`">
-            {{ sellingPoint.title }}
-          </div>
-          <div :class="sellingPoint.descriptionClass">
-            {{ sellingPoint.description }}
-          </div>
+      <div
+        :class="`${sellingPoint.parentClass} hover:scale-110 text-black rounded-md items-center justify-center border-2-[red]`"
+      >
+        <div :class="`${sellingPoint.contentClass} ml-2`">
+          <div
+            :class="sellingPoint.titleClass"
+            v-html="formattedDescription(sellingPoint.title)"
+          ></div>
+          <div
+            v-if="sellingPoint.description"
+            :class="sellingPoint.descriptionClass"
+            v-html="formattedDescription(sellingPoint.description)"
+          ></div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -34,66 +35,73 @@ export default defineComponent({
     // Đoạn text của các điểm bán hàng
     const sellingPoints = [
       {
-        number: "ĐIỂM MẠNH",
-        title: "Tính linh hoạt và thuận tiện cho Nhà trường và Sở/Phòng GD&ĐT",
-        numberClass: "text-center font-black text-5xl text-[#EEBE3A]",
-        titleClass: "font-bold text-xl text-center mt-2",
-        descriptionClass: "text-center text-sm",
-        parentClass: "w-[50vw] h-[13vh] text-center p-2",
+        title: "Hỗ trợ \n quản lý \n hệ thống \n giáo dục",
+        iconClass: "w-10 h-10 mb-4",
+        contentClass: "",
+        titleClass:
+          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
+        descriptionClass: "text-white text-center text-sm px-6",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-white pt-8",
       },
       {
-        title: "Nhà trường dễ dàng quản lý",
-        description: "giáo viên, học sinh, tổ chức các buổi thi",
-        numberClass: "text-center font-black text-4xl text-[#EEBE3A]",
-        titleClass: "font-bold text-center text-2xl italic",
-        descriptionClass: "text-lg text-center text-sm",
-        parentClass: "w-[35vw] h-[13vh] p-3",
+        title: "Xây dựng \n kế hoạch \n năm học \n nhanh chóng",
+        description: "nhờ đồng bộ thông tin đa chiều",
+        iconClass: "w-10 h-10 mb-4",
+        contentClass: "",
+        titleClass: "font-bold text-xl text-[#137BB5] text-center min-h-[17vh]",
+        descriptionClass: "text-white text-center text-lg",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
       },
       {
-        title: "Sở/ Phòng GD & ĐT có thể tiếp nhận & đánh giá một cách",
-        description: "đồng bộ & dễ dàng.",
-        numberClass: "text-left font-black text-4xl text-white",
-        titleClass: "text-lg text-left italic",
-        descriptionClass: "text-right font-bold text-2xl italic mt-2",
-        parentClass: "w-[25vw] h-[13vh] p-3",
+        title: "Đánh giá hiệu quả giáo dục",
+        description: "thông qua báo cáo và thống kê",
+        iconClass: "w-10 h-10 mb-4",
+        contentClass: "",
+        titleClass:
+          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
+        descriptionClass: "text-white text-center text-lg",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
       },
     ];
 
+    function formattedDescription(text) {
+      if (!text) {
+        return "";
+      }
+      return text.replace(/\n/g, "<br>");
+    }
+
     return {
       sellingPoints,
+      formattedDescription,
     };
   },
 });
 </script>
 
 <style scoped>
-/* Các style của các sellingPoint có thể được sao chép từ component gốc và dán vào đây */
-
 .sellingPoint-1 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
   border-radius: 5px;
 }
+
 .sellingPoint-2 {
-  position: absolute;
-  top: 40%;
-  left: 37%;
-  transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
   border-radius: 5px;
 }
+
 .sellingPoint-3 {
-  position: absolute;
-  top: 41%;
-  left: 80%;
-  transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
   border-radius: 5px;
+}
+
+.shadow-effect {
+  box-shadow: 10px 10px 0 rgb(92, 190, 254), 0 4px 10px rgb(92, 190, 254);
+}
+
+.benefit-school {
+  position: absolute;
+  top: 25%;
+  left: 20%;
 }
 </style>
