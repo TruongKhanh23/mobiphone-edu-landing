@@ -1,14 +1,12 @@
 <template>
-  <div
-    class="flex flex-wrap justify-center items-center space-x-16 benefit-school"
-  >
+  <div>
     <div
       v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
-      :class="`sellingPoint-${index + 1} cursor-pointer shadow-effect`"
+      :class="`sellingPoint-${index + 1} cursor-pointer`"
     >
       <div
-        :class="`${sellingPoint.parentClass} hover:scale-110 text-black rounded-md items-center justify-center border-2-[red]`"
+        :class="`${sellingPoint.parentClass} hover:scale-110 text-black items-center justify-center border-2-[red]`"
       >
         <div :class="`${sellingPoint.contentClass} ml-2`">
           <div
@@ -35,32 +33,22 @@ export default defineComponent({
     // Đoạn text của các điểm bán hàng
     const sellingPoints = [
       {
-        title: "Hỗ trợ \n quản lý \n hệ thống \n giáo dục",
+        title: "Giải pháp cung cấp tính năng quản lý trường học",
+        description: "bao gồm giao bài tập, quản lý học sinh và tổ chức thi.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-sm px-6",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-white pt-8",
+        titleClass: "font-bold text-center text-2xl text-black mb-2",
+        descriptionClass: "font-bold text-center text-sm px-6",
+        parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
       },
       {
-        title: "Xây dựng \n kế hoạch \n năm học \n nhanh chóng",
-        description: "nhờ đồng bộ thông tin đa chiều",
+        title:
+          "Nhà trường có thể quản lý nhân sự và nhận báo cáo dễ dàng và chuyên nghiệp",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "font-bold text-xl text-[#137BB5] text-center min-h-[17vh]",
+        titleClass: "font-bold text-xl text-black text-center min-h-[17vh]",
         descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
-      },
-      {
-        title: "Đánh giá hiệu quả giáo dục",
-        description: "thông qua báo cáo và thống kê",
-        iconClass: "w-10 h-10 mb-4",
-        contentClass: "",
-        titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
+        parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
       },
     ];
 
@@ -81,27 +69,16 @@ export default defineComponent({
 
 <style scoped>
 .sellingPoint-1 {
-  color: white;
+  position: absolute;
+  top: 35%;
+  left: 9.5%;
   border-radius: 5px;
 }
 
 .sellingPoint-2 {
-  color: white;
-  border-radius: 5px;
-}
-
-.sellingPoint-3 {
-  color: white;
-  border-radius: 5px;
-}
-
-.shadow-effect {
-  box-shadow: 10px 10px 0 rgb(92, 190, 254), 0 4px 10px rgb(92, 190, 254);
-}
-
-.benefit-school {
   position: absolute;
-  top: 25%;
-  left: 20%;
+  top: 36%;
+  left: 62%;
+  border-radius: 5px;
 }
 </style>

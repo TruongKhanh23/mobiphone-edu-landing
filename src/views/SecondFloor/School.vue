@@ -26,6 +26,9 @@
 
       <div class="image-container mt-[-10px]">
         <img :src="backgroundSchoolStrong" alt="backgroundSchoolStrong" />
+        <div class="school-strong-title font-black text-5xl text-white">
+          ĐIỂM MẠNH
+        </div>
         <SellingPoint />
       </div>
     </div>
@@ -43,7 +46,7 @@ import LoadingModal from "@/components/LoadingModal.vue";
 
 import backgroundSchoolFeatures from "@/assets/image/school/background-school-features.svg";
 import backgroundSchoolBenefits from "@/assets/image/school/background-school-benefits.svg";
-import backgroundSchoolStrong from "@/assets/image/school/background-school-strong.svg";
+import backgroundSchoolStrong from "@/assets/image/school/background-school-strong.png";
 
 import { handlePopup } from "@/composables/loadingModal/index.js";
 
@@ -130,6 +133,14 @@ export default {
   position: absolute;
   top: 45%;
   left: 23%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5px;
+}
+.school-strong-title {
+  position: absolute;
+  top: 8%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;
