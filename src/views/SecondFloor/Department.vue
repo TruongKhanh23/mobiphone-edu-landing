@@ -42,6 +42,7 @@ import DepartmentFeature from "@/views/ThirdFloor/Department/DepartmentFeature.v
 import Features from "@/components/Department/Features.vue";
 import Benefits from "@/components/Department/Benefits.vue";
 import SellingPoint from "@/components/Department/SellingPoint.vue";
+import LoadingModal from "@/components/LoadingModal.vue"; // Import LoadingModal
 
 import backgroundDepartmentFeatures from "@/assets/image/background-department-features.svg";
 import backgroundDepartmentBenefits from "@/assets/image/background-department-benefits.svg";
@@ -57,6 +58,7 @@ export default {
     Features,
     Benefits,
     SellingPoint,
+    LoadingModal, // Đăng ký LoadingModal như một component
   },
   props: {
     handleOk: Function,
