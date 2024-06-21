@@ -2,17 +2,17 @@
   <div class="relative w-full h-screen overflow-hidden">
     <LoadingModal :isOpen="isOpenLoadingModal" />
     <Department
-      :visible="isOpenDepartment"
+      :open="isOpenDepartment"
       :handleOk="handleCloseDepartmentSecondFloor"
       :handleCancel="handleCloseDepartmentSecondFloor"
     />
     <School
-      :visible="isOpenSchool"
+      :open="isOpenSchool"
       :handleOk="handleCloseSchoolSecondFloor"
       :handleCancel="handleCloseSchoolSecondFloor"
     />
     <MobiEdu
-      :visible="isOpenMobiEdu"
+      :open="isOpenMobiEdu"
       :handleOk="handleCloseMobiEduSecondFloor"
       :handleCancel="handleCloseMobiEduSecondFloor"
     />
@@ -25,10 +25,10 @@
           Bộ giải pháp quản lí E-learning của mobiEdu
         </h1>
         <p class="text-white font-bold text-sm">
-          <span
-            >Quản lí chất lượng giáo dục và hỗ trợ mọi đối tượng trong quá trình
-            dạy và học.</span
-          >
+          <span>
+            Quản lí chất lượng giáo dục và hỗ trợ mọi đối tượng trong quá trình
+            dạy và học.
+          </span>
         </p>
       </div>
     </div>

@@ -2,7 +2,7 @@
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <LoadingModal :isOpen="isOpenLoadingModal" />
     <DepartmentFeature
-      :visible="isOpenDepartmentFeature"
+      :open="isOpenDepartmentFeature"
       :handleOk="handleCloseDepartmentFeature"
       :handleCancel="handleCloseDepartmentFeature"
       class="z-20"
@@ -39,7 +39,7 @@
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
 import DepartmentFeature from "@/views/ThirdFloor/Department/DepartmentFeature.vue";
-import Features from "@/components/Department/Features.vue"; // Import component Features
+import Features from "@/components/Department/Features.vue";
 import Benefits from "@/components/Department/Benefits.vue";
 import SellingPoint from "@/components/Department/SellingPoint.vue";
 

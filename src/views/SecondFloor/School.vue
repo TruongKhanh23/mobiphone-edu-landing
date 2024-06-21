@@ -1,7 +1,7 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <SchoolFeatureOne
-      :visible="isOpenSchoolFeatureOne"
+      :open="isOpenSchoolFeatureOne"
       :handleOk="handleCloseSchoolFeatureOne"
       :handleCancel="handleCloseSchoolFeatureOne"
       class="z-20"
