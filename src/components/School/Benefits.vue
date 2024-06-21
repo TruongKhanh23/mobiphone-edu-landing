@@ -1,36 +1,39 @@
 <template>
-  <div>
+  <div
+    class="flex flex-wrap justify-center items-center space-x-16 benefit-school"
+  >
     <div
       v-for="(benefit, index) in benefits"
       :key="index"
-      :class="`benefit-${index + 1} cursor-pointer`"
+      :class="`benefit-${index + 1} cursor-pointer shadow-effect`"
     >
       <div
-        :class="`${benefit.parentClass} hover:scale-110 border-2 border-white bg-white text-black shadow-effect flex rounded-md items-center justify-center`"
+        :class="`${benefit.parentClass} hover:scale-110 text-black rounded-md items-center justify-center border-2-[red]`"
       >
-        <!--Column 1 30%-->
-        <div class="w-3/10">
+        <div class="flex justify-center items-center">
           <img :src="benefit.icon" :class="benefit.iconClass" />
         </div>
-        <!-- Column 2 70%-->
-        <div :class="`${benefit.contentClass} w-7/10 ml-2`">
-          <div :class="benefit.titleClass">
-            {{ benefit.title }}
-          </div>
-          <div v-if="benefit.description" :class="benefit.descriptionClass">
-            {{ benefit.description }}
-          </div>
+        <div :class="`${benefit.contentClass} ml-2`">
+          <div
+            :class="benefit.titleClass"
+            v-html="formattedDescription(benefit.title)"
+          ></div>
+          <div
+            v-if="benefit.description"
+            :class="benefit.descriptionClass"
+            v-html="formattedDescription(benefit.description)"
+          ></div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
-import magnifyingGlass from "@/assets/icon/magnifying-glass.svg";
-import statistic from "@/assets/icon/statistic.svg";
-import multipleEclipse from "@/assets/icon/multiple-eclipse.svg";
+import magnifyingGlass from "@/assets/icon/school/magnifying-glass-icon.svg";
+import humanHead from "@/assets/icon/school/human-head-icon.svg";
+import phone from "@/assets/icon/school/phone-icon.svg";
 
 export default defineComponent({
   name: "Benefits",
@@ -38,38 +41,48 @@ export default defineComponent({
     // Đoạn text của các lợi ích
     const benefits = [
       {
-        icon: statistic,
-        title:
-          "Đánh giá toàn diện và thúc đẩy chuyển đổi số nhanh chóng & dễ dàng",
-        iconClass: "w-10 h-10",
-        contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-left italic text-lg",
-        descriptionClass: "text-center text-sm px-6",
-        parentClass: "w-[35vw] h-[13vh]",
+        icon: humanHead,
+        title: "Hỗ trợ \n quản lý \n hệ thống \n giáo dục",
+        iconClass: "w-10 h-10 mb-4",
+        contentClass: "",
+        titleClass:
+          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
+        descriptionClass: "text-white text-center text-sm px-6",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-white pt-8",
+      },
+      {
+        icon: phone,
+        title: "Xây dựng \n kế hoạch \n năm học \n nhanh chóng",
+        description: "nhờ đồng bộ thông tin đa chiều",
+        iconClass: "w-10 h-10 mb-4",
+        contentClass: "",
+        titleClass: "font-bold text-xl text-[#137BB5] text-center min-h-[17vh]",
+        descriptionClass: "text-white text-center text-lg",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
       },
       {
         icon: magnifyingGlass,
-        title: "Đánh giá hiệu quả giáo dục thông",
-        description: "qua báo cáo & thống kê.",
-        iconClass: "w-10 h-10",
-        contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic text-lg",
-        descriptionClass: "text-center text-lg",
-        parentClass: "w-[35vw] h-[13vh]",
-      },
-      {
-        icon: multipleEclipse,
-        title: "Hỗ trợ quản lý hệ thống giáo dục.",
-        iconClass: "w-10 h-10",
-        contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic text-lg",
-        descriptionClass: "text-center text-sm",
-        parentClass: "w-[35vw] h-[13vh]",
+        title: "Đánh giá hiệu quả giáo dục",
+        description: "thông qua báo cáo và thống kê",
+        iconClass: "w-10 h-10 mb-4",
+        contentClass: "",
+        titleClass:
+          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
+        descriptionClass: "text-white text-center text-lg",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
       },
     ];
 
+    function formattedDescription(text) {
+      if (!text) {
+        return "";
+      }
+      return text.replace(/\n/g, "<br>");
+    }
+
     return {
       benefits,
+      formattedDescription,
     };
   },
 });
@@ -77,33 +90,26 @@ export default defineComponent({
 
 <style scoped>
 .benefit-1 {
-  position: absolute;
-  top: 68%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
   border-radius: 5px;
 }
+
 .benefit-2 {
-  position: absolute;
-  top: 46%;
-  left: 60%;
-  transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
   border-radius: 5px;
 }
+
 .benefit-3 {
-  position: absolute;
-  top: 25%;
-  left: 55%;
-  transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
   border-radius: 5px;
 }
+
 .shadow-effect {
   box-shadow: 10px 10px 0 rgb(92, 190, 254), 0 4px 10px rgb(92, 190, 254);
+}
+.benefit-school {
+  position: absolute;
+  top: 25%;
+  left: 20%;
 }
 </style>

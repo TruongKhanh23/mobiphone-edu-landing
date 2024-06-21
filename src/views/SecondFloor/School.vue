@@ -11,13 +11,12 @@
     <div class="bg-[#021929]">
       <div class="image-container mt-[-10px]">
         <img :src="backgroundSchoolBenefits" alt="backgroundSchoolBenefits" />
+        <div class="school-title font-black text-4xl text-white">LỢI ÍCH</div>
         <Benefits />
       </div>
       <div class="image-container overflow-hidden">
         <img :src="backgroundSchoolFeatures" alt="backgroundSchoolFeatures" />
-        <div
-          class="school-title font-montserratExtraBold font-black text-4xl text-[#D7DEFF]"
-        >
+        <div class="school-feature-title font-black text-5xl text-[#F7C12F]">
           TÍNH NĂNG
         </div>
 
@@ -123,6 +122,14 @@ export default {
   position: absolute;
   top: 12%;
   left: 16%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5px;
+}
+.school-feature-title {
+  position: absolute;
+  top: 45%;
+  left: 23%;
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;
