@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -85,7 +85,7 @@ export default defineComponent({
       },
     ];
 
-    const handleFeatureClick = (featureNumber: number) => {
+    const handleFeatureClick = (featureNumber) => {
       emit("featureClick", featureNumber);
     };
 
