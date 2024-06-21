@@ -3,6 +3,7 @@
     <LoadingModal :isOpen="isOpenLoadingModal" />
     <DepartmentFeature
       :open="isOpenDepartmentFeature"
+      :featureNumber="featureNumber"
       :handleOk="handleCloseDepartmentFeature"
       :handleCancel="handleCloseDepartmentFeature"
       class="z-20"
@@ -35,7 +36,7 @@
   </AntModal>
 </template>
 
-<script lang="ts">
+<script>
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
 import DepartmentFeature from "@/views/ThirdFloor/Department/DepartmentFeature.vue";
@@ -66,7 +67,8 @@ export default {
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup(2000);
-    const isOpenDepartmentFeature = ref<boolean>(false);
+    const isOpenDepartmentFeature = ref(false);
+    const featureNumber = ref(1);
 
     const handleClick = () => {
       openDepartmentFeature();
@@ -82,17 +84,19 @@ export default {
       isOpenDepartmentFeature.value = true;
     };
 
-    const handleOnClick = (featureNumber: number) => {
-      console.log(`Feature ${featureNumber} clicked`);
-      if (featureNumber === 1) {
+    const handleOnClick = (value) => {
+      console.log(`Feature ${value} clicked`);
+      featureNumber.value = value;
+      if (value === 1) {
         openDepartmentFeature();
-      } else if (featureNumber === 2) {
+      } else if (value === 2) {
         openDepartmentFeature();
         console.log("Feature 2 clicked");
       }
     };
 
     return {
+      featureNumber,
       isOpenLoadingModal,
       isOpenDepartmentFeature,
       backgroundDepartmentStrong,
