@@ -26,7 +26,7 @@ import schoolHighlightFeatures from "@/assets/image/school-hightlight-features.p
 import schoolOtherInfo from "@/assets/image/school-other-info.png";
 
 export default {
-  name: "ModalContent",
+  name: "School",
   components: {
     AntModal,
     SchoolFeatureOne,

@@ -56,7 +56,7 @@ import LeftRightBarIcon from "@/views/Home/LeftRightBarIcon.vue";
 import ObjectsTitle from "@/views/Home/ObjectsTitle.vue";
 
 export default {
-  name: "App",
+  name: "Home",
   components: {
     LoadingModal,
     School,

@@ -50,7 +50,7 @@ import backgroundDepartmentStrong from "@/assets/image/background-department-str
 import { handlePopup } from "@/composables/loadingModal/index.js";
 
 export default {
-  name: "ModalContent",
+  name: "Department",
   components: {
     AntModal,
     DepartmentFeature,
