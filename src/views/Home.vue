@@ -67,7 +67,7 @@ export default {
     ObjectsTitle,
   },
   setup() {
-    const { isOpenLoadingModal } = handlePopup();
+    const { isOpenLoadingModal } = handlePopup(1000);
     const isOpenSecondFloor = ref(false);
     const isOpenSchool = ref<boolean>(false);
     const isOpenDepartment = ref<boolean>(false);
