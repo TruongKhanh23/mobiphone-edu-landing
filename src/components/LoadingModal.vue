@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="isOpen"
-    class="fixed inset-0 z-50 h-screen w-screen flex items-center justify-center gradient-bg"
+    class="fixed inset-0 z-50 h-full w-full flex items-center justify-center gradient-bg"
   >
     <div
       class="h-16 w-[400px] mx-4 md:mx-0 flex flex-col items-center justify-center rounded-lg bg-[#ffffff]"

@@ -1,6 +1,6 @@
 import { ref, onMounted } from "vue";
 // popupHandler.js
-export function handlePopup() {
+export function handlePopup(delayTime) {
   //Open popup - no scroll
   const isOpenLoadingModal = ref(true);
   document.body.style.overflow = "hidden";
@@ -10,7 +10,7 @@ export function handlePopup() {
     setTimeout(() => {
       isOpenLoadingModal.value = false;
       document.body.style.removeProperty("overflow");
-    }, 1000);
+    }, delayTime);
   });
 
   return {
