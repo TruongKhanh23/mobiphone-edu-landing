@@ -28,9 +28,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import magnifyingGlass from "@/assets/icon/magnifying-glass.png";
-import statistic from "@/assets/icon/statistic.png";
-import multipleEclipse from "@/assets/icon/multiple-eclipse.png";
+import magnifyingGlass from "@/assets/icon/magnifying-glass.svg";
+import statistic from "@/assets/icon/statistic.svg";
+import multipleEclipse from "@/assets/icon/multiple-eclipse.svg";
 
 export default defineComponent({
   name: "Benefits",
