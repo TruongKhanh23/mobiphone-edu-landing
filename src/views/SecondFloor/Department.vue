@@ -8,30 +8,35 @@
       :handleCancel="handleCloseDepartmentFeature"
       class="z-20"
     />
-    <div class="image-container overflow-hidden">
-      <img
-        :src="backgroundDepartmentFeatures"
-        alt="backgroundDepartmentFeatures"
-      />
-      <div
-        class="feature-title font-montserratExtraBold font-black text-4xl text-[#D7DEFF]"
-      >
-        TÍNH NĂNG
-      </div>
+    <div class="bg-[#021929]">
+      <div class="image-container overflow-hidden">
+        <img
+          :src="backgroundDepartmentFeatures"
+          alt="backgroundDepartmentFeatures"
+        />
+        <div
+          class="feature-title font-montserratExtraBold font-black text-4xl text-[#D7DEFF]"
+        >
+          TÍNH NĂNG
+        </div>
 
-      <!-- Sử dụng component Features -->
-      <Features @featureClick="handleOnClick" />
-    </div>
-    <div class="image-container mt-[-10px]">
-      <img
-        :src="backgroundDepartmentBenefits"
-        alt="backgroundDepartmentBenefits"
-      />
-      <Benefits />
-    </div>
-    <div class="image-container mt-[-10px]">
-      <img :src="backgroundDepartmentStrong" alt="backgroundDepartmentStrong" />
-      <SellingPoint />
+        <!-- Sử dụng component Features -->
+        <Features @featureClick="handleOnClick" />
+      </div>
+      <div class="image-container mt-[-10px]">
+        <img
+          :src="backgroundDepartmentBenefits"
+          alt="backgroundDepartmentBenefits"
+        />
+        <Benefits />
+      </div>
+      <div class="image-container mt-[-10px]">
+        <img
+          :src="backgroundDepartmentStrong"
+          alt="backgroundDepartmentStrong"
+        />
+        <SellingPoint />
+      </div>
     </div>
   </AntModal>
 </template>
