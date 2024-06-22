@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden font-robotoRegular">
     <LoadingModal :isOpen="isOpenLoadingModal" />
     <Department
       :open="isOpenDepartment"
