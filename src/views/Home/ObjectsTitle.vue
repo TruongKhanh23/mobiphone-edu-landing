@@ -3,31 +3,31 @@
     <div class="text-center text-[#41F6F9]">
       <!-- Positioned Image -->
       <button
-        class="department bg-skyblue min-h-[5vh] min-w-[24vh] rounded-lg uppercase font-black"
+        class="department bg-skyblue min-h-[5vh] min-w-[24vh] rounded-lg uppercase font-black hover:text-lg"
         @click="onClickButton('department')"
       >
         Sở giáo dục
       </button>
       <button
-        class="teacher bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg uppercase font-black"
+        class="teacher bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg uppercase font-black hover:text-lg"
         @click="onClickButton('teacher')"
       >
         Giáo viên
       </button>
       <button
-        class="student bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg uppercase font-black"
+        class="student bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg uppercase font-black hover:text-lg"
         @click="onClickButton('student')"
       >
         Học sinh
       </button>
       <button
-        class="school bg-skyblue min-h-[5vh] min-w-[25vh] rounded-lg uppercase font-black"
+        class="school bg-skyblue min-h-[5vh] min-w-[25vh] rounded-lg uppercase font-black hover:text-lg"
         @click="onClickButton('school')"
       >
         Trường học
       </button>
       <button
-        class="mobiEdu bg-skyblue min-h-[5vh] min-w-[15vh] rounded-lg uppercase font-black"
+        class="mobiEdu bg-skyblue min-h-[5vh] min-w-[15vh] rounded-lg uppercase font-black hover:text-lg"
         @click="onClickButton('mobiEdu')"
       >
         MobiEdu
@@ -81,69 +81,34 @@ export default defineComponent({
   position: absolute;
   top: 21%;
   left: 55%;
-  transform: translate(-75%, -25%) rotate(30deg);
   transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
-}
-
-.department:hover {
-  transform: translate(-75%, -25%) rotate(30deg) scale(1.1);
-  border: 2px solid white;
-  border-radius: 10px;
 }
 
 .school {
   position: absolute;
   top: 47%;
   left: 60%;
-  transform: translate(-75%, -25%) rotate(30deg);
   transition: transform 0.3s ease;
-}
-
-.school:hover {
-  transform: translate(-75%, -25%) rotate(30deg) scale(1.1);
-  border: 2px solid white;
-  border-radius: 10px;
 }
 
 .teacher {
   position: absolute;
   top: 25%;
   left: 35%;
-  transform: translate(-75%, -45%) rotate(30deg);
   transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
-}
-
-.teacher:hover {
-  transform: translate(-75%, -45%) rotate(30deg) scale(1.1);
-  border: 2px solid white;
-  border-radius: 10px;
 }
 
 .student {
   position: absolute;
   top: 30%;
   left: 28%;
-  transform: translate(-75%, -25%) rotate(30deg);
   transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
-}
-
-.student:hover {
-  transform: translate(-75%, -25%) rotate(30deg) scale(1.1);
-  border: 2px solid white;
-  border-radius: 10px;
 }
 
 .mobiEdu {
   position: absolute;
   top: 43%;
   left: 45%;
-  transform: translate(-75%, -25%) rotate(30deg);
   transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
-}
-
-.mobiEdu:hover {
-  transform: translate(-75%, -25%) rotate(30deg) scale(1.1);
-  border: 2px solid white;
-  border-radius: 10px;
 }
 </style>
