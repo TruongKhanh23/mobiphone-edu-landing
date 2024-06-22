@@ -11,6 +11,12 @@
     <div class="bg-[#021929]">
       <div class="image-container mt-[-10px]">
         <img :src="backgroundTeacherStrong" alt="backgroundTeacherStrong" />
+        <div class="teacher-title text-white flex flex-col gap-2">
+          <span class="font-black text-4xl">ĐIỂM MẠNH</span>
+          <span class="font-bold"
+            >Tính năng quản lí và đánh giá của giáo viên</span
+          >
+        </div>
         <SellingPoint />
       </div>
       <div class="image-container overflow-hidden">
@@ -118,7 +124,6 @@ export default {
   top: 12%;
   left: 16%;
   transform: translate(-50%, -50%);
-  padding: 10px;
   border-radius: 5px;
 }
 .teacher-feature-title {
