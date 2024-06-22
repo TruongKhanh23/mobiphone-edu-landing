@@ -16,6 +16,11 @@
       :handleOk="handleCloseMobiEduSecondFloor"
       :handleCancel="handleCloseMobiEduSecondFloor"
     />
+    <Teacher
+      :open="isOpenTeacher"
+      :handleOk="handleCloseTeacherSecondFloor"
+      :handleCancel="handleCloseTeacherSecondFloor"
+    />
     <!-- Home Title -->
     <div
       class="absolute top-[5%] left-1/2 transform -translate-x-1/2 flex flex-col z-10 text-center font-robotoBold"
@@ -49,6 +54,7 @@ import LoadingModal from "@/components/LoadingModal.vue";
 import School from "@/views/SecondFloor/School.vue";
 import Department from "@/views/SecondFloor/Department.vue";
 import MobiEdu from "@/views/SecondFloor/MobiEdu.vue";
+import Teacher from "@/views/SecondFloor/Teacher.vue";
 import { handlePopup } from "@/composables/loadingModal/index.js";
 import "@/assets/css/home.css";
 import VideoBackground from "@/views/Home/VideoBackground.vue";
@@ -62,16 +68,17 @@ export default {
     School,
     MobiEdu,
     Department,
+    Teacher,
     VideoBackground,
     LeftRightBarIcon,
     ObjectsTitle,
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup(1000);
-    const isOpenSecondFloor = ref(false);
     const isOpenSchool = ref<boolean>(false);
     const isOpenDepartment = ref<boolean>(false);
     const isOpenMobiEdu = ref<boolean>(false);
+    const isOpenTeacher = ref<boolean>(false);
 
     function onClickButton(value: string) {
       console.log("receive emit success: ", value);
@@ -93,7 +100,7 @@ export default {
           break;
         case "teacher":
           console.log("Handling click on Teacher button");
-          // Xử lý khi click vào button Giáo viên
+          isOpenTeacher.value = true;
           break;
         case "mobiEdu":
           console.log("Handling click on MobiEdu button");
@@ -120,16 +127,22 @@ export default {
       isOpenMobiEdu.value = false;
     };
 
+    const handleCloseTeacherSecondFloor = () => {
+      console.log("handleCloseTeacherSecondFloor");
+      isOpenTeacher.value = false;
+    };
+
     return {
       isOpenLoadingModal,
-      isOpenSecondFloor,
       isOpenSchool,
       isOpenMobiEdu,
       isOpenDepartment,
+      isOpenTeacher,
       onClickButton,
       handleCloseSchoolSecondFloor,
       handleCloseMobiEduSecondFloor,
       handleCloseDepartmentSecondFloor,
+      handleCloseTeacherSecondFloor,
     };
   },
 };
