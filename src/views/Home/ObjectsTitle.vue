@@ -2,42 +2,48 @@
   <div class="relative z-1 flex items-center justify-center w-full h-full">
     <div class="text-center text-[#41F6F9]">
       <!-- Positioned Image -->
-      <button
-        class="department bg-skyblue min-h-[5vh] min-w-[24vh] rounded-lg uppercase font-black hover:text-lg"
+      <img
+        :src="department"
+        alt="department"
+        class="h-24 department cursor-pointer bg-skyblue font-black hover:h-28"
         @click="onClickButton('department')"
-      >
-        Sở giáo dục
-      </button>
-      <button
-        class="teacher bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg uppercase font-black hover:text-lg"
+      />
+      <img
+        :src="teacher"
+        alt="teacher"
+        class="h-24 teacher cursor-pointer bg-skyblue font-black hover:h-28"
         @click="onClickButton('teacher')"
-      >
-        Giáo viên
-      </button>
-      <button
-        class="student bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg uppercase font-black hover:text-lg"
+      />
+      <img
+        :src="student"
+        alt="student"
+        class="h-24 student cursor-pointer bg-skyblue font-black hover:h-28"
         @click="onClickButton('student')"
-      >
-        Học sinh
-      </button>
-      <button
-        class="school bg-skyblue min-h-[5vh] min-w-[25vh] rounded-lg uppercase font-black hover:text-lg"
+      />
+      <img
+        :src="school"
+        alt="school"
+        class="h-24 school cursor-pointer bg-skyblue font-black hover:h-28"
         @click="onClickButton('school')"
-      >
-        Trường học
-      </button>
-      <button
-        class="mobiEdu bg-skyblue min-h-[5vh] min-w-[15vh] rounded-lg uppercase font-black hover:text-lg"
+      />
+      <img
+        :src="mobiEdu"
+        alt="mobiEdu"
+        class="h-24 mobiEdu cursor-pointer bg-skyblue font-black hover:h-28"
         @click="onClickButton('mobiEdu')"
-      >
-        MobiEdu
-      </button>
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
+import school from "@/assets/image/home/school.png";
+import teacher from "@/assets/image/home/teacher.png";
+import student from "@/assets/image/home/student.png";
+import department from "@/assets/image/home/department.png";
+import mobiEdu from "@/assets/image/home/mobiEdu.png";
 
 export default defineComponent({
   name: "ObjectsTitle",
@@ -50,65 +56,73 @@ export default defineComponent({
 
     return {
       onClickButton,
+      school,
+      teacher,
+      student,
+      department,
+      mobiEdu,
     };
   },
 });
 </script>
 
 <style scoped>
-/* Animation keyframes */
 @keyframes moveUpDown {
   0%,
   100% {
-    transform: translateY(0) rotate(30deg);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px) rotate(30deg); /* Di chuyển lên */
+    transform: translateY(-20px);
   }
 }
 
-/* Apply animation to buttons */
 .department,
 .teacher,
 .student,
 .school,
 .mobiEdu {
-  animation: moveUpDown 3s ease-in-out infinite; /* Thời gian và kiểu lặp lại của hiệu ứng */
+  animation: moveUpDown 3s ease-in-out infinite;
 }
 
-/* Các kiểu vị trí và hover của nút */
 .department {
   position: absolute;
-  top: 21%;
-  left: 55%;
-  transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
+  top: 14%;
+  left: 58%;
+  transition: transform 0.3s ease;
 }
 
 .school {
   position: absolute;
-  top: 47%;
-  left: 60%;
+  top: 39%;
+  left: 58.5%;
   transition: transform 0.3s ease;
 }
 
 .teacher {
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 35%;
-  transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
+  transition: transform 0.3s ease;
 }
 
 .student {
   position: absolute;
-  top: 30%;
-  left: 28%;
-  transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
+  top: 20%;
+  left: 26%;
+  transition: transform 0.3s ease;
 }
 
 .mobiEdu {
   position: absolute;
-  top: 43%;
-  left: 45%;
-  transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
+  top: 37%;
+  left: 41%;
+  transition: transform 0.3s ease;
+}
+.mobiEdu:hover {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  transition: transform 0.3s ease;
 }
 </style>

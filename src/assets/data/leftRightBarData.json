@@ -1,22 +1,22 @@
 [
   {
-    "title": "Title 1",
-    "description": "Velit laboris sunt quis ut dignissim, voluptate sed dolor sint ex aliquip ullamco, nulla velit urna consequat suscipit voluptate consectetur quis esse. Nulla ut, sed tempor in in duis quis. Ex harmud nostrud amet dolor suscipit ex sint dignissim urna quis ut pariatur laboris ullamco pulvinar harmud pulvinar doming."
+    "title": "Mô tả đầy đủ",
+    "description": "Bộ giải pháp Quản lí E-learning của mobiEdu là hệ sinh thái các giải pháp giáo dục quản lý chất lượng và hỗ trợ giáo viên, học sinh, nhà trường, sở-ban-ngành trong quá trình dạy và học. E-learning của mobiEdu hoạt động theo mô hình phần mềm dịch vụ (SaaS) trên nền tảng điện toán đám mây, cho phép người dùng truy cập và sử dụng kho học liệu số không giới hạn, không phụ thuộc vào thời gian và địa điểm. Giải pháp sử dụng dữ liệu lớn và học máy để theo dõi và phân tích hành vi học tập của học sinh, từ đó hỗ trợ quản lý chất lượng giáo dục và cải thiện quá trình dạy và học. Bên cạnh đó bộ giải pháp giúp đồng bộ dữ liệu giữa tất cả các cấp trong ngành giáo dục."
   },
   {
-    "title": "Chức năng",
+    "title": "Tính năng",
     "description": "- Quản lí, tra cứu tài liệu học tập\n- Theo dõi tiến độ và kế hoạch\n- Quản lí học tập và giảng dạy\n- Học và ôn luyện thần tốc\n- Báo cáo và liên lạc\n- Hỗ trợ tương tác và hỏi đáp"
   },
   {
-    "title": "Title 3",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elitmagna laboris harmud, doming laboris, ullamco nisi nulla sint eros sed nostrud elit adipiscing duis ut. Lorem ipsum dolor sit amet, consectetur adipiscing elitmagna laboris harmud, doming laboris, ullamco nisi nulla sint eros sed nostrud elit adipiscing duis ut."
+    "title": "Lợi ích",
+    "description": "<span class='font-bold'>1. Học sinh:</span><br/>Dễ dàng truy cập kho bài giảng và bài tập tất cả các bộ môn<br/>Tự giác học tập và tiết kiệm thời gian.<br/><br/><span class='font-bold'>2. Phụ huynh:</span><br/>Theo dõi tiến độ học tập một cách dễ dàng<br/>Tương tác với giáo viên để cập nhật thông tin<br/><br/><span class='font-bold'>3. Giáo viên:</span><br/>Tạo và quản lý dữ liệu học tập một cách dễ dàng<br/>Theo dõi tiến độ học tập của học sinh và cung cấp phản hồi.<br/><br/><span class='font-bold'>4. Nhà trường - Sở/Phòng GD&ĐT:</span><br/>Hỗ trợ quản lý hệ thống giáo dục.<br/>Đánh giá hiệu quả giáo dục thông qua báo cáo và thống kê.<br/>"
   },
   {
-    "title": "Title 4",
-    "description": "Velit laboris sunt quis ut dignissim, voluptate sed dolor sint ex aliquip ullamco, nulla velit urna consequat suscipit voluptate consectetur quis esse. Nulla ut, sed tempor in in duis quis. Ex harmud nostrud amet dolor suscipit ex sint dignissim urna quis ut pariatur laboris ullamco pulvinar harmud pulvinar"
+    "title": "Đối tượng hướng đến",
+    "description": "- Cán bộ sở/ban/ngành: dùng để quản lí<br/>- Cán bộ hành chính/quản lí của nhà trường: dùng để quản lí<br/>- Các giáo viên: dùng để quản lí lớp/học sinh và thực hiện các nghiệp vụ sư phạm<br/>- Học sinh để ôn luyện theo chương trình Bộ GD và tự luyện."
   },
   {
-    "title": "Title 5",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elitmagna laboris harmud, doming laboris, ullamco nisi nulla sint eros sed nostrud elit adipiscing duis ut."
+    "title": "",
+    "description": "<span class='font-bold'>Thông tin liên hệ</span><br/>Số điện thoại: 0xx.xxxx.xxx<br/>Email: xxx@gmail.com<br/>Website: mobiedu.vn<br/><br/><span class='font-bold'>Câu hỏi thường gặp</span><br/>Giải đáp câu hỏi thường gặp phải tại mobiEdu<br/>Tìm hiểu thêm tại đây:<br/><a href='https://mobiedu.vn' target='_blank' class='underline cursor-pointer'>xxx.com.vn</a>"
   }
 ]
