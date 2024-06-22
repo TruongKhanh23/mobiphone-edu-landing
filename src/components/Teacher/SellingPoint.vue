@@ -1,15 +1,24 @@
 <template>
-  <div>
+  <div class="container flex flex-col justify-center gap-10 w-[80%]">
     <div
       v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
       :class="`sellingPoint-${index + 1} cursor-pointer`"
     >
       <div
-        :class="`${sellingPoint.parentClass} hover:scale-110 text-black items-center justify-center border-2-[red]`"
+        :class="`${sellingPoint.parentClass} flex hover:scale-110 text-black items-center`"
       >
-        <div :class="`${sellingPoint.contentClass} ml-2`">
+        <!--Column 1 30%-->
+        <div
+          class="border-2 rounded-full flex items-center justify-center p-3"
+          :class="sellingPoint.divIconClass"
+        >
+          <img :src="sellingPoint.icon" :class="sellingPoint.iconClass" />
+        </div>
+        <!-- Column 2 70%-->
+        <div :class="`${sellingPoint.contentClass} ml-4`">
           <div
+            v-if="sellingPoint.title"
             :class="sellingPoint.titleClass"
             v-html="formattedDescription(sellingPoint.title)"
           ></div>
@@ -27,37 +36,62 @@
 <script>
 import { defineComponent } from "vue";
 
+import idea from "@/assets/icon/teacher/idea-icon.svg";
+import location from "@/assets/icon/teacher/location-icon.svg";
+import magnifyingGlass from "@/assets/icon/teacher/magnifying-glass-icon.svg";
+import multipleHuman from "@/assets/icon/teacher/multiple-human-icon.svg";
+
+import formattedDescription from "@/utils/index.js";
+
 export default defineComponent({
   name: "SellingPoints",
   setup() {
     // Đoạn text của các điểm bán hàng
     const sellingPoints = [
       {
-        title: "Giải pháp cung cấp tính năng quản lý trường học",
-        description: "bao gồm giao bài tập, quản lý học sinh và tổ chức thi.",
-        iconClass: "w-10 h-10 mb-4",
+        icon: location,
+        description: "Đa dạng cách thức thiết kế bài giảng",
+        divIconClass: "",
+        iconClass: "w-10 h-10",
         contentClass: "",
-        titleClass: "font-bold text-center text-2xl text-black mb-2",
-        descriptionClass: "font-bold text-center text-sm px-6",
-        parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
+        titleClass: "font-bold text-2xl text-white mb-2",
+        descriptionClass: "text-lg text-white",
+        parentClass: "min-h-[10vh] w-fit",
       },
       {
-        title:
-          "Nhà trường có thể quản lý nhân sự và nhận báo cáo dễ dàng và chuyên nghiệp",
-        iconClass: "w-10 h-10 mb-4",
+        icon: magnifyingGlass,
+        description:
+          "Được truy cập vào kho bài giảng và \n giáo án trong trường",
+        divIconClass: "",
+        iconClass: "w-10 h-10",
         contentClass: "",
-        titleClass: "font-bold text-xl text-black text-center min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
+        titleClass: "font-bold text-xl text-white min-h-[17vh]",
+        descriptionClass: "text-white text-lg",
+        parentClass: "min-h-[10vh] w-fit",
+      },
+      {
+        icon: multipleHuman,
+        description:
+          "Giáo viên có thể giao bài tập, tổ chức \n kiểm tra trực tuyến và nhận đánh giá \n từ hệ thống AI.",
+        divIconClass: "border-[#36437F]",
+        iconClass: "w-10 h-10",
+        contentClass: "",
+        titleClass: "font-bold text-xl text-white mb-2",
+        descriptionClass: "text-lg text-white",
+        parentClass: "min-h-[10vh] w-fit",
+      },
+      {
+        icon: idea,
+        description:
+          "Đánh giá chi tiết về tính chuyên cần, năng lực,  \nvà kết quả học tập của từng học sinh.",
+        divIconClass: "border-[#36437F]",
+        iconClass: "w-10 h-10",
+        contentClass: "",
+        titleClass: "font-bold text-xl text-white min-h-[17vh]",
+        descriptionClass: "text-white text-lg",
+        parentClass: "min-h-[10vh] w-fit",
       },
     ];
-
-    function formattedDescription(text) {
-      if (!text) {
-        return "";
-      }
-      return text.replace(/\n/g, "<br>");
-    }
 
     return {
       sellingPoints,
@@ -68,17 +102,21 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.sellingPoint-1 {
+.container {
   position: absolute;
-  top: 35%;
-  left: 9.5%;
+  top: 25%;
+  left: 4%;
+}
+
+.sellingPoint-1 {
   border-radius: 5px;
 }
 
 .sellingPoint-2 {
-  position: absolute;
-  top: 36%;
-  left: 62%;
   border-radius: 5px;
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
 }
 </style>
