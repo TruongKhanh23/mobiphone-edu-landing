@@ -46,7 +46,7 @@ import LoadingModal from "@/components/LoadingModal.vue";
 
 import backgroundSchoolFeatures from "@/assets/image/school/background-school-features.svg";
 import backgroundSchoolBenefits from "@/assets/image/school/background-school-benefits.svg";
-import backgroundSchoolStrong from "@/assets/image/school/background-school-strong.png";
+import backgroundSchoolStrong from "@/assets/image/school/background-school-strong.svg";
 
 import { handlePopup } from "@/composables/loadingModal/index.js";
 

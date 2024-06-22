@@ -6,7 +6,7 @@
       :class="`sellingPoint-${index + 1} cursor-pointer`"
     >
       <div
-        :class="`${sellingPoint.parentClass} hover:scale-110 text-black items-center justify-center border-2-[red]`"
+        :class="`${sellingPoint.parentClass} hover:scale-110 text-white items-center justify-center border-2-[red]`"
       >
         <div :class="`${sellingPoint.contentClass} ml-2`">
           <div
@@ -37,7 +37,7 @@ export default defineComponent({
         description: "bao gồm giao bài tập, quản lý học sinh và tổ chức thi.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "font-bold text-center text-2xl text-black mb-2",
+        titleClass: "font-bold text-center text-2xl text-white mb-2",
         descriptionClass: "font-bold text-center text-sm px-6",
         parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
       },
@@ -46,8 +46,8 @@ export default defineComponent({
           "Nhà trường có thể quản lý nhân sự và nhận báo cáo dễ dàng và chuyên nghiệp",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "font-bold text-xl text-black text-center min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
+        titleClass: "font-bold text-xl text-white text-center min-h-[17vh]",
+        descriptionClass: "text-white  text-center text-lg",
         parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
       },
     ];
@@ -70,15 +70,15 @@ export default defineComponent({
 <style scoped>
 .sellingPoint-1 {
   position: absolute;
-  top: 35%;
-  left: 9.5%;
+  top: 30%;
+  left: 25%;
   border-radius: 5px;
 }
 
 .sellingPoint-2 {
   position: absolute;
-  top: 36%;
-  left: 62%;
+  top: 35%;
+  left: 65%;
   border-radius: 5px;
 }
 </style>
