@@ -1,21 +1,63 @@
 <template>
   <div>
-    <div
-      v-for="(feature, index) in features"
-      :key="index"
-      :class="`feature-${index + 1} cursor-pointer`"
-      @click="handleFeatureClick(index + 1)"
-    >
-      <div class="hover:scale-110" :class="feature.parentClass">
-        <div :class="`font-black ${feature.numberClass}`">
-          {{ feature.number }}
-        </div>
-        <div :class="feature.contentClass">
-          <div v-if="title" :class="`font-bold ${feature.titleClass}`">
-            {{ feature.title }}
+    <div class="container-left flex flex-col gap-10 w-[80%]">
+      <div
+        v-for="(feature, index) in features.slice(0, 3)"
+        :key="index"
+        :class="`feature-${index + 1} cursor-pointer`"
+      >
+        <div
+          :class="`${feature.parentClass} flex justify-end items-center gap-2 hover:scale-110 text-black`"
+        >
+          <div :class="`${feature.contentClass} ml-4`">
+            <div
+              v-if="feature.title"
+              :class="feature.titleClass"
+              v-html="formattedDescription(feature.title)"
+            ></div>
+            <div
+              v-if="feature.description"
+              :class="feature.descriptionClass"
+              v-html="formattedDescription(feature.description)"
+            ></div>
           </div>
-          <div :class="feature.descriptionClass">
-            {{ feature.description }}
+          <div
+            class="flex items-center justify-center p-3"
+            :class="feature.divIconClass"
+          >
+            <img :src="feature.icon" :class="feature.iconClass" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-right flex flex-col justify-center gap-10 w-[80%]">
+      <div
+        v-for="(feature, index) in features.slice(-2)"
+        :key="index"
+        :class="`feature-${index + 1} cursor-pointer`"
+      >
+        <div
+          :class="`${feature.parentClass} flex hover:scale-110 text-black items-center`"
+        >
+          <!--Column 1 30%-->
+          <div
+            class="flex items-center justify-center p-3"
+            :class="feature.divIconClass"
+          >
+            <img :src="feature.icon" :class="feature.iconClass" />
+          </div>
+          <!-- Column 2 70%-->
+          <div :class="`${feature.contentClass} ml-4`">
+            <div
+              v-if="feature.title"
+              :class="feature.titleClass"
+              v-html="formattedDescription(feature.title)"
+            ></div>
+            <div
+              v-if="feature.description"
+              :class="feature.descriptionClass"
+              v-html="formattedDescription(feature.description)"
+            ></div>
           </div>
         </div>
       </div>
@@ -26,128 +68,117 @@
 <script>
 import { defineComponent } from "vue";
 
+import clock from "@/assets/icon/teacher/icon-clock.svg";
+import computer from "@/assets/icon/teacher/icon-computer.svg";
+import data from "@/assets/icon/teacher/icon-data.svg";
+import teacher from "@/assets/icon/teacher/icon-teacher.svg";
+import universe from "@/assets/icon/teacher/icon-universe.svg"; // Đặt tên khác để tránh trùng lặp nếu cần thiết
+
+import formattedDescription from "@/utils/index.js";
+
 export default defineComponent({
   name: "Features",
-  emits: ["featureClick"], // Declare the emitted event
-  setup(_, { emit }) {
+  setup() {
+    // Đoạn text của các điểm bán hàng
     const features = [
       {
-        number: "01",
+        id: 1,
+        icon: universe,
         description:
-          "Quản lý hệ thống và toàn bộ tài khoản người dùng, phân quyền chuyên môn/bộ môn theo các cấp giáo viên trong trường",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[35%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[45vw] h-30 bg-[#0093FF] rounded-lg",
+          "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các \n cấp học từ Tiểu học đến THPT",
+        divIconClass: "",
+        iconClass: "w-16 h-16",
+        contentClass: "text-right",
+        titleClass: "font-bold text-2xl text-white mb-2",
+        descriptionClass: "text-white",
+        parentClass: "min-h-[10vh] w-[27vw]",
       },
       {
-        number: "02",
+        id: 2,
+        icon: data,
         description:
-          "Quản trị kết quả học tập và giảng dạy của học sinh, giáo viên do nhà trường quản lý",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+          " Hỗ trợ giáo viên tạo các học liệu \n đa phương tiện, từ đó xây dựng \n thư viện điện tử",
+        divIconClass: "",
+        iconClass: "w-16 h-16",
+        contentClass: "text-right float-right",
+        titleClass: "font-bold text-md text-white",
+        descriptionClass: "text-white",
+        parentClass: "min-h-[10vh] w-[27vw]",
       },
       {
-        number: "03",
+        id: 3,
+        icon: clock,
         description:
-          "Quản trị tiến độ giảng dạy và theo dõi KHGD của giáo viên",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+          "Quản lí kho bài tập và giao \n bài tập dễ dàng cho học sinh \n kiểm soát được chất lượng dạy học.",
+        divIconClass: "border-[#36437F]",
+        iconClass: "w-16 h-16",
+        contentClass: "text-right float-right",
+        titleClass: "font-bold text-md text-white mb-2",
+        descriptionClass: "text-white",
+        parentClass: "min-h-[10vh] w-[27vw]",
       },
       {
-        number: "04",
-        description: "Quản trị và tổ chức thi, kiểm tra cho nhà trường",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+        id: 4,
+        icon: teacher,
+        title:
+          "Hỗ trợ giáo viên thiết kế \n bài giảng tương tác trực tuyến \n với nhiều định dạng",
+        description:
+          "+ Thiết kế trực tiếp trên hệ thống \n+ Gắn link bài giảng từ các nền tảng khác",
+        divIconClass: "border-[#36437F]",
+        iconClass: "w-16 h-16",
+        contentClass: "",
+        titleClass: "font-bold text-md text-white",
+        descriptionClass: "text-white",
+        parentClass: "min-h-[10vh] w-fit",
       },
       {
-        number: "05",
-        description: "Báo cáo sở ban ngành",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+        id: 5,
+        icon: computer,
+        description:
+          "Hỗ trợ nộp và quản lý trực tuyến \n các KHGD, KHBD và các báo cáo \n khác theo lớp phân công, \n tiết kiệm thời gian tìm kiếm và \n lưu trữ sổ sách giấy tờ",
+        divIconClass: "border-[#36437F]",
+        iconClass: "w-16 h-16",
+        contentClass: "",
+        titleClass: "font-bold text-md text-white",
+        descriptionClass: "text-white",
+        parentClass: "min-h-[10vh] w-fit",
       },
     ];
-
-    const handleFeatureClick = (featureNumber) => {
-      emit("featureClick", featureNumber);
-    };
+    function getFeatureClass(index) {
+      const leftSide = [1, 2, 3];
+      const side = leftSide.includes(index) ? "left" : "right";
+      return `feature-${index + 1}-${side}`;
+    }
 
     return {
       features,
-      handleFeatureClick,
+      formattedDescription,
+      getFeatureClass,
     };
   },
 });
 </script>
 
 <style scoped>
-/* Các style của các feature có thể được sao chép từ component gốc và dán vào đây */
+.container-left {
+  position: absolute;
+  top: 21%;
+}
+.container-right {
+  position: absolute;
+  top: 28%;
+  left: 68%;
+}
+
 .feature-1 {
-  position: absolute;
-  top: 15%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
   border-radius: 5px;
 }
+
 .feature-2 {
-  position: absolute;
-  top: 30%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
   border-radius: 5px;
 }
-.feature-3 {
-  position: absolute;
-  top: 45%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-4 {
-  position: absolute;
-  top: 60%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-5 {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
 }
 </style>
