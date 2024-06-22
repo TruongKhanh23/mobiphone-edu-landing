@@ -1,35 +1,27 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <LoadingModal :isOpen="isOpenLoadingModal" />
-    <SchoolFeature
-      :open="isOpenSchoolFeature"
+    <TeacherFeature
+      :open="isOpenTeacherFeature"
       :featureNumber="featureNumber"
-      :handleOk="handleCloseSchoolFeature"
-      :handleCancel="handleCloseSchoolFeature"
+      :handleOk="handleCloseTeacherFeature"
+      :handleCancel="handleCloseTeacherFeature"
       class="z-20"
     />
     <div class="bg-[#021929]">
       <div class="image-container mt-[-10px]">
-        <img :src="backgroundSchoolBenefits" alt="backgroundSchoolBenefits" />
-        <div class="school-title font-black text-4xl text-white">LỢI ÍCH</div>
-        <Benefits />
+        <img :src="backgroundTeacherStrong" alt="backgroundTeacherStrong" />
+        <SellingPoint />
       </div>
       <div class="image-container overflow-hidden">
-        <img :src="backgroundSchoolFeatures" alt="backgroundSchoolFeatures" />
-        <div class="school-feature-title font-black text-5xl text-[#F7C12F]">
-          TÍNH NĂNG
-        </div>
+        <img :src="backgroundTeacherFeatures" alt="backgroundTeacherFeatures" />
 
         <!-- Sử dụng component Features -->
         <Features @featureClick="handleOnClick" />
       </div>
-
       <div class="image-container mt-[-10px]">
-        <img :src="backgroundSchoolStrong" alt="backgroundSchoolStrong" />
-        <div class="school-strong-title font-black text-5xl text-white">
-          ĐIỂM MẠNH
-        </div>
-        <SellingPoint />
+        <img :src="backgroundTeacherBenefits" alt="backgroundTeacherBenefits" />
+        <Benefits />
       </div>
     </div>
   </AntModal>
@@ -38,27 +30,27 @@
 <script>
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
-import SchoolFeature from "@/views/ThirdFloor/School/SchoolFeature.vue";
-import Features from "@/components/School/Features.vue";
-import Benefits from "@/components/School/Benefits.vue";
-import SellingPoint from "@/components/School/SellingPoint.vue";
+import TeacherFeature from "@/views/ThirdFloor/Teacher/TeacherFeature.vue";
+import Features from "@/components/Teacher/Features.vue";
+import Benefits from "@/components/Teacher/Benefits.vue";
+import SellingPoint from "@/components/Teacher/SellingPoint.vue";
 import LoadingModal from "@/components/LoadingModal.vue";
 
-import backgroundSchoolFeatures from "@/assets/image/school/background-school-features.svg";
-import backgroundSchoolBenefits from "@/assets/image/school/background-school-benefits.svg";
-import backgroundSchoolStrong from "@/assets/image/school/background-school-strong.png";
+import backgroundTeacherFeatures from "@/assets/image/teacher/background-teacher-features.svg";
+import backgroundTeacherBenefits from "@/assets/image/teacher/background-teacher-benefits.svg";
+import backgroundTeacherStrong from "@/assets/image/teacher/background-teacher-strong.svg";
 
 import { handlePopup } from "@/composables/loadingModal/index.js";
 
 export default {
-  name: "School",
+  name: "Teacher",
   components: {
     AntModal,
-    SchoolFeature,
+    TeacherFeature,
     Features,
     Benefits,
     SellingPoint,
-    LoadingModal, // Đăng ký LoadingModal như một component
+    LoadingModal,
   },
   props: {
     handleOk: Function,
@@ -66,30 +58,30 @@ export default {
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup(2000);
-    const isOpenSchoolFeature = ref(false);
+    const isOpenTeacherFeature = ref(false);
     const featureNumber = ref(1);
 
     const handleClick = () => {
-      openSchoolFeature();
+      openTeacherFeature();
     };
 
-    const handleCloseSchoolFeature = () => {
-      console.log("Ok clicked Close School Feature");
-      isOpenSchoolFeature.value = false;
+    const handleCloseTeacherFeature = () => {
+      console.log("Ok clicked Close Teacher Feature");
+      isOpenTeacherFeature.value = false;
     };
 
-    const openSchoolFeature = () => {
-      console.log("click open school feature");
-      isOpenSchoolFeature.value = true;
+    const openTeacherFeature = () => {
+      console.log("click open teacher feature");
+      isOpenTeacherFeature.value = true;
     };
 
     const handleOnClick = (value) => {
       console.log(`Feature ${value} clicked`);
       featureNumber.value = value;
       if (value === 1) {
-        openSchoolFeature();
+        openTeacherFeature();
       } else if (value === 2) {
-        openSchoolFeature();
+        openTeacherFeature();
         console.log("Feature 2 clicked");
       }
     };
@@ -97,13 +89,13 @@ export default {
     return {
       featureNumber,
       isOpenLoadingModal,
-      isOpenSchoolFeature,
-      backgroundSchoolStrong,
-      backgroundSchoolBenefits,
-      backgroundSchoolFeatures,
-      openSchoolFeature,
+      isOpenTeacherFeature,
+      backgroundTeacherStrong,
+      backgroundTeacherBenefits,
+      backgroundTeacherFeatures,
+      openTeacherFeature,
       handleClick,
-      handleCloseSchoolFeature,
+      handleCloseTeacherFeature,
       handleOnClick,
     };
   },
@@ -121,7 +113,7 @@ export default {
   height: auto;
 }
 
-.school-title {
+.teacher-title {
   position: absolute;
   top: 12%;
   left: 16%;
@@ -129,7 +121,7 @@ export default {
   padding: 10px;
   border-radius: 5px;
 }
-.school-feature-title {
+.teacher-feature-title {
   position: absolute;
   top: 45%;
   left: 23%;
@@ -137,7 +129,7 @@ export default {
   padding: 10px;
   border-radius: 5px;
 }
-.school-strong-title {
+.teacher-strong-title {
   position: absolute;
   top: 8%;
   left: 50%;
