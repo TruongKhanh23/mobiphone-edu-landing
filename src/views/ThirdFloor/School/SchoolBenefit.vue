@@ -1,7 +1,7 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <img
-      :src="getFeatureImage(featureNumber)"
+      :src="getItemImage(itemNumber)"
       alt="long image"
       class="w-full h-auto"
     />
@@ -13,6 +13,7 @@ import AntModal from "@/components/reusable/AntModal.vue";
 
 import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
+import inforgraphic3 from "@/assets/inforgraphic-1.jpg";
 
 export default {
   name: "ModalContent",
@@ -22,25 +23,27 @@ export default {
   props: {
     handleOk: Function,
     handleCancel: Function,
-    featureNumber: {
+    itemNumber: {
       type: Number,
       default: 1,
     },
   },
   setup() {
-    function getFeatureImage(feature) {
-      console.log("featureNumber", feature);
-      switch (feature) {
+    function getItemImage(item) {
+      console.log("itemNumber", item);
+      switch (item) {
         case 1:
           return inforgraphic1;
         case 2:
           return inforgraphic2;
+        case 3:
+          return inforgraphic3;
       }
-      return feature;
+      return item;
     }
     return {
       inforgraphic1,
-      getFeatureImage,
+      getItemImage,
     };
   },
 };
