@@ -5,19 +5,27 @@
       <button
         class="department bg-skyblue min-h-[5vh] min-w-[24vh] rounded-lg"
         @click="onClickButton('department')"
-      ></button>
+      >
+        Sở giáo dục
+      </button>
       <button
         class="teacher bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg"
         @click="onClickButton('teacher')"
-      ></button>
+      >
+        Giáo viên
+      </button>
       <button
         class="student bg-skyblue min-h-[5vh] min-w-[20vh] rounded-lg"
         @click="onClickButton('student')"
-      ></button>
+      >
+        Học sinh
+      </button>
       <button
         class="school bg-skyblue min-h-[5vh] min-w-[25vh] rounded-lg"
         @click="onClickButton('school')"
-      ></button>
+      >
+        Trường học
+      </button>
       <button
         class="mobiEdu bg-skyblue min-h-[5vh] min-w-[15vh] rounded-lg"
         @click="onClickButton('mobiEdu')"

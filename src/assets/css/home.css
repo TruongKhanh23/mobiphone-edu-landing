@@ -28,8 +28,8 @@
 
 .teacher {
   position: absolute;
-  top: 23%;
-  left: 48.5%;
+  top: 25%;
+  left: 43.5%;
   transform: translate(-75%, -45%) rotate(30deg);
   transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
 }
@@ -43,7 +43,7 @@
 .student {
   position: absolute;
   top: 29%;
-  left: 42.5%;
+  left: 35%;
   transform: translate(-75%, -25%) rotate(30deg);
   transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
 }
@@ -57,7 +57,7 @@
 .mobiEdu {
   position: absolute;
   top: 46.5%;
-  left: 55%;
+  left: 50%;
   transform: translate(-75%, -25%) rotate(30deg);
   transition: transform 0.3s ease; /* Thêm transition để có hiệu ứng mượt khi hover */
 }
