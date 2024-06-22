@@ -4,7 +4,6 @@
       v-for="(feature, index) in features"
       :key="index"
       :class="`feature-${index + 1} cursor-pointer`"
-      @click="handleFeatureClick(index + 1)"
     >
       <div class="hover:scale-110 shadow-effect" :class="feature.parentClass">
         <div :class="`font-black ${feature.numberClass}`">
@@ -31,8 +30,7 @@ import formattedDescription from "@/utils/index.js";
 
 export default defineComponent({
   name: "Features",
-  emits: ["featureClick"], // Declare the emitted event
-  setup(_, { emit }) {
+  setup() {
     const features = [
       {
         number: "01",
@@ -89,13 +87,8 @@ export default defineComponent({
       },
     ];
 
-    const handleFeatureClick = (featureNumber) => {
-      emit("featureClick", featureNumber);
-    };
-
     return {
       features,
-      handleFeatureClick,
       formattedDescription,
     };
   },

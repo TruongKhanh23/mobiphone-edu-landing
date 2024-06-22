@@ -6,6 +6,7 @@
       v-for="(benefit, index) in benefits"
       :key="index"
       :class="`benefit-${index + 1} cursor-pointer shadow-effect`"
+      @click="handleBenefitClick(index + 1)"
     >
       <div
         :class="`${benefit.parentClass} hover:scale-110 text-black rounded-md items-center justify-center border-2-[red]`"
@@ -37,7 +38,8 @@ import phone from "@/assets/icon/school/phone-icon.svg";
 
 export default defineComponent({
   name: "Benefits",
-  setup() {
+  emits: ["benefitClick"],
+  setup(_, { emit }) {
     // Đoạn text của các lợi ích
     const benefits = [
       {
@@ -80,9 +82,14 @@ export default defineComponent({
       return text.replace(/\n/g, "<br>");
     }
 
+    const handleBenefitClick = (benefitNumber) => {
+      emit("benefitClick", benefitNumber);
+    };
+
     return {
       benefits,
       formattedDescription,
+      handleBenefitClick,
     };
   },
 });

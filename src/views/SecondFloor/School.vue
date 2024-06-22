@@ -1,18 +1,18 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <LoadingModal :isOpen="isOpenLoadingModal" />
-    <SchoolFeature
-      :open="isOpenSchoolFeature"
-      :featureNumber="featureNumber"
-      :handleOk="handleCloseSchoolFeature"
-      :handleCancel="handleCloseSchoolFeature"
+    <SchoolBenefit
+      :open="isOpenSchoolBenefit"
+      :itemNumber="benefitNumber"
+      :handleOk="handleCloseSchoolBenefit"
+      :handleCancel="handleCloseSchoolBenefit"
       class="z-20"
     />
     <div class="bg-[#021929]">
       <div class="image-container mt-[-10px]">
         <img :src="backgroundSchoolBenefits" alt="backgroundSchoolBenefits" />
         <div class="school-title font-black text-4xl text-white">LỢI ÍCH</div>
-        <Benefits />
+        <Benefits @benefitClick="handleOnClick" />
       </div>
       <div class="image-container overflow-hidden">
         <img :src="backgroundSchoolFeatures" alt="backgroundSchoolFeatures" />
@@ -21,7 +21,7 @@
         </div>
 
         <!-- Sử dụng component Features -->
-        <Features @featureClick="handleOnClick" />
+        <Features />
       </div>
 
       <div class="image-container mt-[-10px]">
@@ -38,7 +38,7 @@
 <script>
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
-import SchoolFeature from "@/views/ThirdFloor/School/SchoolFeature.vue";
+import SchoolBenefit from "@/views/ThirdFloor/School/SchoolBenefit.vue";
 import Features from "@/components/School/Features.vue";
 import Benefits from "@/components/School/Benefits.vue";
 import SellingPoint from "@/components/School/SellingPoint.vue";
@@ -54,11 +54,11 @@ export default {
   name: "School",
   components: {
     AntModal,
-    SchoolFeature,
+    SchoolBenefit,
     Features,
     Benefits,
     SellingPoint,
-    LoadingModal, // Đăng ký LoadingModal như một component
+    LoadingModal,
   },
   props: {
     handleOk: Function,
@@ -66,44 +66,37 @@ export default {
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup(2000);
-    const isOpenSchoolFeature = ref(false);
-    const featureNumber = ref(1);
+    const isOpenSchoolBenefit = ref(false);
+    const benefitNumber = ref(1);
 
-    const handleClick = () => {
-      openSchoolFeature();
-    };
-
-    const handleCloseSchoolFeature = () => {
+    const handleCloseSchoolBenefit = () => {
       console.log("Ok clicked Close School Feature");
-      isOpenSchoolFeature.value = false;
+      isOpenSchoolBenefit.value = false;
     };
 
-    const openSchoolFeature = () => {
-      console.log("click open school feature");
-      isOpenSchoolFeature.value = true;
+    const openSchoolBenefit = () => {
+      console.log("click open school Benefits");
+      isOpenSchoolBenefit.value = true;
     };
 
     const handleOnClick = (value) => {
-      console.log(`Feature ${value} clicked`);
-      featureNumber.value = value;
-      if (value === 1) {
-        openSchoolFeature();
-      } else if (value === 2) {
-        openSchoolFeature();
-        console.log("Feature 2 clicked");
+      console.log(`Benefits ${value} clicked`);
+      const itemsHasDetails = [2, 3];
+      if (itemsHasDetails.includes(value)) {
+        benefitNumber.value = value;
+        openSchoolBenefit();
       }
     };
 
     return {
-      featureNumber,
+      benefitNumber,
       isOpenLoadingModal,
-      isOpenSchoolFeature,
+      isOpenSchoolBenefit,
       backgroundSchoolStrong,
       backgroundSchoolBenefits,
       backgroundSchoolFeatures,
-      openSchoolFeature,
-      handleClick,
-      handleCloseSchoolFeature,
+      openSchoolBenefit,
+      handleCloseSchoolBenefit,
       handleOnClick,
     };
   },
