@@ -11,8 +11,11 @@
     <div class="bg-[#021929]">
       <div class="image-container mt-[-10px]">
         <img :src="backgroundStudentStrong" alt="backgroundStudentStrong" />
-        <div class="student-strong-title font-black text-5xl text-white">
-          ĐIỂM MẠNH
+        <div class="student-strong-title flex flex-col items-center text-white">
+          <span class="font-black text-4xl">ĐIỂM MẠNH</span>
+          <span class="font-bold italic"
+            >Tính năng Adaptive Learning cho học sinh</span
+          >
         </div>
         <SellingPoint />
       </div>
@@ -128,17 +131,9 @@ export default {
   padding: 10px;
   border-radius: 5px;
 }
-.student-feature-title {
-  position: absolute;
-  top: 45%;
-  left: 23%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  border-radius: 5px;
-}
 .student-strong-title {
   position: absolute;
-  top: 8%;
+  top: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
