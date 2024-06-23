@@ -1,22 +1,19 @@
 <template>
-  <div>
+  <div
+    class="flex flex-col justify-center items-center space-y-8 benefit-school"
+  >
     <div
-      v-for="(sellingPoint, index) in sellingPoints"
+      v-for="(benefit, index) in benefits"
       :key="index"
-      :class="`sellingPoint-${index + 1} cursor-pointer`"
+      :class="`benefit-${index + 1} cursor-pointer`"
     >
       <div
-        :class="`${sellingPoint.parentClass} hover:scale-110 text-black items-center justify-center border-2-[red]`"
+        :class="`${benefit.parentClass} hover:scale-110 text-white rounded-md flex flex-col items-center justify-center`"
       >
-        <div :class="`${sellingPoint.contentClass} ml-2`">
+        <div :class="`${benefit.contentClass} ml-2`">
           <div
-            :class="sellingPoint.titleClass"
-            v-html="formattedDescription(sellingPoint.title)"
-          ></div>
-          <div
-            v-if="sellingPoint.description"
-            :class="sellingPoint.descriptionClass"
-            v-html="formattedDescription(sellingPoint.description)"
+            :class="benefit.titleClass"
+            v-html="formattedDescription(benefit.title)"
           ></div>
         </div>
       </div>
@@ -28,27 +25,23 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "SellingPoints",
+  name: "Benefits",
   setup() {
-    // Đoạn text của các điểm bán hàng
-    const sellingPoints = [
+    // Đoạn text của các lợi ích
+    const benefits = [
       {
-        title: "Giải pháp cung cấp tính năng quản lý trường học",
-        description: "bao gồm giao bài tập, quản lý học sinh và tổ chức thi.",
-        iconClass: "w-10 h-10 mb-4",
+        title: "Dễ dàng truy cập\nkho bài giảng và bài tập\n tất cả các bộ môn",
         contentClass: "",
-        titleClass: "font-bold text-center text-2xl text-black mb-2",
-        descriptionClass: "font-bold text-center text-sm px-6",
-        parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
+        titleClass: "font-bold text-center text-2xl text-white",
+        parentClass:
+          "w-[30vw] h-[20vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F] bg-opacity-60 pt-8",
       },
       {
-        title:
-          "Nhà trường có thể quản lý nhân sự và nhận báo cáo dễ dàng và chuyên nghiệp",
-        iconClass: "w-10 h-10 mb-4",
+        title: "Tự giác học tập và\n tiết kiệm thời gian",
         contentClass: "",
-        titleClass: "font-bold text-xl text-black text-center min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
+        titleClass: "font-bold text-center text-2xl text-white",
+        parentClass:
+          "w-[30vw] h-[20vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F] pt-8",
       },
     ];
 
@@ -60,7 +53,7 @@ export default defineComponent({
     }
 
     return {
-      sellingPoints,
+      benefits,
       formattedDescription,
     };
   },
@@ -68,17 +61,21 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.sellingPoint-1 {
-  position: absolute;
-  top: 35%;
-  left: 9.5%;
+.benefit-1 {
   border-radius: 5px;
 }
 
-.sellingPoint-2 {
-  position: absolute;
-  top: 36%;
-  left: 62%;
+.benefit-2 {
   border-radius: 5px;
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+.benefit-school {
+  position: absolute;
+  top: 35%;
+  left: 15%;
 }
 </style>
