@@ -83,9 +83,11 @@ export default {
     };
 
     const handleOnClick = (value) => {
-      console.log(`SellingPoint ${value} clicked`);
-      openTeacherSellingPoint();
-      sellingPointNumber.value = value;
+      const hasDetails = [1, 2];
+      if (hasDetails.includes(value)) {
+        openTeacherSellingPoint();
+        sellingPointNumber.value = value;
+      }
     };
 
     return {
