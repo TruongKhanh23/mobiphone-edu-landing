@@ -21,10 +21,6 @@
       </div>
       <div class="image-container overflow-hidden">
         <img :src="backgroundStudentFeatures" alt="backgroundStudentFeatures" />
-        <div class="student-feature-title font-black text-5xl text-[#F7C12F]">
-          TÍNH NĂNG
-        </div>
-
         <!-- Sử dụng component Features -->
         <Features @featureClick="handleOnClick" />
       </div>
@@ -47,7 +43,7 @@ import SellingPoint from "@/components/Student/SellingPoint.vue";
 import LoadingModal from "@/components/LoadingModal.vue";
 
 import backgroundStudentFeatures from "@/assets/image/student/background-student-features.svg";
-import backgroundStudentBenefits from "@/assets/image/student/background-student-benefits.png";
+import backgroundStudentBenefits from "@/assets/image/student/background-student-benefits.svg";
 import backgroundStudentStrong from "@/assets/image/student/background-student-strong.svg";
 
 import { handlePopup } from "@/composables/loadingModal/index.js";
