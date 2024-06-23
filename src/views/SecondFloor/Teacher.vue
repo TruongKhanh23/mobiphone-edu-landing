@@ -27,6 +27,9 @@
       </div>
       <div class="image-container mt-[-10px]">
         <img :src="backgroundTeacherBenefits" alt="backgroundTeacherBenefits" />
+        <div class="teacher-benefit-title text-white flex flex-col gap-2">
+          <span class="font-black text-5xl">LỢI ÍCH</span>
+        </div>
         <Benefits />
       </div>
     </div>
@@ -126,13 +129,14 @@ export default {
   transform: translate(-50%, -50%);
   border-radius: 5px;
 }
-.teacher-feature-title {
+.teacher-benefit-title {
   position: absolute;
-  top: 45%;
-  left: 23%;
+  top: 10%;
+  left: 15%;
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;
+  color: #efd763;
 }
 .teacher-strong-title {
   position: absolute;
