@@ -1,11 +1,11 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <LoadingModal :isOpen="isOpenLoadingModal" />
-    <TeacherFeature
-      :open="isOpenTeacherFeature"
-      :featureNumber="featureNumber"
-      :handleOk="handleCloseTeacherFeature"
-      :handleCancel="handleCloseTeacherFeature"
+    <TeacherSellingPoint
+      :open="isOpenTeacherSellingPoint"
+      :sellingPointNumber="sellingPointNumber"
+      :handleOk="handleCloseTeacherSellingPoint"
+      :handleCancel="handleCloseTeacherSellingPoint"
       class="z-20"
     />
     <div class="bg-[#021929]">
@@ -17,13 +17,11 @@
             >Tính năng quản lí và đánh giá của giáo viên</span
           >
         </div>
-        <SellingPoint />
+        <SellingPoint @sellingPointClick="handleOnClick" />
       </div>
       <div class="image-container overflow-hidden">
         <img :src="backgroundTeacherFeatures" alt="backgroundTeacherFeatures" />
-
-        <!-- Sử dụng component Features -->
-        <Features @featureClick="handleOnClick" />
+        <Features />
       </div>
       <div class="image-container mt-[-10px]">
         <img :src="backgroundTeacherBenefits" alt="backgroundTeacherBenefits" />
@@ -39,7 +37,7 @@
 <script>
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
-import TeacherFeature from "@/views/ThirdFloor/Teacher/TeacherFeature.vue";
+import TeacherSellingPoint from "@/views/ThirdFloor/Teacher/TeacherSellingPoint.vue";
 import Features from "@/components/Teacher/Features.vue";
 import Benefits from "@/components/Teacher/Benefits.vue";
 import SellingPoint from "@/components/Teacher/SellingPoint.vue";
@@ -55,7 +53,7 @@ export default {
   name: "Teacher",
   components: {
     AntModal,
-    TeacherFeature,
+    TeacherSellingPoint,
     Features,
     Benefits,
     SellingPoint,
@@ -67,44 +65,39 @@ export default {
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup(2000);
-    const isOpenTeacherFeature = ref(false);
-    const featureNumber = ref(1);
+    const isOpenTeacherSellingPoint = ref(false);
+    const sellingPointNumber = ref(1);
 
     const handleClick = () => {
-      openTeacherFeature();
+      openTeacherSellingPoint();
     };
 
-    const handleCloseTeacherFeature = () => {
+    const handleCloseTeacherSellingPoint = () => {
       console.log("Ok clicked Close Teacher Feature");
-      isOpenTeacherFeature.value = false;
+      isOpenTeacherSellingPoint.value = false;
     };
 
-    const openTeacherFeature = () => {
-      console.log("click open teacher feature");
-      isOpenTeacherFeature.value = true;
+    const openTeacherSellingPoint = () => {
+      console.log("click openTeacherSellingPoint");
+      isOpenTeacherSellingPoint.value = true;
     };
 
     const handleOnClick = (value) => {
-      console.log(`Feature ${value} clicked`);
-      featureNumber.value = value;
-      if (value === 1) {
-        openTeacherFeature();
-      } else if (value === 2) {
-        openTeacherFeature();
-        console.log("Feature 2 clicked");
-      }
+      console.log(`SellingPoint ${value} clicked`);
+      openTeacherSellingPoint();
+      sellingPointNumber.value = value;
     };
 
     return {
-      featureNumber,
+      sellingPointNumber,
       isOpenLoadingModal,
-      isOpenTeacherFeature,
+      isOpenTeacherSellingPoint,
       backgroundTeacherStrong,
       backgroundTeacherBenefits,
       backgroundTeacherFeatures,
-      openTeacherFeature,
+      openTeacherSellingPoint,
       handleClick,
-      handleCloseTeacherFeature,
+      handleCloseTeacherSellingPoint,
       handleOnClick,
     };
   },

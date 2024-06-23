@@ -4,6 +4,7 @@
       v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
       :class="`sellingPoint-${index + 1} cursor-pointer`"
+      @click="handleSellingPointClick(index + 1)"
     >
       <div
         :class="`${sellingPoint.parentClass} flex hover:scale-110 text-black items-center`"
@@ -45,7 +46,8 @@ import formattedDescription from "@/utils/index.js";
 
 export default defineComponent({
   name: "SellingPoints",
-  setup() {
+  emits: ["sellingPointClick"],
+  setup(_, { emit }) {
     // Đoạn text của các điểm bán hàng
     const sellingPoints = [
       {
@@ -93,9 +95,14 @@ export default defineComponent({
       },
     ];
 
+    const handleSellingPointClick = (sellingPointNumber) => {
+      emit("sellingPointClick", sellingPointNumber);
+    };
+
     return {
       sellingPoints,
       formattedDescription,
+      handleSellingPointClick,
     };
   },
 });
