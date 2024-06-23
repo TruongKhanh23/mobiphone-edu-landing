@@ -72,6 +72,7 @@ import clock from "@/assets/icon/teacher/icon-clock.svg";
 import computer from "@/assets/icon/teacher/icon-computer.svg";
 import data from "@/assets/icon/teacher/icon-data.svg";
 import teacher from "@/assets/icon/teacher/icon-teacher.svg";
+import unviverse from "@/assets/icon/teacher/icon-universe.svg";
 
 import formattedDescription from "@/utils/index.js";
 
@@ -82,7 +83,7 @@ export default defineComponent({
     const features = [
       {
         id: 1,
-        icon: teacher,
+        icon: unviverse,
         description:
           "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các \n cấp học từ Tiểu học đến THPT",
         divIconClass: "",
