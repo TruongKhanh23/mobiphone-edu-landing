@@ -72,7 +72,7 @@ import clock from "@/assets/icon/teacher/icon-clock.svg";
 import computer from "@/assets/icon/teacher/icon-computer.svg";
 import data from "@/assets/icon/teacher/icon-data.svg";
 import teacher from "@/assets/icon/teacher/icon-teacher.svg";
-import universe from "@/assets/icon/teacher/icon-universe.svg"; // Đặt tên khác để tránh trùng lặp nếu cần thiết
+import universe from "@/assets/icon/teacher/icon-universe.svg";
 
 import formattedDescription from "@/utils/index.js";
 
