@@ -10,7 +10,7 @@
       <div
         :class="`${benefit.parentClass} hover:scale-110 text-black rounded-md items-center justify-center border-2-[red]`"
       >
-        <div class="flex justify-center items-center">
+        <div v-if="benefit.icon" class="flex justify-center items-center">
           <img :src="benefit.icon" :class="benefit.iconClass" />
         </div>
         <div :class="`${benefit.contentClass} ml-2`">
@@ -41,35 +41,34 @@ export default defineComponent({
     // Đoạn text của các lợi ích
     const benefits = [
       {
-        icon: humanHead,
-        title: "Hỗ trợ \n quản lý \n hệ thống \n giáo dục",
+        title: "Đánh giá và theo dõi \n chính xác năng lực học sinh",
+        description:
+          "\nGiúp đánh giá năng lực\ntừng học sinh một cách chính xác.\n \nĐồng thời theo dõi tiến độ học tập và \n cung cấp phản hồi chi tiết để \n cải thiện hiệu quả học tập.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-sm px-6",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-white pt-8",
+        titleClass: "text-lg font-bold text-[#009AFE]",
+        descriptionClass: "text-sm",
+        parentClass: "w-[22vw] h-[45vh] p-4 bg-white pt-6",
       },
       {
-        icon: phone,
-        title: "Xây dựng \n kế hoạch \n năm học \n nhanh chóng",
-        description: "nhờ đồng bộ thông tin đa chiều",
+        title: "Tiết kiệm thời gian và \n giảm tải công việc \n",
+        description:
+          "\nVới nguồn học liệu phong phú và \n chuẩn hóa, giúp tiết kiệm 80% \n thời gian biên soạn đề. \n \n Hệ thống hỗ trợ giảm tải 70% các \n công việc hàng ngày như tìm kiếm \n nội dung, phân bổ chương trình, \n chấm điểm tự động, và theo dõi \n việc làm bài tập.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "font-bold text-xl text-[#137BB5] text-center min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
+        titleClass: "text-lg font-bold text-[#009AFE]",
+        descriptionClass: "text-sm",
+        parentClass: "w-[22vw] h-[45vh] p-4 bg-white pt-6",
       },
       {
-        icon: magnifyingGlass,
-        title: "Đánh giá hiệu quả giáo dục",
-        description: "thông qua báo cáo và thống kê",
+        title: "Quản lí dữ liệu học tập \n dễ dàng \n",
+        description:
+          "\nCho phép tạo và quản lí dữ liệu \n học tập một cách dễ dàng. \n Giúp giáo viên và học sinh tổ chức và \n lưu trữ thông tin học tập một cách \n hiệu quả.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
+        titleClass: "text-lg font-bold text-[#009AFE]",
+        descriptionClass: "text-sm",
+        parentClass: "w-[22vw] h-[45vh] p-4 bg-white pt-6",
       },
     ];
 
@@ -109,7 +108,8 @@ export default defineComponent({
 }
 .benefit-school {
   position: absolute;
-  top: 25%;
-  left: 20%;
+  top: 40%;
+  left: 9%;
+  transform: translateY(-25%);
 }
 </style>
