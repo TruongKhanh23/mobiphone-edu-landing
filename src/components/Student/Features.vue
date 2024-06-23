@@ -1,21 +1,24 @@
 <template>
   <div>
     <div
-      v-for="(feature, index) in features"
+      v-for="(benefit, index) in benefits"
       :key="index"
-      :class="`feature-${index + 1} cursor-pointer`"
-      @click="handleFeatureClick(index + 1)"
+      :class="`benefit-${index + 1} cursor-pointer`"
     >
-      <div class="hover:scale-110" :class="feature.parentClass">
-        <div :class="`font-black ${feature.numberClass}`">
-          {{ feature.number }}
+      <div
+        :class="`${benefit.parentClass} hover:scale-110 border-2 border-white bg-white text-black shadow-effect flex rounded-md items-center justify-center`"
+      >
+        <!--Column 1 30%-->
+        <div class="w-3/10">
+          <img :src="benefit.icon" :class="benefit.iconClass" />
         </div>
-        <div :class="feature.contentClass">
-          <div v-if="title" :class="`font-bold ${feature.titleClass}`">
-            {{ feature.title }}
+        <!-- Column 2 70%-->
+        <div :class="`${benefit.contentClass} w-7/10 ml-2`">
+          <div :class="benefit.titleClass">
+            {{ benefit.title }}
           </div>
-          <div :class="feature.descriptionClass">
-            {{ feature.description }}
+          <div v-if="benefit.description" :class="benefit.descriptionClass">
+            {{ benefit.description }}
           </div>
         </div>
       </div>
@@ -23,131 +26,84 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
+import magnifyingGlass from "@/assets/icon/magnifying-glass.svg";
+import statistic from "@/assets/icon/statistic.svg";
+import multipleEclipse from "@/assets/icon/multiple-eclipse.svg";
 
 export default defineComponent({
-  name: "Features",
-  emits: ["featureClick"], // Declare the emitted event
-  setup(_, { emit }) {
-    const features = [
+  name: "Benefits",
+  setup() {
+    // Đoạn text của các lợi ích
+    const benefits = [
       {
-        number: "01",
-        description:
-          "Quản lý hệ thống và toàn bộ tài khoản người dùng, phân quyền chuyên môn/bộ môn theo các cấp giáo viên trong trường",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[35%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[45vw] h-30 bg-[#0093FF] rounded-lg",
+        icon: statistic,
+        title:
+          "Đánh giá toàn diện và thúc đẩy chuyển đổi số nhanh chóng & dễ dàng",
+        iconClass: "w-10 h-10",
+        contentClass: "w-[75%] float-right",
+        titleClass: "font-bold text-left italic text-lg",
+        descriptionClass: "text-center text-sm px-6",
+        parentClass: "w-[35vw] h-[13vh]",
       },
       {
-        number: "02",
-        description:
-          "Quản trị kết quả học tập và giảng dạy của học sinh, giáo viên do nhà trường quản lý",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+        icon: magnifyingGlass,
+        title: "Đánh giá hiệu quả giáo dục thông",
+        description: "qua báo cáo & thống kê.",
+        iconClass: "w-10 h-10",
+        contentClass: "w-[75%] float-right",
+        titleClass: "font-bold text-center italic text-lg",
+        descriptionClass: "text-center text-lg",
+        parentClass: "w-[35vw] h-[13vh]",
       },
       {
-        number: "03",
-        description:
-          "Quản trị tiến độ giảng dạy và theo dõi KHGD của giáo viên",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
-      },
-      {
-        number: "04",
-        description: "Quản trị và tổ chức thi, kiểm tra cho nhà trường",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
-      },
-      {
-        number: "05",
-        description: "Báo cáo sở ban ngành",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+        icon: multipleEclipse,
+        title: "Hỗ trợ quản lý hệ thống giáo dục.",
+        iconClass: "w-10 h-10",
+        contentClass: "w-[75%] float-right",
+        titleClass: "font-bold text-center italic text-lg",
+        descriptionClass: "text-center text-sm",
+        parentClass: "w-[35vw] h-[13vh]",
       },
     ];
 
-    const handleFeatureClick = (featureNumber) => {
-      emit("featureClick", featureNumber);
-    };
-
     return {
-      features,
-      handleFeatureClick,
+      benefits,
     };
   },
 });
 </script>
 
 <style scoped>
-/* Các style của các feature có thể được sao chép từ component gốc và dán vào đây */
-.feature-1 {
+.benefit-1 {
   position: absolute;
-  top: 15%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-2 {
-  position: absolute;
-  top: 30%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-3 {
-  position: absolute;
-  top: 45%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-4 {
-  position: absolute;
-  top: 60%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-5 {
-  position: absolute;
-  top: 75%;
+  top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
+}
+.benefit-2 {
+  position: absolute;
+  top: 46%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.benefit-3 {
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.shadow-effect {
+  box-shadow: 10px 10px 0 rgb(92, 190, 254), 0 4px 10px rgb(92, 190, 254);
 }
 </style>

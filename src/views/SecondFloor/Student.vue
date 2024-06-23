@@ -139,4 +139,12 @@ export default {
   padding: 10px;
   border-radius: 5px;
 }
+.student-feature-title {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5px;
+}
 </style>
