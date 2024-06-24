@@ -26,7 +26,7 @@
       </div>
       <div class="image-container mt-[-10px]">
         <img :src="backgroundStudentBenefits" alt="backgroundStudentBenefits" />
-        <div class="student-title font-black text-4xl text-white">LỢI ÍCH</div>
+        <div class="student-title font-black text-5xl text-white">LỢI ÍCH</div>
         <Benefits />
       </div>
     </div>
@@ -122,7 +122,7 @@ export default {
 .student-title {
   position: absolute;
   top: 12%;
-  left: 16%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;

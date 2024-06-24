@@ -32,16 +32,16 @@ export default defineComponent({
       {
         title: "Dễ dàng truy cập\nkho bài giảng và bài tập\n tất cả các bộ môn",
         contentClass: "",
-        titleClass: "font-bold text-center text-2xl text-white",
+        titleClass: "font-bold text-center text-4xl text-white",
         parentClass:
-          "w-[30vw] h-[20vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F] bg-opacity-60 pt-8",
+          "w-[25vw] h-[20vh] p-4 bg-[#0099FF] bg-opacity-60 pt-8",
       },
       {
         title: "Tự giác học tập và\n tiết kiệm thời gian",
         contentClass: "",
-        titleClass: "font-bold text-center text-2xl text-white",
+        titleClass: "font-bold text-center text-4xl text-white",
         parentClass:
-          "w-[30vw] h-[20vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F] pt-8",
+          "w-[25vw] h-[20vh] p-4 bg-[#0099FF] bg-opacity-60 pt-8",
       },
     ];
 
@@ -75,7 +75,8 @@ export default defineComponent({
 
 .benefit-school {
   position: absolute;
-  top: 35%;
-  left: 15%;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
 }
 </style>

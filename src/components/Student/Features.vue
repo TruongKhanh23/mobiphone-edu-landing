@@ -40,7 +40,7 @@ export default defineComponent({
       {
         icon: statistic,
         title:
-          "Đánh giá toàn diện và thúc đẩy chuyển đổi số nhanh chóng & dễ dàng",
+          "Tham gia các kì thi trực tuyến",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
         titleClass: "font-bold text-left italic text-lg",
@@ -49,7 +49,7 @@ export default defineComponent({
       },
       {
         icon: magnifyingGlass,
-        title: "Đánh giá hiệu quả giáo dục thông",
+        title: "Gợi ý bài luyện tập dựa theo năng lực của học sinh qua adaptive learning.",
         description: "qua báo cáo & thống kê.",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
@@ -59,7 +59,16 @@ export default defineComponent({
       },
       {
         icon: multipleEclipse,
-        title: "Hỗ trợ quản lý hệ thống giáo dục.",
+        title: "Cung cấp kho bài tập tự luyện có sẵn trên hệ thống và kho bài tập được giao bởi giáo viên bộ môn",
+        iconClass: "w-10 h-10",
+        contentClass: "w-[75%] float-right",
+        titleClass: "font-bold text-center italic text-lg",
+        descriptionClass: "text-center text-sm",
+        parentClass: "w-[35vw] h-[13vh]",
+      },
+      {
+        icon: multipleEclipse,
+        title: "Cung cấp kho bài giảng với đầy đủ môn học bám sát chương trình GDPT giúp học sinh tự học",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
         titleClass: "font-bold text-center italic text-lg",
@@ -78,8 +87,8 @@ export default defineComponent({
 <style scoped>
 .benefit-1 {
   position: absolute;
-  top: 68%;
-  left: 50%;
+  top: 70%;
+  left: 55%;
   transform: translate(-50%, -50%);
   color: white;
   padding: 10px;
@@ -87,8 +96,8 @@ export default defineComponent({
 }
 .benefit-2 {
   position: absolute;
-  top: 46%;
-  left: 60%;
+  top: 53%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   padding: 10px;
@@ -96,8 +105,17 @@ export default defineComponent({
 }
 .benefit-3 {
   position: absolute;
-  top: 25%;
+  top: 36%;
   left: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.benefit-4 {
+  position: absolute;
+  top: 18%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   padding: 10px;
