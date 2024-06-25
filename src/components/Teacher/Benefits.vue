@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-wrap justify-center items-center space-x-16 benefit-school"
+    class="flex justify-center items-center space-x-16 benefit-school"
   >
     <div
       v-for="(benefit, index) in benefits"
@@ -108,8 +108,8 @@ export default defineComponent({
 }
 .benefit-school {
   position: absolute;
-  top: 40%;
-  left: 9%;
-  transform: translateY(-25%);
+  top: 57.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

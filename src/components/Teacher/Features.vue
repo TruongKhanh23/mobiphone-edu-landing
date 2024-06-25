@@ -85,7 +85,7 @@ export default defineComponent({
         id: 1,
         icon: universal,
         description:
-          "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các \n cấp học từ Tiểu học đến THPT",
+          "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các cấp \n học từ Tiểu học đến THPT",
         divIconClass: "",
         iconClass: "w-16 h-16",
         contentClass: "text-right",
@@ -162,12 +162,15 @@ export default defineComponent({
 <style scoped>
 .container-left {
   position: absolute;
-  top: 21%;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
 .container-right {
   position: absolute;
-  top: 28%;
-  left: 68%;
+  top: 50%;
+  left: 110%;
+  transform: translate(-50%, -50%);
 }
 
 .feature-1 {
