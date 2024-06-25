@@ -15,7 +15,7 @@
           alt="backgroundDepartmentFeatures"
         />
         <div
-          class="department-title font-montserratExtraBold font-black text-4xl text-[#D7DEFF]"
+          class="department-title font-black text-5xl text-[#D7DEFF]"
         >
           TÍNH NĂNG
         </div>
