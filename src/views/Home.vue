@@ -31,7 +31,7 @@
       class="absolute top-[5%] left-1/2 transform -translate-x-1/2 flex flex-col z-10 text-center font-robotoBold"
     >
       <div>
-        <h1 class="text-2xl font-bold text-white !mb-0">
+        <h1 class="text-3xl font-bold text-white !mb-0">
           Bộ giải pháp quản lí E-learning của mobiEdu
         </h1>
         <p class="text-white font-bold text-sm">

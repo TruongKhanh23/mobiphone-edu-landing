@@ -126,7 +126,7 @@ export default {
 }
 .teacher-benefit-title {
   position: absolute;
-  top: 10%;
+  top: 17%;
   left: 15%;
   transform: translate(-50%, -50%);
   padding: 10px;

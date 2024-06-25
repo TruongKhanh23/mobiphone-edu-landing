@@ -46,7 +46,7 @@ export default defineComponent({
       {
         number: "02",
         description:
-          "Quản trị kết quả học tập và giảng dạy của \n học sinh, giáo viên do nhà trường quản lý",
+          "Quản trị kết quả học tập và giảng dạy của \n học sinh, giáo viên do nhà trường quản lí",
         numberClass:
           "italic text-[#FFBB00] font-black text-5xl w-[30%]  text-center",
         contentClass: "font-bold flex items-center pr-4",
@@ -67,7 +67,7 @@ export default defineComponent({
       },
       {
         number: "04",
-        description: "Quản trị và tổ chức thi, kiểm tra cho nhà trường",
+        description: "Quản trị và tổ chức thi, kiểm tra cho \n nhà trường",
         numberClass:
           "italic text-[#FFBB00] font-black text-5xl w-[40%]  text-center",
         contentClass: "font-bold flex items-center pr-4",

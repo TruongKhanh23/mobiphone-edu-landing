@@ -52,11 +52,11 @@ export default {
     const activeIconIndex = ref<number | null>(null);
 
     const icons = [
-      consultantIcon,
-      contributeIcon,
       networkIcon,
-      personIcon,
       settingIcon,
+      contributeIcon,
+      personIcon,
+      consultantIcon,
     ];
 
     const showPopup = (index: number) => {
