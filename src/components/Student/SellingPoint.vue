@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-wrap justify-center items-center space-x-16 sellingPoint-school"
+    class="flex justify-center items-center space-x-16 sellingPoint-school"
   >
     <div
       v-for="(sellingPoint, index) in sellingPoints"
@@ -100,7 +100,8 @@ export default defineComponent({
 
 .sellingPoint-school {
   position: absolute;
-  top: 35%;
-  left: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
