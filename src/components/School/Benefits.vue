@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-wrap justify-center items-center space-x-16 benefit-school"
+    class="flex justify-center items-center space-x-16 benefit-school"
   >
     <div
       v-for="(benefit, index) in benefits"
@@ -12,7 +12,7 @@
         :class="`${benefit.parentClass} hover:scale-110 text-black rounded-md items-center justify-center border-2-[red]`"
       >
         <div class="flex justify-center items-center">
-          <img :src="benefit.icon" :class="benefit.iconClass" />
+          <img :src="benefit.icon" :class="benefit.iconClass" alt="icon" />
         </div>
         <div :class="`${benefit.contentClass} ml-2`">
           <div
@@ -64,7 +64,7 @@ export default defineComponent({
       },
       {
         icon: magnifyingGlass,
-        title: "Đánh giá hiệu quả giáo dục",
+        title: "Đánh giá \n hiệu quả \n giáo dục",
         description: "thông qua báo cáo và thống kê",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
@@ -116,7 +116,8 @@ export default defineComponent({
 }
 .benefit-school {
   position: absolute;
-  top: 25%;
-  left: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
 }
 </style>
