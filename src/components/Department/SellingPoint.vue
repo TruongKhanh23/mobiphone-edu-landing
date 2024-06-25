@@ -6,12 +6,6 @@
       :class="`sellingPoint-${index + 1} cursor-pointer`"
     >
       <div :class="`${sellingPoint.parentClass} hover:scale-110`">
-        <div
-          v-if="sellingPoint.number"
-          :class="`font-black text-4xl ${sellingPoint.numberClass}`"
-        >
-          {{ sellingPoint.number }}
-        </div>
         <div>
           <div :class="`${sellingPoint.titleClass}`">
             {{ sellingPoint.title }}
@@ -33,14 +27,6 @@ export default defineComponent({
   setup() {
     // Đoạn text của các điểm bán hàng
     const sellingPoints = [
-      {
-        number: "ĐIỂM MẠNH",
-        title: "Tính linh hoạt và thuận tiện cho Nhà trường và Sở/Phòng GD&ĐT",
-        numberClass: "text-center font-black text-5xl text-[#EEBE3A]",
-        titleClass: "font-bold text-xl text-center mt-2",
-        descriptionClass: "text-center text-sm",
-        parentClass: "w-[50vw] h-[13vh] text-center p-2",
-      },
       {
         title: "Nhà trường dễ dàng quản lý",
         description: "giáo viên, học sinh, tổ chức các buổi thi",
@@ -68,17 +54,7 @@ export default defineComponent({
 
 <style scoped>
 /* Các style của các sellingPoint có thể được sao chép từ component gốc và dán vào đây */
-
 .sellingPoint-1 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-.sellingPoint-2 {
   position: absolute;
   top: 40%;
   left: 37%;
@@ -87,7 +63,7 @@ export default defineComponent({
   padding: 10px;
   border-radius: 5px;
 }
-.sellingPoint-3 {
+.sellingPoint-2 {
   position: absolute;
   top: 41%;
   left: 80%;

@@ -12,8 +12,8 @@
       <div class="image-container mt-[-10px]">
         <img :src="backgroundStudentStrong" alt="backgroundStudentStrong" />
         <div class="student-strong-title flex flex-col items-center text-white">
-          <span class="font-black text-4xl">ĐIỂM MẠNH</span>
-          <span class="font-bold italic"
+          <span class="font-black text-5xl">ĐIỂM MẠNH</span>
+          <span class="font-bold italic mt-2"
             >Tính năng Adaptive Learning cho học sinh</span
           >
         </div>
