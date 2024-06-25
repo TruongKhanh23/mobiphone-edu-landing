@@ -12,7 +12,7 @@
       <div class="image-container mt-[-10px]">
         <img :src="backgroundTeacherStrong" alt="backgroundTeacherStrong" />
         <div class="teacher-title text-white flex flex-col gap-2">
-          <span class="font-black text-4xl">ĐIỂM MẠNH</span>
+          <span class="font-black text-5xl">ĐIỂM MẠNH</span>
           <span class="font-bold"
             >Tính năng quản lí và đánh giá của giáo viên</span
           >
