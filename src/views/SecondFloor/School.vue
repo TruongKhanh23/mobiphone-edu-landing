@@ -11,7 +11,7 @@
     <div class="bg-[#021929]">
       <div class="image-container mt-[-10px]">
         <img :src="backgroundSchoolBenefits" alt="backgroundSchoolBenefits" />
-        <div class="school-title font-black text-4xl text-white">LỢI ÍCH</div>
+        <div class="school-title font-black text-5xl text-white">LỢI ÍCH</div>
         <Benefits @benefitClick="handleOnClick" />
       </div>
       <div class="image-container overflow-hidden">

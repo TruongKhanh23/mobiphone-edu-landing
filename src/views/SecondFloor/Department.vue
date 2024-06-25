@@ -15,7 +15,7 @@
           alt="backgroundDepartmentFeatures"
         />
         <div
-          class="department-title font-montserratExtraBold font-black text-4xl text-[#D7DEFF]"
+          class="department-title font-black text-5xl text-[#D7DEFF]"
         >
           TÍNH NĂNG
         </div>
@@ -35,6 +35,12 @@
           :src="backgroundDepartmentStrong"
           alt="backgroundDepartmentStrong"
         />
+        <div
+          class="department-strong-title flex flex-col items-center"
+        >
+          <span class="font-black text-5xl text-[#EEBE3A]">ĐIỂM MẠNH</span>
+          <span class="text-white text-xl font-bold mt-2">Tính linh hoạt và thuận tiện cho Nhà trường và Sở/Phòng GD&ĐT</span>
+        </div>
         <SellingPoint />
       </div>
     </div>
@@ -131,6 +137,14 @@ export default {
   position: absolute;
   top: 12%;
   left: 16%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5px;
+}
+.department-strong-title {
+  position: absolute;
+  top: 18%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;
