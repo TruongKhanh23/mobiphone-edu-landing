@@ -5,31 +5,31 @@
       <img
         :src="department"
         alt="department"
-        class="h-24 department cursor-pointer bg-skyblue font-black hover:h-28"
+        class="h-28 department cursor-pointer bg-skyblue font-black hover:h-32"
         @click="onClickButton('department')"
       />
       <img
         :src="teacher"
         alt="teacher"
-        class="h-24 teacher cursor-pointer bg-skyblue font-black hover:h-28"
+        class="h-28 teacher cursor-pointer bg-skyblue font-black hover:h-32"
         @click="onClickButton('teacher')"
       />
       <img
         :src="student"
         alt="student"
-        class="h-24 student cursor-pointer bg-skyblue font-black hover:h-28"
+        class="h-28 student cursor-pointer bg-skyblue font-black hover:h-32"
         @click="onClickButton('student')"
       />
       <img
         :src="school"
         alt="school"
-        class="h-24 school cursor-pointer bg-skyblue font-black hover:h-28"
+        class="h-32 school cursor-pointer bg-skyblue font-black hover:h-36"
         @click="onClickButton('school')"
       />
       <img
         :src="mobiEdu"
         alt="mobiEdu"
-        class="h-24 mobiEdu cursor-pointer bg-skyblue font-black hover:h-28"
+        class="h-28 mobiEdu cursor-pointer bg-skyblue font-black hover:h-32"
         @click="onClickButton('mobiEdu')"
       />
     </div>
@@ -70,10 +70,10 @@ export default defineComponent({
 @keyframes moveUpDown {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) translate(-50%, -50%);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px) translate(-50%, -50%);
   }
 }
 
@@ -83,46 +83,47 @@ export default defineComponent({
 .school,
 .mobiEdu {
   animation: moveUpDown 3s ease-in-out infinite;
+  transform: translate(-50%, -50%);
 }
 
 .department {
   position: absolute;
-  top: 14%;
-  left: 58%;
+  top: 15%;
+  left: 62%;
   transition: transform 0.3s ease;
 }
 
 .school {
   position: absolute;
-  top: 39%;
-  left: 58.5%;
+  top: 45%;
+  left: 65%;
   transition: transform 0.3s ease;
 }
 
 .teacher {
   position: absolute;
-  top: 15%;
-  left: 35%;
+  top: 17%;
+  left: 40%;
   transition: transform 0.3s ease;
 }
 
 .student {
   position: absolute;
-  top: 20%;
-  left: 26%;
+  top: 24%;
+  left: 32%;
   transition: transform 0.3s ease;
 }
 
 .mobiEdu {
   position: absolute;
-  top: 37%;
-  left: 41%;
+  top: 43%;
+  left: 47%;
   transition: transform 0.3s ease;
 }
 .mobiEdu:hover {
   position: absolute;
-  top: 35%;
-  left: 40%;
+  top: 43%;
+  left: 47%;
   transition: transform 0.3s ease;
 }
 </style>
