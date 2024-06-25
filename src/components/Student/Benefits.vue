@@ -32,16 +32,16 @@ export default defineComponent({
       {
         title: "Dễ dàng truy cập\nkho bài giảng và bài tập\n tất cả các bộ môn",
         contentClass: "",
-        titleClass: "font-bold text-center text-4xl text-white",
+        titleClass: "font-bold text-center lg:text-2xl 3xl:text-3xl text-white",
         parentClass:
-          "w-[25vw] h-[20vh] p-4 bg-[#0099FF] bg-opacity-60 pt-8",
+          "w-[25vw] h-[20vh] p-4 bg-[#0099FF] bg-opacity-60",
       },
       {
         title: "Tự giác học tập và\n tiết kiệm thời gian",
         contentClass: "",
-        titleClass: "font-bold text-center text-4xl text-white",
+        titleClass: "font-bold text-center lg:text-2xl 3xl:text-3xl text-white",
         parentClass:
-          "w-[25vw] h-[20vh] p-4 bg-[#0099FF] bg-opacity-60 pt-8",
+          "w-[25vw] h-[20vh] p-4 bg-[#0099FF] bg-opacity-60",
       },
     ];
 

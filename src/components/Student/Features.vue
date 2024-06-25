@@ -10,15 +10,13 @@
       >
         <!--Column 1 30%-->
         <div class="w-3/10">
-          <img :src="benefit.icon" :class="benefit.iconClass" />
+          <img :src="benefit.icon" :class="benefit.iconClass" alt="icon">
         </div>
         <!-- Column 2 70%-->
-        <div :class="`${benefit.contentClass} w-7/10 ml-2`">
-          <div :class="benefit.titleClass">
-            {{ benefit.title }}
+        <div :class="`${benefit.contentClass} w-7/10 ml-6`">
+          <div :class="benefit.titleClass" v-html="formattedDescription(benefit.title)">
           </div>
-          <div v-if="benefit.description" :class="benefit.descriptionClass">
-            {{ benefit.description }}
+          <div v-if="benefit.description" :class="benefit.descriptionClass" v-html="formattedDescription(benefit.description)">
           </div>
         </div>
       </div>
@@ -28,9 +26,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import magnifyingGlass from "@/assets/icon/magnifying-glass.svg";
-import statistic from "@/assets/icon/statistic.svg";
-import multipleEclipse from "@/assets/icon/multiple-eclipse.svg";
+
+import book from "@/assets/icon/student/icon_book.svg";
+import card from "@/assets/icon/student/icon_card.svg";
+import computerHeavy from "@/assets/icon/student/icon_computerheavy.svg";
+import universe from "@/assets/icon/student/icon_univer.svg";
+
+import formattedDescription from "@/utils/index.js";
 
 export default defineComponent({
   name: "Benefits",
@@ -38,47 +40,47 @@ export default defineComponent({
     // Đoạn text của các lợi ích
     const benefits = [
       {
-        icon: statistic,
+        icon: computerHeavy,
         title:
           "Tham gia các kì thi trực tuyến",
-        iconClass: "w-10 h-10",
-        contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-left italic text-lg",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-left text-md",
         descriptionClass: "text-center text-sm px-6",
-        parentClass: "w-[35vw] h-[13vh]",
+        parentClass: "w-[30vw] h-[13vh]",
       },
       {
-        icon: magnifyingGlass,
-        title: "Gợi ý bài luyện tập dựa theo năng lực của học sinh qua adaptive learning.",
-        description: "qua báo cáo & thống kê.",
-        iconClass: "w-10 h-10",
-        contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic text-lg",
-        descriptionClass: "text-center text-lg",
-        parentClass: "w-[35vw] h-[13vh]",
+        icon: card,
+        title: "Gợi ý bài luyện tập dựa theo năng lực \n của học sinh qua adaptive learning.",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-md",
+        descriptionClass: "text-center text-md",
+        parentClass: "w-[30vw] h-[13vh]",
       },
       {
-        icon: multipleEclipse,
-        title: "Cung cấp kho bài tập tự luyện có sẵn trên hệ thống và kho bài tập được giao bởi giáo viên bộ môn",
-        iconClass: "w-10 h-10",
-        contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic text-lg",
+        icon: book,
+        title: "Cung cấp kho bài tập tự luyện có sẵn \n trên hệ thống và kho bài tập được giao \n bởi giáo viên bộ môn",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-md",
         descriptionClass: "text-center text-sm",
-        parentClass: "w-[35vw] h-[13vh]",
+        parentClass: "w-[30vw] h-[13vh]",
       },
       {
-        icon: multipleEclipse,
-        title: "Cung cấp kho bài giảng với đầy đủ môn học bám sát chương trình GDPT giúp học sinh tự học",
-        iconClass: "w-10 h-10",
-        contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-center italic text-lg",
+        icon: universe,
+        title: "Cung cấp kho bài giảng với đầy đủ \n môn học bám sát chương trình GDPT \n giúp học sinh tự học",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-md",
         descriptionClass: "text-center text-sm",
-        parentClass: "w-[35vw] h-[13vh]",
+        parentClass: "w-[30vw] h-[13vh]",
       },
     ];
 
     return {
       benefits,
+      formattedDescription,
     };
   },
 });
