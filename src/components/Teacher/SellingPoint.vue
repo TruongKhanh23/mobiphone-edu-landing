@@ -111,8 +111,9 @@ export default defineComponent({
 <style scoped>
 .container {
   position: absolute;
-  top: 25%;
-  left: 4%;
+  top: 52.5%;
+  left: 45%;
+  transform: translate(-50%, -50%)
 }
 
 .sellingPoint-1 {
