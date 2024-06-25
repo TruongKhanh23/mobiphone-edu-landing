@@ -1,33 +1,32 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <LoadingModal :isOpen="isOpenLoadingModal" />
-    <StudentFeature
-      :open="isOpenStudentFeature"
-      :featureNumber="featureNumber"
-      :handleOk="handleCloseStudentFeature"
-      :handleCancel="handleCloseStudentFeature"
+    <StudentSellingPoint
+      :open="isOpenStudentSellingPoint"
+      :sellingPointNumber="sellingPointNumber"
+      :handleOk="handleCloseStudentSellingPoint"
+      :handleCancel="handleCloseStudentSellingPoint"
       class="z-20"
     />
     <div class="bg-[#021929]">
       <div class="image-container mt-[-10px]">
         <img :src="backgroundStudentStrong" alt="backgroundStudentStrong" />
-        <div class="student-strong-title font-black text-5xl text-white">
-          ĐIỂM MẠNH
+        <div class="student-strong-title flex flex-col items-center text-white">
+          <span class="font-black text-4xl">ĐIỂM MẠNH</span>
+          <span class="font-bold italic"
+            >Tính năng Adaptive Learning cho học sinh</span
+          >
         </div>
-        <SellingPoint />
+        <SellingPoint @sellingPointClick="handleOnClick" />
       </div>
       <div class="image-container overflow-hidden">
         <img :src="backgroundStudentFeatures" alt="backgroundStudentFeatures" />
-        <div class="student-feature-title font-black text-5xl text-[#F7C12F]">
-          TÍNH NĂNG
-        </div>
-
         <!-- Sử dụng component Features -->
         <Features @featureClick="handleOnClick" />
       </div>
       <div class="image-container mt-[-10px]">
         <img :src="backgroundStudentBenefits" alt="backgroundStudentBenefits" />
-        <div class="student-title font-black text-4xl text-white">LỢI ÍCH</div>
+        <div class="student-title font-black text-5xl text-white">LỢI ÍCH</div>
         <Benefits />
       </div>
     </div>
@@ -37,14 +36,14 @@
 <script>
 import { ref } from "vue";
 import AntModal from "@/components/reusable/AntModal.vue";
-import StudentFeature from "@/views/ThirdFloor/Student/StudentFeature.vue";
+import StudentSellingPoint from "@/views/ThirdFloor/Student/StudentSellingPoint.vue";
 import Features from "@/components/Student/Features.vue";
 import Benefits from "@/components/Student/Benefits.vue";
 import SellingPoint from "@/components/Student/SellingPoint.vue";
 import LoadingModal from "@/components/LoadingModal.vue";
 
 import backgroundStudentFeatures from "@/assets/image/student/background-student-features.svg";
-import backgroundStudentBenefits from "@/assets/image/student/background-student-benefits.png";
+import backgroundStudentBenefits from "@/assets/image/student/background-student-benefits.svg";
 import backgroundStudentStrong from "@/assets/image/student/background-student-strong.svg";
 
 import { handlePopup } from "@/composables/loadingModal/index.js";
@@ -53,7 +52,7 @@ export default {
   name: "Student",
   components: {
     AntModal,
-    StudentFeature,
+    StudentSellingPoint,
     Features,
     Benefits,
     SellingPoint,
@@ -65,44 +64,41 @@ export default {
   },
   setup() {
     const { isOpenLoadingModal } = handlePopup(2000);
-    const isOpenStudentFeature = ref(false);
-    const featureNumber = ref(1);
+    const isOpenStudentSellingPoint = ref(false);
+    const sellingPointNumber = ref(1);
 
     const handleClick = () => {
-      openStudentFeature();
+      openStudentSellingPoint();
     };
 
-    const handleCloseStudentFeature = () => {
-      console.log("Ok clicked Close Student Feature");
-      isOpenStudentFeature.value = false;
+    const handleCloseStudentSellingPoint = () => {
+      console.log("Ok clicked Close Student SellingPoint");
+      isOpenStudentSellingPoint.value = false;
     };
 
-    const openStudentFeature = () => {
-      console.log("click open student feature");
-      isOpenStudentFeature.value = true;
+    const openStudentSellingPoint = () => {
+      console.log("click openStudentSellingPoint");
+      isOpenStudentSellingPoint.value = true;
     };
 
     const handleOnClick = (value) => {
-      console.log(`Feature ${value} clicked`);
-      featureNumber.value = value;
-      if (value === 1) {
-        openStudentFeature();
-      } else if (value === 2) {
-        openStudentFeature();
-        console.log("Feature 2 clicked");
+      const hasDetails = [1, 2];
+      if (hasDetails.includes(value)) {
+        openStudentSellingPoint();
+        sellingPointNumber.value = value;
       }
     };
 
     return {
-      featureNumber,
+      sellingPointNumber,
       isOpenLoadingModal,
-      isOpenStudentFeature,
+      isOpenStudentSellingPoint,
       backgroundStudentStrong,
       backgroundStudentBenefits,
       backgroundStudentFeatures,
-      openStudentFeature,
+      openStudentSellingPoint,
       handleClick,
-      handleCloseStudentFeature,
+      handleCloseStudentSellingPoint,
       handleOnClick,
     };
   },
@@ -123,23 +119,23 @@ export default {
 .student-title {
   position: absolute;
   top: 12%;
-  left: 16%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  border-radius: 5px;
-}
-.student-feature-title {
-  position: absolute;
-  top: 45%;
-  left: 23%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;
 }
 .student-strong-title {
   position: absolute;
-  top: 8%;
+  top: 12%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5px;
+}
+.student-feature-title {
+  position: absolute;
+  top: 40%;
+  left: 15%;
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;

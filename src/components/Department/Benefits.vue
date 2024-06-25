@@ -14,11 +14,9 @@
         </div>
         <!-- Column 2 70%-->
         <div :class="`${benefit.contentClass} w-7/10 ml-2`">
-          <div :class="benefit.titleClass">
-            {{ benefit.title }}
+          <div :class="benefit.titleClass" v-html="formattedDescription(benefit.title)">
           </div>
-          <div v-if="benefit.description" :class="benefit.descriptionClass">
-            {{ benefit.description }}
+          <div v-if="benefit.description" :class="benefit.descriptionClass" v-html="formattedDescription(benefit.description)">
           </div>
         </div>
       </div>
@@ -32,6 +30,8 @@ import magnifyingGlass from "@/assets/icon/magnifying-glass.svg";
 import statistic from "@/assets/icon/statistic.svg";
 import multipleEclipse from "@/assets/icon/multiple-eclipse.svg";
 
+import formattedDescription from "@/utils/index.js";
+
 export default defineComponent({
   name: "Benefits",
   setup() {
@@ -40,10 +40,10 @@ export default defineComponent({
       {
         icon: statistic,
         title:
-          "Đánh giá toàn diện và thúc đẩy chuyển đổi số nhanh chóng & dễ dàng",
+          "Đánh giá toàn diện và thúc đẩy \n chuyển đổi số nhanh chóng & dễ dàng",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
-        titleClass: "font-bold text-left italic text-lg",
+        titleClass: "font-bold text-center italic text-lg",
         descriptionClass: "text-center text-sm px-6",
         parentClass: "w-[35vw] h-[13vh]",
       },
@@ -70,6 +70,7 @@ export default defineComponent({
 
     return {
       benefits,
+      formattedDescription,
     };
   },
 });
