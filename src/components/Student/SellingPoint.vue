@@ -1,27 +1,28 @@
 <template>
   <div
-    class="flex flex-wrap justify-center items-center space-x-16 benefit-school"
+    class="flex flex-wrap justify-center items-center space-x-16 sellingPoint-school"
   >
     <div
-      v-for="(benefit, index) in benefits"
+      v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
-      :class="`benefit-${index + 1} cursor-pointer`"
+      :class="`sellingPoint-${index + 1} cursor-pointer`"
+      @click="handleSellingPointClick(index + 1)"
     >
       <div
-        :class="`${benefit.parentClass} hover:scale-110 text-white rounded-md flex flex-col items-center justify-center`"
+        :class="`${sellingPoint.parentClass} hover:scale-110 text-white rounded-md flex flex-col items-center justify-center`"
       >
         <div class="flex justify-center items-center">
-          <img :src="benefit.icon" :class="benefit.iconClass" />
+          <img :src="sellingPoint.icon" :class="sellingPoint.iconClass" alt="icon"/>
         </div>
-        <div :class="`${benefit.contentClass} ml-2`">
+        <div :class="`${sellingPoint.contentClass} ml-2`">
           <div
-            :class="benefit.titleClass"
-            v-html="formattedDescription(benefit.title)"
+            :class="sellingPoint.titleClass"
+            v-html="formattedDescription(sellingPoint.title)"
           ></div>
           <div
-            v-if="benefit.description"
-            :class="benefit.descriptionClass"
-            v-html="formattedDescription(benefit.description)"
+            v-if="sellingPoint.description"
+            :class="sellingPoint.descriptionClass"
+            v-html="formattedDescription(sellingPoint.description)"
           ></div>
         </div>
       </div>
@@ -35,10 +36,11 @@ import humanHead from "@/assets/icon/school/human-head-icon.svg";
 import phone from "@/assets/icon/school/phone-icon.svg";
 
 export default defineComponent({
-  name: "Benefits",
-  setup() {
+  name: "SellingPoints",
+  emits: ["sellingPointClick"],
+  setup(_, { emit }) {
     // Đoạn text của các lợi ích
-    const benefits = [
+    const sellingPoints = [
       {
         icon: humanHead,
         description:
@@ -70,20 +72,25 @@ export default defineComponent({
       return text.replace(/\n/g, "<br>");
     }
 
+    const handleSellingPointClick = (sellingPointNumber) => {
+      emit("sellingPointClick", sellingPointNumber);
+    };
+
     return {
-      benefits,
+      sellingPoints,
       formattedDescription,
+      handleSellingPointClick,
     };
   },
 });
 </script>
 
 <style scoped>
-.benefit-1 {
+.sellingPoint-1 {
   border-radius: 5px;
 }
 
-.benefit-2 {
+.sellingPoint-2 {
   border-radius: 5px;
 }
 
@@ -91,7 +98,7 @@ export default defineComponent({
   transform: scale(1.1);
 }
 
-.benefit-school {
+.sellingPoint-school {
   position: absolute;
   top: 35%;
   left: 15%;
