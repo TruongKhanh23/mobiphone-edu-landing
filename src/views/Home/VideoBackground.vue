@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute top-0 left-0 w-full h-full">
+  <div class="absolute top-16 left-0 w-full h-full">
     <video
       v-if="useVideo"
       autoplay
