@@ -162,12 +162,15 @@ export default defineComponent({
 <style scoped>
 .container-left {
   position: absolute;
-  top: 21%;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
 .container-right {
   position: absolute;
-  top: 28%;
-  left: 68%;
+  top: 50%;
+  left: 110%;
+  transform: translate(-50%, -50%);
 }
 
 .feature-1 {
