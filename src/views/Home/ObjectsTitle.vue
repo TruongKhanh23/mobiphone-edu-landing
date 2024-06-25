@@ -88,41 +88,41 @@ export default defineComponent({
 
 .department {
   position: absolute;
-  top: 15%;
+  top: 23%;
   left: 62%;
   transition: transform 0.3s ease;
 }
 
 .school {
   position: absolute;
-  top: 45%;
+  top: 53%;
   left: 65%;
   transition: transform 0.3s ease;
 }
 
 .teacher {
   position: absolute;
-  top: 17%;
+  top: 25%;
   left: 40%;
   transition: transform 0.3s ease;
 }
 
 .student {
   position: absolute;
-  top: 24%;
+  top: 32%;
   left: 32%;
   transition: transform 0.3s ease;
 }
 
 .mobiEdu {
   position: absolute;
-  top: 43%;
+  top: 51%;
   left: 47%;
   transition: transform 0.3s ease;
 }
 .mobiEdu:hover {
   position: absolute;
-  top: 43%;
+  top: 51%;
   left: 47%;
   transition: transform 0.3s ease;
 }
