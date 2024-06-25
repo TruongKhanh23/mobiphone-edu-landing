@@ -132,7 +132,7 @@ export default {
 }
 .school-strong-title {
   position: absolute;
-  top: 8%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
