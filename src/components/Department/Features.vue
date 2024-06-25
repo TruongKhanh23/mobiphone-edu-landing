@@ -11,11 +11,9 @@
           {{ feature.number }}
         </div>
         <div :class="feature.contentClass">
-          <div :class="`font-bold ${feature.titleClass}`">
-            {{ feature.title }}
+          <div :class="`font-bold ${feature.titleClass}`" v-html="formattedDescription(feature.title)">
           </div>
-          <div :class="feature.descriptionClass">
-            {{ feature.description }}
+          <div :class="feature.descriptionClass" v-html="formattedDescription(feature.description)">
           </div>
         </div>
       </div>
@@ -25,6 +23,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import formattedDescription from "@/utils/index.js";
 
 export default defineComponent({
   name: "Features",
@@ -34,7 +33,7 @@ export default defineComponent({
       {
         number: "01",
         title: "ĐỊNH DANH cây học liệu theo chương học",
-        description: "bài giảng chi tiết cho toàn Sở/Phòng.",
+        description: "bài giảng chi tiết cho toàn \n Sở/Phòng.",
         numberClass: "text-right font-black text-5xl text-[#FCBF19]",
         contentClass: "text-right",
         titleClass: "font-bold text-right text-[#0C9DEE] italic",
@@ -54,10 +53,10 @@ export default defineComponent({
       },
       {
         number: "03",
-        title: "XEM CÁC BÁO CÁO tổng quan và chi tiết",
+        title: "XEM CÁC BÁO CÁO tổng quan \n và chi tiết",
         description:
-          "Về tình hình học tập và giảng dạy của toàn bộ trường do Sở/Phòng quản lí",
-        numberClass: "font-black text-5xl text-white w-[45%] text-center",
+          "Về tình hình học tập và giảng dạy của \n  toàn bộ trường do Sở/Phòng quản lí",
+        numberClass: "font-black text-5xl text-white w-[20%] text-center",
         contentClass: "float-right",
         titleClass: "font-bold text-left text-[#0C9DEE] italic",
         descriptionClass: "text-left text-lg",
@@ -65,9 +64,9 @@ export default defineComponent({
       },
       {
         number: "04",
-        title: "THEO DÕI tiến độ, xem và đọc kết quả",
+        title: "THEO DÕI tiến độ, xem và \n đọc kết quả",
         description: "nhà trường, giáo viên",
-        numberClass: "font-black text-5xl text-white w-[30%] text-center",
+        numberClass: "font-black text-5xl text-white w-[20%] text-center",
         contentClass: "float-right",
         titleClass: "font-bold text-left text-[#0C9DEE] italic",
         descriptionClass: "text-left text-lg",
@@ -75,9 +74,9 @@ export default defineComponent({
       },
       {
         number: "05",
-        title: "DUYỆT đăng tải/CHIA SẺ bài giảng",
+        title: "DUYỆT đăng tải/CHIA SẺ \n bài giảng",
         description: "của giáo viên trên trang của Tỉnh",
-        numberClass: "font-black text-5xl text-white w-[30%] text-center",
+        numberClass: "font-black text-5xl text-white w-[20%] text-center",
         contentClass: "float-right",
         titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
         descriptionClass: "text-left text-lg",
@@ -91,6 +90,7 @@ export default defineComponent({
 
     return {
       features,
+      formattedDescription,
       handleFeatureClick,
     };
   },
@@ -123,7 +123,7 @@ export default defineComponent({
 .feature-3 {
   position: absolute;
   top: 75%;
-  left: 80%;
+  left: 81%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
@@ -133,7 +133,7 @@ export default defineComponent({
 .feature-4 {
   position: absolute;
   top: 45%;
-  left: 83%;
+  left: 84%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
@@ -143,7 +143,7 @@ export default defineComponent({
 .feature-5 {
   position: absolute;
   top: 20%;
-  left: 80%;
+  left: 81%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
