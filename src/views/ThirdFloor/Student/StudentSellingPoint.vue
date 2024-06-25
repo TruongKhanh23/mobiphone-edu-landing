@@ -1,7 +1,7 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <img
-      :src="getFeatureImage(featureNumber)"
+      :src="getFeatureImage(sellingPointNumber)"
       alt="long image"
       class="w-full h-auto"
     />
@@ -15,21 +15,21 @@ import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
 
 export default {
-  name: "ModalContent",
+  name: "StudentSellingPoint",
   components: {
     AntModal,
   },
   props: {
     handleOk: Function,
     handleCancel: Function,
-    featureNumber: {
+    sellingPointNumber: {
       type: Number,
       default: 1,
     },
   },
   setup() {
     function getFeatureImage(feature) {
-      console.log("featureNumber", feature);
+      console.log("sellingPointNumber", feature);
       switch (feature) {
         case 1:
           return inforgraphic1;

@@ -1,27 +1,28 @@
 <template>
   <div
-    class="flex flex-wrap justify-center items-center space-x-16 benefit-school"
+    class="flex flex-wrap justify-center items-center space-x-16 sellingPoint-school"
   >
     <div
-      v-for="(benefit, index) in benefits"
+      v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
-      :class="`benefit-${index + 1} cursor-pointer shadow-effect`"
+      :class="`sellingPoint-${index + 1} cursor-pointer`"
+      @click="handleSellingPointClick(index + 1)"
     >
       <div
-        :class="`${benefit.parentClass} hover:scale-110 text-black rounded-md items-center justify-center border-2-[red]`"
+        :class="`${sellingPoint.parentClass} hover:scale-110 text-white rounded-md flex flex-col items-center justify-center`"
       >
         <div class="flex justify-center items-center">
-          <img :src="benefit.icon" :class="benefit.iconClass" />
+          <img :src="sellingPoint.icon" :class="sellingPoint.iconClass" alt="icon"/>
         </div>
-        <div :class="`${benefit.contentClass} ml-2`">
+        <div :class="`${sellingPoint.contentClass} ml-2`">
           <div
-            :class="benefit.titleClass"
-            v-html="formattedDescription(benefit.title)"
+            :class="sellingPoint.titleClass"
+            v-html="formattedDescription(sellingPoint.title)"
           ></div>
           <div
-            v-if="benefit.description"
-            :class="benefit.descriptionClass"
-            v-html="formattedDescription(benefit.description)"
+            v-if="sellingPoint.description"
+            :class="sellingPoint.descriptionClass"
+            v-html="formattedDescription(sellingPoint.description)"
           ></div>
         </div>
       </div>
@@ -31,45 +32,36 @@
 
 <script>
 import { defineComponent } from "vue";
-import magnifyingGlass from "@/assets/icon/school/magnifying-glass-icon.svg";
-import humanHead from "@/assets/icon/school/human-head-icon.svg";
-import phone from "@/assets/icon/school/phone-icon.svg";
+import team from "@/assets/icon/student/icon_team.svg"
+import computerLight from "@/assets/icon/student/icon_computerlight.svg"
 
 export default defineComponent({
-  name: "Benefits",
-  setup() {
+  name: "SellingPoints",
+  emits: ["sellingPointClick"],
+  setup(_, { emit }) {
     // Đoạn text của các lợi ích
-    const benefits = [
+    const sellingPoints = [
       {
-        icon: humanHead,
-        title: "Hỗ trợ \n quản lý \n hệ thống \n giáo dục",
-        iconClass: "w-10 h-10 mb-4",
+        icon: team,
+        description:
+          "Học sinh có thể tự học, tự luyện tập theo từng chủ đề theo khả năng của mình.",
+        iconClass: "w-12 h-12 mb-4",
         contentClass: "",
-        titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-sm px-6",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-white pt-8",
+        titleClass: "font-bold text-center text-2xl text-[#137BB5]",
+        descriptionClass: "font-bold text-white text-center text-lg px-6",
+        parentClass:
+          "w-[30vw] h-[30vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
       {
-        icon: phone,
-        title: "Xây dựng \n kế hoạch \n năm học \n nhanh chóng",
-        description: "nhờ đồng bộ thông tin đa chiều",
-        iconClass: "w-10 h-10 mb-4",
+        icon: computerLight,
+        description:
+          "Hệ thống phân tích trình độ và đưa ra bài luyện tập phù hợp",
+        iconClass: "w-12 h-12 mb-4",
         contentClass: "",
-        titleClass: "font-bold text-xl text-[#137BB5] text-center min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
-      },
-      {
-        icon: magnifyingGlass,
-        title: "Đánh giá hiệu quả giáo dục",
-        description: "thông qua báo cáo và thống kê",
-        iconClass: "w-10 h-10 mb-4",
-        contentClass: "",
-        titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
+        titleClass: "font-bold text-xl text-[#137BB5] text-center",
+        descriptionClass: "font-bold text-white text-center text-lg px-6",
+        parentClass:
+          "w-[30vw] h-[30vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
     ];
 
@@ -80,36 +72,35 @@ export default defineComponent({
       return text.replace(/\n/g, "<br>");
     }
 
+    const handleSellingPointClick = (sellingPointNumber) => {
+      emit("sellingPointClick", sellingPointNumber);
+    };
+
     return {
-      benefits,
+      sellingPoints,
       formattedDescription,
+      handleSellingPointClick,
     };
   },
 });
 </script>
 
 <style scoped>
-.benefit-1 {
-  color: white;
+.sellingPoint-1 {
   border-radius: 5px;
 }
 
-.benefit-2 {
-  color: white;
+.sellingPoint-2 {
   border-radius: 5px;
 }
 
-.benefit-3 {
-  color: white;
-  border-radius: 5px;
+.hover\:scale-110:hover {
+  transform: scale(1.1);
 }
 
-.shadow-effect {
-  box-shadow: 10px 10px 0 rgb(92, 190, 254), 0 4px 10px rgb(92, 190, 254);
-}
-.benefit-school {
+.sellingPoint-school {
   position: absolute;
-  top: 25%;
-  left: 20%;
+  top: 35%;
+  left: 15%;
 }
 </style>

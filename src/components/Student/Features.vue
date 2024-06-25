@@ -1,21 +1,22 @@
 <template>
   <div>
     <div
-      v-for="(feature, index) in features"
+      v-for="(benefit, index) in benefits"
       :key="index"
-      :class="`feature-${index + 1} cursor-pointer`"
-      @click="handleFeatureClick(index + 1)"
+      :class="`benefit-${index + 1} cursor-pointer`"
     >
-      <div class="hover:scale-110" :class="feature.parentClass">
-        <div :class="`font-black ${feature.numberClass}`">
-          {{ feature.number }}
+      <div
+        :class="`${benefit.parentClass} hover:scale-110 border-2 border-white bg-white text-black shadow-effect flex rounded-md items-center justify-center`"
+      >
+        <!--Column 1 30%-->
+        <div class="w-3/10">
+          <img :src="benefit.icon" :class="benefit.iconClass" alt="icon">
         </div>
-        <div :class="feature.contentClass">
-          <div v-if="title" :class="`font-bold ${feature.titleClass}`">
-            {{ feature.title }}
+        <!-- Column 2 70%-->
+        <div :class="`${benefit.contentClass} w-7/10 ml-6`">
+          <div :class="benefit.titleClass" v-html="formattedDescription(benefit.title)">
           </div>
-          <div :class="feature.descriptionClass">
-            {{ feature.description }}
+          <div v-if="benefit.description" :class="benefit.descriptionClass" v-html="formattedDescription(benefit.description)">
           </div>
         </div>
       </div>
@@ -23,131 +24,106 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 
+import book from "@/assets/icon/student/icon_book.svg";
+import card from "@/assets/icon/student/icon_card.svg";
+import computerHeavy from "@/assets/icon/student/icon_computerheavy.svg";
+import universe from "@/assets/icon/student/icon_univer.svg";
+
+import formattedDescription from "@/utils/index.js";
+
 export default defineComponent({
-  name: "Features",
-  emits: ["featureClick"], // Declare the emitted event
-  setup(_, { emit }) {
-    const features = [
+  name: "Benefits",
+  setup() {
+    // Đoạn text của các lợi ích
+    const benefits = [
       {
-        number: "01",
-        description:
-          "Quản lý hệ thống và toàn bộ tài khoản người dùng, phân quyền chuyên môn/bộ môn theo các cấp giáo viên trong trường",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[35%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[45vw] h-30 bg-[#0093FF] rounded-lg",
+        icon: computerHeavy,
+        title:
+          "Tham gia các kì thi trực tuyến",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-left text-md",
+        descriptionClass: "text-center text-sm px-6",
+        parentClass: "w-[30vw] h-[13vh]",
       },
       {
-        number: "02",
-        description:
-          "Quản trị kết quả học tập và giảng dạy của học sinh, giáo viên do nhà trường quản lý",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+        icon: card,
+        title: "Gợi ý bài luyện tập dựa theo năng lực \n của học sinh qua adaptive learning.",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-md",
+        descriptionClass: "text-center text-md",
+        parentClass: "w-[30vw] h-[13vh]",
       },
       {
-        number: "03",
-        description:
-          "Quản trị tiến độ giảng dạy và theo dõi KHGD của giáo viên",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+        icon: book,
+        title: "Cung cấp kho bài tập tự luyện có sẵn \n trên hệ thống và kho bài tập được giao \n bởi giáo viên bộ môn",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-md",
+        descriptionClass: "text-center text-sm",
+        parentClass: "w-[30vw] h-[13vh]",
       },
       {
-        number: "04",
-        description: "Quản trị và tổ chức thi, kiểm tra cho nhà trường",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
-      },
-      {
-        number: "05",
-        description: "Báo cáo sở ban ngành",
-        numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%] text-center",
-        contentClass: "flex items-center pr-4",
-        titleClass: "w-[90%] font-bold text-left text-[#0C9DEE] italic",
-        descriptionClass: "text-left text-sm",
-        parentClass: "py-3 flex w-[35vw] h-30 bg-[#0093FF] rounded-lg",
+        icon: universe,
+        title: "Cung cấp kho bài giảng với đầy đủ \n môn học bám sát chương trình GDPT \n giúp học sinh tự học",
+        iconClass: "w-12 h-12",
+        contentClass: "",
+        titleClass: "font-semibold text-md",
+        descriptionClass: "text-center text-sm",
+        parentClass: "w-[30vw] h-[13vh]",
       },
     ];
 
-    const handleFeatureClick = (featureNumber) => {
-      emit("featureClick", featureNumber);
-    };
-
     return {
-      features,
-      handleFeatureClick,
+      benefits,
+      formattedDescription,
     };
   },
 });
 </script>
 
 <style scoped>
-/* Các style của các feature có thể được sao chép từ component gốc và dán vào đây */
-.feature-1 {
+.benefit-1 {
   position: absolute;
-  top: 15%;
+  top: 70%;
   left: 55%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
 }
-.feature-2 {
+.benefit-2 {
   position: absolute;
-  top: 30%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-3 {
-  position: absolute;
-  top: 45%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-4 {
-  position: absolute;
-  top: 60%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.feature-5 {
-  position: absolute;
-  top: 75%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
+}
+.benefit-3 {
+  position: absolute;
+  top: 36%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.benefit-4 {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.shadow-effect {
+  box-shadow: 10px 10px 0 rgb(92, 190, 254), 0 4px 10px rgb(92, 190, 254);
 }
 </style>
