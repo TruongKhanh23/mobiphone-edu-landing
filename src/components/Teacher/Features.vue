@@ -85,7 +85,7 @@ export default defineComponent({
         id: 1,
         icon: universal,
         description:
-          "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các \n cấp học từ Tiểu học đến THPT",
+          "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các cấp \n học từ Tiểu học đến THPT",
         divIconClass: "",
         iconClass: "w-16 h-16",
         contentClass: "text-right",
