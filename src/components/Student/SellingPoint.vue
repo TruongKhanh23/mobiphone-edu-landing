@@ -32,8 +32,8 @@
 
 <script>
 import { defineComponent } from "vue";
-import humanHead from "@/assets/icon/school/human-head-icon.svg";
-import phone from "@/assets/icon/school/phone-icon.svg";
+import team from "@/assets/icon/student/icon_team.svg"
+import computerLight from "@/assets/icon/student/icon_computerlight.svg"
 
 export default defineComponent({
   name: "SellingPoints",
@@ -42,26 +42,26 @@ export default defineComponent({
     // Đoạn text của các lợi ích
     const sellingPoints = [
       {
-        icon: humanHead,
+        icon: team,
         description:
           "Học sinh có thể tự học, tự luyện tập theo từng chủ đề theo khả năng của mình.",
-        iconClass: "w-10 h-10 mb-4",
+        iconClass: "w-12 h-12 mb-4",
         contentClass: "",
         titleClass: "font-bold text-center text-2xl text-[#137BB5]",
         descriptionClass: "font-bold text-white text-center text-lg px-6",
         parentClass:
-          "w-[30vw] h-[30vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F] pt-8",
+          "w-[30vw] h-[30vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
       {
-        icon: phone,
+        icon: computerLight,
         description:
           "Hệ thống phân tích trình độ và đưa ra bài luyện tập phù hợp",
-        iconClass: "w-10 h-10 mb-4",
+        iconClass: "w-12 h-12 mb-4",
         contentClass: "",
         titleClass: "font-bold text-xl text-[#137BB5] text-center",
         descriptionClass: "font-bold text-white text-center text-lg px-6",
         parentClass:
-          "w-[30vw] h-[30vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F] pt-8",
+          "w-[30vw] h-[30vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
     ];
 
