@@ -75,10 +75,6 @@ export default {
       return randomText.value.description.replace(/\n/g, "<br>");
     });
 
-    onMounted(() => {
-      showPopup(1); // Set the first icon as active by default
-    });
-
     return {
       icons,
       isPopupVisible,
