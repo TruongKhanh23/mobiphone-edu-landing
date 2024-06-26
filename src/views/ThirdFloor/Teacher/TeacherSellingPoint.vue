@@ -1,10 +1,6 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
-    <img
-      :src="getFeatureImage(sellingPointNumber)"
-      alt="long image"
-      class="w-full h-auto"
-    />
+    <LessonDesign />
   </AntModal>
 </template>
 
@@ -13,11 +9,13 @@ import AntModal from "@/components/reusable/AntModal.vue";
 
 import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
+import LessonDesign from "@/views/ThirdFloor/Teacher/LessonDesign.vue"
 
 export default {
   name: "ModalContent",
   components: {
     AntModal,
+    LessonDesign,
   },
   props: {
     handleOk: Function,
