@@ -4,7 +4,7 @@
       <div
         v-for="(feature, index) in features.slice(0, 3)"
         :key="index"
-        :class="`feature-${index + 1} cursor-pointer`"
+        :class="`feature-${index + 1}`"
       >
         <div
           :class="`${feature.parentClass} flex justify-end items-center gap-2 hover:scale-110 text-black`"
@@ -34,7 +34,7 @@
       <div
         v-for="(feature, index) in features.slice(-2)"
         :key="index"
-        :class="`feature-${index + 1} cursor-pointer`"
+        :class="`feature-${index + 1}`"
       >
         <div
           :class="`${feature.parentClass} flex hover:scale-110 text-black items-center`"

@@ -5,7 +5,7 @@
     <div
       v-for="(benefit, index) in benefits"
       :key="index"
-      :class="`benefit-${index + 1} cursor-pointer`"
+      :class="`benefit-${index + 1}`"
     >
       <div
         :class="`${benefit.parentClass} hover:scale-110 text-white rounded-md flex flex-col items-center justify-center`"

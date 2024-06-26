@@ -3,7 +3,7 @@
     <div
       v-for="(benefit, index) in benefits"
       :key="index"
-      :class="`benefit-${index + 1} cursor-pointer`"
+      :class="`benefit-${index + 1}`"
     >
       <div
         :class="`${benefit.parentClass} hover:scale-110 border-2 border-white bg-white text-black shadow-effect flex rounded-md items-center justify-center`"

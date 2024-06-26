@@ -1,22 +1,20 @@
 <template>
   <div>
     <div
-      v-for="(benefit, index) in benefits"
+      v-for="(feature, index) in features"
       :key="index"
-      :class="`benefit-${index + 1} cursor-pointer`"
+      :class="`feature-${index + 1}`"
     >
       <div
-        :class="`${benefit.parentClass} hover:scale-110 border-2 border-white bg-white text-black shadow-effect flex rounded-md items-center justify-center`"
+        :class="`${feature.parentClass} hover:scale-110 border-2 border-white bg-white text-black shadow-effect flex rounded-md items-center justify-center`"
       >
         <!--Column 1 30%-->
         <div class="w-3/10">
-          <img :src="benefit.icon" :class="benefit.iconClass" alt="icon">
+          <img :src="feature.icon" :class="feature.iconClass" alt="icon">
         </div>
         <!-- Column 2 70%-->
-        <div :class="`${benefit.contentClass} w-7/10 ml-6`">
-          <div :class="benefit.titleClass" v-html="formattedDescription(benefit.title)">
-          </div>
-          <div v-if="benefit.description" :class="benefit.descriptionClass" v-html="formattedDescription(benefit.description)">
+        <div :class="`${feature.contentClass} w-7/10 ml-6`">
+          <div :class="feature.titleClass" v-html="formattedDescription(feature.title)">
           </div>
         </div>
       </div>
@@ -35,10 +33,10 @@ import universe from "@/assets/icon/student/icon_univer.svg";
 import formattedDescription from "@/utils/index.js";
 
 export default defineComponent({
-  name: "Benefits",
+  name: "features",
   setup() {
     // Đoạn text của các lợi ích
-    const benefits = [
+    const features = [
       {
         icon: computerHeavy,
         title:
@@ -79,7 +77,7 @@ export default defineComponent({
     ];
 
     return {
-      benefits,
+      features,
       formattedDescription,
     };
   },
@@ -87,7 +85,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.benefit-1 {
+.feature-1 {
   position: absolute;
   top: 70%;
   left: 55%;
@@ -96,7 +94,7 @@ export default defineComponent({
   padding: 10px;
   border-radius: 5px;
 }
-.benefit-2 {
+.feature-2 {
   position: absolute;
   top: 53%;
   left: 50%;
@@ -105,7 +103,7 @@ export default defineComponent({
   padding: 10px;
   border-radius: 5px;
 }
-.benefit-3 {
+.feature-3 {
   position: absolute;
   top: 36%;
   left: 55%;
@@ -114,7 +112,7 @@ export default defineComponent({
   padding: 10px;
   border-radius: 5px;
 }
-.benefit-4 {
+.feature-4 {
   position: absolute;
   top: 18%;
   left: 50%;
