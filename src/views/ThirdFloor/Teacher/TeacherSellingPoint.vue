@@ -1,23 +1,24 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <div class="image-container mt-[-10px]">
-      <LessonDesign />
+      <component :is="currentComponent" />
     </div>
   </AntModal>
 </template>
 
 <script>
 import AntModal from "@/components/reusable/AntModal.vue";
-
 import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
 import LessonDesign from "@/views/ThirdFloor/Teacher/LessonDesign.vue";
+import AccessLessonRepository from "@/views/ThirdFloor/Teacher/AccessLessonRepository.vue";
 
 export default {
   name: "ModalContent",
   components: {
     AntModal,
     LessonDesign,
+    AccessLessonRepository,
   },
   props: {
     handleOk: Function,
@@ -25,6 +26,11 @@ export default {
     sellingPointNumber: {
       type: Number,
       default: 1,
+    },
+  },
+  computed: {
+    currentComponent() {
+      return this.sellingPointNumber === 1 ? 'LessonDesign' : 'AccessLessonRepository';
     },
   },
   setup() {
