@@ -33,13 +33,13 @@ export default defineComponent({
     // Đoạn text của các điểm bán hàng
     const sellingPoints = [
       {
-        title: "Giải pháp cung cấp tính năng \n quản lý trường học",
+        title: "Giải pháp cung cấp tính \n năng quản lý trường học",
         description: "bao gồm giao bài tập, quản lý \n học sinh và tổ chức thi.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass: "font-bold text-center text-2xl text-white mb-2",
         descriptionClass: "font-bold text-center text-sm px-6",
-        parentClass: "w-[25vw] h-[50vh] p-4 pt-8",
+        parentClass: "w-[30vw] h-[50vh] p-4 pt-8",
       },
       {
         title:
@@ -71,7 +71,7 @@ export default defineComponent({
 .sellingPoint-1 {
   position: absolute;
   top: 60%;
-  left: 40%;
+  left: 38%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
 }
@@ -79,7 +79,7 @@ export default defineComponent({
 .sellingPoint-2 {
   position: absolute;
   top: 60%;
-  left: 80%;
+  left: 77%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
 }
