@@ -48,8 +48,8 @@ export default defineComponent({
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-sm px-6",
+          "font-bold text-2xl text-[#137BB5] min-h-[17vh]",
+        descriptionClass: "text-sm px-6",
         parentClass: "w-[15vw] h-[50vh] p-4 bg-white pt-8",
       },
       {
@@ -58,8 +58,8 @@ export default defineComponent({
         description: "nhờ đồng bộ thông tin đa chiều",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "font-bold text-xl text-[#137BB5] text-center min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
+        titleClass: "font-bold text-xl text-[#137BB5] min-h-[17vh]",
+        descriptionClass: "text-lg",
         parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
       },
       {
@@ -69,8 +69,8 @@ export default defineComponent({
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass:
-          "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-white text-center text-lg",
+          "font-bold text-2xl text-[#137BB5] min-h-[17vh]",
+        descriptionClass: "text-lg",
         parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
       },
     ];
