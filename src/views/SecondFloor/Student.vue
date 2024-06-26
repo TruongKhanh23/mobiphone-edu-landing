@@ -13,7 +13,7 @@
         <img :src="backgroundStudentStrong" alt="backgroundStudentStrong" />
         <div class="student-strong-title flex flex-col items-center text-white">
           <span class="font-black text-5xl">ĐIỂM MẠNH</span>
-          <span class="font-bold italic mt-2"
+          <span class="font-bold italic mt-2 text-2xl"
             >Tính năng Adaptive Learning cho học sinh</span
           >
         </div>
@@ -126,7 +126,7 @@ export default {
 }
 .student-strong-title {
   position: absolute;
-  top: 12%;
+  top: 14%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
