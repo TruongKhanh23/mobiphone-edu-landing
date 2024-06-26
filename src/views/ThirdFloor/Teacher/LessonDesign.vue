@@ -18,7 +18,7 @@
         <img
           :src="lessonData.image"
           class="mx-auto mt-4 w-full max-w-xl"
-          alt="Example Image"
+          alt="Example"
         />
         <ol class="list-inside ml-4 mt-4">
           <li class="text-base font-bold">{{ lessonData.h5p.title }}</li>
@@ -29,7 +29,7 @@
         <p class="text-base font-bold ml-4">
           <img
             :src="lessonData.h5p.image"
-            alt="Example Image"
+            alt="Example"
             class="mx-auto w-full max-w-xl"
           />
         </p>
@@ -37,7 +37,7 @@
         <p class="text-base text-blue-600 underline font-bold ml-4">
           <img
             :src="lessonData.h5p.designImage"
-            alt="Example Image"
+            alt="Example"
             class="mx-auto w-full max-w-xl"
           />
         </p>
@@ -67,7 +67,7 @@
           </div>
           <p class="text-sm">
             {{ item.upload }}
-            <a :href="item.link" class="underline text-blue-700"></a>
+            <a :href="item.link" class="underline text-blue-700" aria-label="link"></a>
           </p>
           <ol class="pl-12 text-sm font-bold" start="2">
             <li v-for="(item, index) in lessonData.youtubeCanva" :key="index">
