@@ -1,10 +1,8 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
-    <img
-      :src="getFeatureImage(sellingPointNumber)"
-      alt="long image"
-      class="w-full h-auto"
-    />
+    <div class="image-container mt-[-10px]">
+      <LessonDesign />
+    </div>
   </AntModal>
 </template>
 
@@ -13,11 +11,13 @@ import AntModal from "@/components/reusable/AntModal.vue";
 
 import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
+import LessonDesign from "@/views/ThirdFloor/Teacher/LessonDesign.vue";
 
 export default {
   name: "ModalContent",
   components: {
     AntModal,
+    LessonDesign,
   },
   props: {
     handleOk: Function,
@@ -48,4 +48,8 @@ export default {
 
 <style scoped>
 /* Các styles tùy chỉnh cho modal có thể được thêm vào đây */
+.image-container {
+  position: relative;
+  width: 100%;
+}
 </style>
