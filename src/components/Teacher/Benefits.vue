@@ -53,7 +53,7 @@ export default defineComponent({
       {
         title: "Tiết kiệm thời gian và \n giảm tải công việc \n",
         description:
-          "\nVới nguồn học liệu phong phú và \n chuẩn hóa, giúp tiết kiệm 80% \n thời gian biên soạn đề. \n \n Hệ thống hỗ trợ giảm tải 70% các \n công việc hàng ngày như tìm kiếm \n nội dung, phân bổ chương trình, \n chấm điểm tự động, và theo dõi \n việc làm bài tập.",
+          "\nVới nguồn học liệu phong phú và \n chuẩn hóa, giúp tiết kiệm 80% \n thời gian biên soạn đề. \n \n Hệ thống hỗ trợ giảm tải 70% các \n công việc hàng ngày như tìm kiếm \n nội dung, phân bổ chương trình, \n chấm điểm tự động, và theo dõi việc \n làm bài tập.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass: "text-2xl font-bold text-[#009AFE]",
