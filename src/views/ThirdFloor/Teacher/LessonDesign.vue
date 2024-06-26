@@ -1,9 +1,9 @@
 <template>
   <div class="p-4 flex justify-center items-center bg-[#021929]">
-    <div class="mx-auto w-[40vw] text-3xl text-white">
+    <div class="mx-auto w-[70vw] text-3xl text-white">
       <!-- Part 1 -->
       <div class="p-6">
-        <p class="text-2xl font-bold">{{ lessonData.title }}</p>
+        <p class="text-2xl text-center font-bold">{{ lessonData.title }}</p>
         <p class="text-base mt-2">{{ lessonData.description }}</p>
         <p class="text-base mt-2">{{ lessonData.subDescription }}</p>
         <ul class="list-disc list-inside ml-4 mt-2">
@@ -17,7 +17,7 @@
         </ul>
         <img
           :src="lessonData.image"
-          class="mt-4 w-full max-w-xl"
+          class="mx-auto mt-4 w-full max-w-xl"
           alt="Example Image"
         />
         <ol class="list-inside ml-4 mt-4">
@@ -30,7 +30,7 @@
           <img
             :src="lessonData.h5p.image"
             alt="Example Image"
-            class="w-full max-w-xl"
+            class="mx-auto w-full max-w-xl"
           />
         </p>
         <p class="text-base ml-4">{{ lessonData.h5p.types }}</p>
@@ -38,7 +38,7 @@
           <img
             :src="lessonData.h5p.designImage"
             alt="Example Image"
-            class="w-full max-w-xl"
+            class="mx-auto w-full max-w-xl"
           />
         </p>
         <p class="text-base mt-2 font-bold">
@@ -62,7 +62,7 @@
             <img
               :src="item.image"
               alt="SCORM"
-              class="w-full max-w-screen-md h-auto"
+              class="mx-auto w-full max-w-screen-md h-auto"
             />
           </div>
           <p class="text-sm">
@@ -85,7 +85,7 @@
             <img
               :src="item.image"
               :alt="item.alt"
-              class="w-full max-w-screen-md h-auto"
+              class="mx-auto w-full max-w-screen-md h-auto"
             />
           </div>
         </div>
@@ -97,7 +97,7 @@
             <img
               :src="item.image2"
               :alt="item.alt2"
-              class="w-full max-w-screen-md h-auto"
+              class="mx-auto w-full max-w-screen-md h-auto"
             />
           </div>
         </div>
@@ -138,7 +138,7 @@
           <img
             :src="lessonData.embed.image"
             alt="Hình ảnh minh họa"
-            class="w-full h-auto"
+            class="mx-auto w-full h-auto"
           />
         </div>
       </div>
