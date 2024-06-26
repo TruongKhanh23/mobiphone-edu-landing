@@ -5,7 +5,7 @@
     <div
       v-for="(benefit, index) in benefits"
       :key="index"
-      :class="`benefit-${index + 1} cursor-pointer shadow-effect`"
+      :class="`benefit-${index + 1} shadow-effect`"
       @click="handleBenefitClick(index + 1)"
     >
       <div
@@ -60,7 +60,7 @@ export default defineComponent({
         contentClass: "",
         titleClass: "font-bold text-xl text-[#137BB5] text-center min-h-[17vh]",
         descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
       },
       {
         icon: magnifyingGlass,
@@ -71,7 +71,7 @@ export default defineComponent({
         titleClass:
           "font-bold text-center text-2xl text-[#137BB5] min-h-[17vh]",
         descriptionClass: "text-white text-center text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8",
+        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
       },
     ];
 

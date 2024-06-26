@@ -3,7 +3,7 @@
     <div
       v-for="(feature, index) in features"
       :key="index"
-      :class="`feature-${index + 1} cursor-pointer`"
+      :class="`feature-${index + 1}`"
       @click="handleFeatureClick(index + 1)"
     >
       <div class="hover:scale-110" :class="feature.parentClass">
@@ -38,7 +38,7 @@ export default defineComponent({
         contentClass: "text-right",
         titleClass: "font-bold text-right text-[#0C9DEE] italic",
         descriptionClass: "text-right text-lg",
-        parentClass: "w-[23vw] h-40 ",
+        parentClass: "w-[23vw] h-40 cursor-pointer",
       },
       {
         number: "02",
@@ -49,7 +49,7 @@ export default defineComponent({
         contentClass: "text-right",
         titleClass: "font-bold text-right text-[#0C9DEE] italic",
         descriptionClass: "w-[80%] float-right text-right text-lg",
-        parentClass: "w-[23vw] h-40",
+        parentClass: "w-[23vw] h-40 cursor-pointer",
       },
       {
         number: "03",

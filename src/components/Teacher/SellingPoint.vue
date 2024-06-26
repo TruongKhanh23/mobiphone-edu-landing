@@ -3,7 +3,7 @@
     <div
       v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
-      :class="`sellingPoint-${index + 1} cursor-pointer`"
+      :class="`sellingPoint-${index + 1}`"
       @click="handleSellingPointClick(index + 1)"
     >
       <div
@@ -58,7 +58,7 @@ export default defineComponent({
         contentClass: "",
         titleClass: "font-bold text-2xl text-white mb-2",
         descriptionClass: "text-lg text-white",
-        parentClass: "min-h-[10vh] w-fit",
+        parentClass: "min-h-[10vh] w-fit cursor-pointer",
       },
       {
         icon: magnifyingGlass,
@@ -69,7 +69,7 @@ export default defineComponent({
         contentClass: "",
         titleClass: "font-bold text-xl text-white min-h-[17vh]",
         descriptionClass: "text-white text-lg",
-        parentClass: "min-h-[10vh] w-fit",
+        parentClass: "min-h-[10vh] w-fit cursor-pointer",
       },
       {
         icon: multipleHuman,

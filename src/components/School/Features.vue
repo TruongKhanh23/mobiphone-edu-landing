@@ -3,7 +3,7 @@
     <div
       v-for="(feature, index) in features"
       :key="index"
-      :class="`feature-${index + 1} cursor-pointer`"
+      :class="`feature-${index + 1}`"
     >
       <div class="hover:scale-110 shadow-effect" :class="feature.parentClass">
         <div :class="`font-black ${feature.numberClass}`">
