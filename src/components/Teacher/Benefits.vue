@@ -46,9 +46,9 @@ export default defineComponent({
           "\nGiúp đánh giá năng lực\ntừng học sinh một cách chính xác.\n \n Đồng thời theo dõi tiến độ học tập và cung cấp phản hồi chi tiết để \n cải thiện hiệu quả học tập.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "text-xl font-bold text-[#009AFE]",
+        titleClass: "text-2xl font-bold text-[#009AFE]",
         descriptionClass: "text-lg",
-        parentClass: "w-[22vw] h-[55vh] p-4 bg-white pt-6",
+        parentClass: "w-[24vw] h-[55vh] p-4 bg-white pt-6",
       },
       {
         title: "Tiết kiệm thời gian và \n giảm tải công việc \n",
@@ -56,9 +56,9 @@ export default defineComponent({
           "\nVới nguồn học liệu phong phú và \n chuẩn hóa, giúp tiết kiệm 80% \n thời gian biên soạn đề. \n \n Hệ thống hỗ trợ giảm tải 70% các \n công việc hàng ngày như tìm kiếm \n nội dung, phân bổ chương trình, \n chấm điểm tự động, và theo dõi \n việc làm bài tập.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "text-xl font-bold text-[#009AFE]",
+        titleClass: "text-2xl font-bold text-[#009AFE]",
         descriptionClass: "text-lg",
-        parentClass: "w-[22vw] h-[55vh] p-4 bg-white pt-6",
+        parentClass: "w-[24vw] h-[55vh] p-4 bg-white pt-6",
       },
       {
         title: "Quản lí dữ liệu học tập \n dễ dàng \n",
@@ -66,9 +66,9 @@ export default defineComponent({
           "\nCho phép tạo và quản lí dữ liệu \n học tập một cách dễ dàng. \n \n Giúp giáo viên và học sinh tổ chức và \n lưu trữ thông tin học tập một cách \n hiệu quả.",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "text-justify",
-        titleClass: "text-xl font-bold text-[#009AFE]",
+        titleClass: "text-2xl font-bold text-[#009AFE]",
         descriptionClass: "text-lg text-justify",
-        parentClass: "w-[22vw] h-[55vh] p-4 bg-white pt-6",
+        parentClass: "w-[24vw] h-[55vh] p-4 bg-white pt-6",
       },
     ];
 
