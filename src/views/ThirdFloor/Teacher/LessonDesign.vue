@@ -85,7 +85,7 @@ export default {
           },
           {
             type: "paragraph",
-            text: "H5P có thể được tích hợp với các nền tảng học tập và hệ thống quản lý nội dung, đồng thời cho phép giáo viên tạo nội dung tương tác phong phú và học sinh có thể trải nghiệm chúng trên laptop, máy tính bảng hoặc điện thoại thông minh.",
+            text: "H5P có thể được tích hợp với các nền tảng học tập và hệ thống quản lí nội dung, đồng thời cho phép giáo viên tạo nội dung tương tác phong phú và học sinh có thể trải nghiệm chúng trên laptop, máy tính bảng hoặc điện thoại thông minh.",
           },
           {
             type: "paragraph",

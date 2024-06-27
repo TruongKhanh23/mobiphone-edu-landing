@@ -85,7 +85,7 @@ export default defineComponent({
       {
         icon: idea,
         description:
-          "Đánh giá chi tiết về tính chuyên cần, năng lực,  \nvà kết quả học tập của từng học sinh.",
+          "Đánh giá chi tiết về tính chuyên cần, năng lực, \nvà kết quả học tập của từng học sinh.",
         divIconClass: "border-[#36437F]",
         iconClass: "w-10 h-10",
         contentClass: "",

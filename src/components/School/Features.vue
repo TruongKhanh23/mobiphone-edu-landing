@@ -5,7 +5,7 @@
       :key="index"
       :class="`feature-${index + 1}`"
     >
-      <div class="hover:scale-110 shadow-effect" :class="feature.parentClass">
+      <div class="hover:scale-110 shadow-effect flex items-center justify-center" :class="feature.parentClass">
         <div :class="`font-black ${feature.numberClass}`">
           {{ feature.number }}
         </div>
@@ -35,10 +35,10 @@ export default defineComponent({
       {
         number: "01",
         description:
-          "Quản lý hệ thống và toàn bộ tài khoản \n người dùng, phân quyền chuyên môn/bộ môn \n theo các cấp giáo viên trong trường",
+          "Quản lí hệ thống và toàn bộ tài khoản \n người dùng, phân quyền chuyên môn/bộ môn \n theo các cấp giáo viên trong trường",
         numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[25%] text-center",
-        contentClass: "font-bold flex items-center pr-4",
+          "mr-6 italic text-[#FFBB00] font-black text-5xl text-center",
+        contentClass: "font-bold flex items-center justify-center pr-4",
         titleClass: "font-bold text-left text-black italic",
         descriptionClass: "text-black text-left text-sm",
         parentClass: "py-3 flex w-[35vw] h-30 bg-white rounded-lg",
@@ -46,10 +46,10 @@ export default defineComponent({
       {
         number: "02",
         description:
-          "Quản trị kết quả học tập và giảng dạy của \n học sinh, giáo viên do nhà trường quản lí",
+          "Quản trị kết quả học tập và giảng dạy \n của học sinh, giáo viên do nhà trường quản lí",
         numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%]  text-center",
-        contentClass: "font-bold flex items-center pr-4",
+          "mr-6 italic text-[#FFBB00] font-black text-5xl text-center",
+        contentClass: "font-bold pr-4",
         titleClass: "font-bold text-left text-black italic",
         descriptionClass: "text-black text-left text-sm",
         parentClass: "py-3 flex w-[35vw] h-30 bg-white rounded-lg",
@@ -57,10 +57,10 @@ export default defineComponent({
       {
         number: "03",
         description:
-          "Quản trị tiến độ giảng dạy và theo dõi KHGD của giáo viên",
+          "Quản trị tiến độ giảng dạy và theo dõi \n KHGD của giáo viên",
         numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[40%]  text-center",
-        contentClass: "font-bold flex items-center pr-4",
+          "mr-6 italic text-[#FFBB00] font-black text-5xl text-center",
+        contentClass: "font-bold pr-4",
         titleClass: "w-[90%] font-bold text-left text-black italic",
         descriptionClass: "text-black text-left text-sm",
         parentClass: "py-3 flex w-[30vw] h-30 bg-white rounded-lg",
@@ -69,8 +69,8 @@ export default defineComponent({
         number: "04",
         description: "Quản trị và tổ chức thi, kiểm tra cho \n nhà trường",
         numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[40%]  text-center",
-        contentClass: "font-bold flex items-center pr-4",
+          "mr-6 italic text-[#FFBB00] font-black text-5xl text-center",
+        contentClass: "font-bold pr-4",
         titleClass: "w-[90%] font-bold text-left text-black italic",
         descriptionClass: "text-black text-left text-sm",
         parentClass: "py-3 flex w-[30vw] h-30 bg-white rounded-lg",
@@ -79,8 +79,8 @@ export default defineComponent({
         number: "05",
         description: "Báo cáo sở ban ngành",
         numberClass:
-          "italic text-[#FFBB00] font-black text-5xl w-[30%]  text-center",
-        contentClass: "font-bold flex items-center",
+          "mr-6 italic text-[#FFBB00] font-black text-5xl text-center",
+        contentClass: "font-bold",
         titleClass: "font-bold text-left text-black italic",
         descriptionClass: "text-black text-left text-sm",
         parentClass: "py-3 flex w-[30vw] h-30 bg-white rounded-lg",
