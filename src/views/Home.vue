@@ -28,16 +28,19 @@
     />
     <!-- Home Title -->
     <div
-      class="absolute top-[5%] left-1/2 transform -translate-x-1/2 flex flex-col z-10 text-center font-robotoBold"
+      class="absolute top-[3.5%] left-1/2 transform -translate-x-1/2 flex flex-col z-10 text-center font-robotoBold"
     >
       <div>
-        <h1 class="text-3xl font-bold text-white !mb-0">
-          Bộ giải pháp quản lí E-learning của mobiEdu
+        <div class="flex items-center justify-center">
+          <h1 class="text-3xl font-bold text-white !mb-0">
+          Bộ giải pháp quản lí E-learning của
         </h1>
-        <p class="text-white font-bold text-sm">
+        <img :src="logoMobiEdu" class="ml-2 h-7 !mb-0" alt="logo"/>
+        </div>
+        
+        <p class="text-white font-bold text-lg mt-1">
           <span>
-            Quản lí chất lượng giáo dục và hỗ trợ mọi đối tượng trong quá trình
-            dạy và học.
+            Quản lí chất lượng giáo dục và hỗ trợ mọi đối tượng trong quá trình dạy và học.
           </span>
         </p>
       </div>
@@ -66,6 +69,8 @@ import "@/assets/css/home.css";
 import VideoBackground from "@/views/Home/VideoBackground.vue";
 import LeftRightBarIcon from "@/views/Home/LeftRightBarIcon.vue";
 import ObjectsTitle from "@/views/Home/ObjectsTitle.vue";
+
+import logoMobiEdu from "@/assets/logo-mobi-edu.png";
 
 export default {
   name: "Home",
@@ -156,6 +161,7 @@ export default {
       handleCloseDepartmentSecondFloor,
       handleCloseTeacherSecondFloor,
       handleCloseStudentSecondFloor, // Add handler to return
+      logoMobiEdu,
     };
   },
 };
