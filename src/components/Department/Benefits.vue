@@ -40,7 +40,7 @@ export default defineComponent({
       {
         icon: statistic,
         title:
-          "Đánh giá toàn diện và thúc đẩy \n chuyển đổi số nhanh chóng & dễ dàng",
+          "Đánh giá toàn diện, thúc đẩy \n chuyển đổi số nhanh chóng & dễ dàng",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
         titleClass: "font-bold text-center italic text-lg",
@@ -49,8 +49,8 @@ export default defineComponent({
       },
       {
         icon: magnifyingGlass,
-        title: "Đánh giá hiệu quả giáo dục thông",
-        description: "qua báo cáo & thống kê.",
+        title: "Đánh giá hiệu quả giáo dục",
+        description: "thông qua báo cáo & thống kê",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
         titleClass: "font-bold text-center italic text-lg",
@@ -59,7 +59,7 @@ export default defineComponent({
       },
       {
         icon: multipleEclipse,
-        title: "Hỗ trợ quản lý hệ thống giáo dục.",
+        title: "Hỗ trợ quản lý hệ thống giáo dục",
         iconClass: "w-10 h-10",
         contentClass: "w-[75%] float-right",
         titleClass: "font-bold text-center italic text-lg",

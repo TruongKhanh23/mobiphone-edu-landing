@@ -7,7 +7,8 @@
       <div
         v-for="(icon, index) in icons"
         :key="index"
-        class="cursor-pointer transition-transform transform hover:scale-110 z-2"
+        :class="{'scale-150': activeIconIndex === index, 'hover:scale-110': activeIconIndex !== index}"
+        class="cursor-pointer transition-transform transform z-2"
         @click="showPopup(index)"
       >
         <img :src="icon" alt="Icon" class="w-10 h-10 mb-4" />
@@ -34,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted, computed } from "vue";
+import { ref, computed } from "vue";
 import consultantIcon from "@/assets/icon/consultant-icon.png";
 import contributeIcon from "@/assets/icon/contribute-icon.png";
 import networkIcon from "@/assets/icon/network-icon.png";
@@ -63,6 +64,9 @@ export default {
       if (activeIconIndex.value === index) {
         // If the same icon is clicked again, toggle the popup visibility
         isPopupVisible.value = !isPopupVisible.value;
+        if (!isPopupVisible.value) {
+          activeIconIndex.value = null;
+        }
       } else {
         randomText.value = leftRightBarData[index];
         popupHeight.value = "auto"; // Adjust based on text length
@@ -88,6 +92,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 /* Floating icons styles */

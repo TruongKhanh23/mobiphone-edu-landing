@@ -16,6 +16,7 @@
         </div>
         <div :class="`${benefit.contentClass} ml-2`">
           <div
+            class="mt-2"
             :class="benefit.titleClass"
             v-html="formattedDescription(benefit.title)"
           ></div>
@@ -44,34 +45,35 @@ export default defineComponent({
     const benefits = [
       {
         icon: humanHead,
-        title: "Hỗ trợ \n quản lý \n hệ thống \n giáo dục",
+        title: "Hỗ trợ quản lý \n hệ thống giáo dục",
+        description: "cho nhà trường",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass:
-          "font-bold text-2xl text-[#137BB5] min-h-[17vh]",
-        descriptionClass: "text-sm px-6",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-white pt-8",
+          "font-bold text-xl text-[#137BB5] min-h-[13vh]",
+        descriptionClass: "text-lg",
+        parentClass: "w-[18vw] h-[55vh] p-4 bg-white pt-8",
       },
       {
         icon: phone,
-        title: "Xây dựng \n kế hoạch \n năm học \n nhanh chóng",
+        title: "Xây dựng kế hoạch \n năm học nhanh chóng",
         description: "nhờ đồng bộ thông tin đa chiều",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
-        titleClass: "font-bold text-xl text-[#137BB5] min-h-[17vh]",
+        titleClass: "font-bold text-xl text-[#137BB5] min-h-[13vh]",
         descriptionClass: "text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
+        parentClass: "w-[18vw] h-[55vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
       },
       {
         icon: magnifyingGlass,
-        title: "Đánh giá \n hiệu quả \n giáo dục",
+        title: "Đánh giá hiệu quả \n giáo dục",
         description: "thông qua báo cáo và thống kê",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass:
-          "font-bold text-2xl text-[#137BB5] min-h-[17vh]",
+          "font-bold text-xl text-[#137BB5] min-h-[13vh]",
         descriptionClass: "text-lg",
-        parentClass: "w-[15vw] h-[50vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
+        parentClass: "w-[18vw] h-[55vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
       },
     ];
 
@@ -117,7 +119,7 @@ export default defineComponent({
 .benefit-school {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 53.5%;
   transform: translate(-50%, -50%)
 }
 </style>

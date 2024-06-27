@@ -71,7 +71,7 @@ import { defineComponent } from "vue";
 import clock from "@/assets/icon/teacher/icon-clock.svg";
 import computer from "@/assets/icon/teacher/icon-computer.svg";
 import data from "@/assets/icon/teacher/icon-data.svg";
-import teacher from "@/assets/icon/teacher/icon-teacher.svg";
+import card from "@/assets/icon/teacher/icon-card-yellow.svg";
 import universal from "@/assets/icon/teacher/icon-universal.svg";
 
 import formattedDescription from "@/utils/index.js";
@@ -119,7 +119,7 @@ export default defineComponent({
       },
       {
         id: 4,
-        icon: teacher,
+        icon: card,
         title:
           "Hỗ trợ giáo viên thiết kế \n bài giảng tương tác trực tuyến \n với nhiều định dạng",
         description:
@@ -127,7 +127,7 @@ export default defineComponent({
         divIconClass: "border-[#36437F]",
         iconClass: "w-16 h-16",
         contentClass: "",
-        titleClass: "font-bold text-md text-white",
+        titleClass: "text-md text-white",
         descriptionClass: "text-white",
         parentClass: "min-h-[10vh] w-fit",
       },
