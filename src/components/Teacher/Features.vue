@@ -85,7 +85,7 @@ export default defineComponent({
         id: 1,
         icon: universal,
         description:
-          "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các cấp \n học từ Tiểu học đến THPT",
+          "Cung cấp kho giáo án, tài liệu, \n bài giảng có sẵn cho các cấp học \n từ Tiểu học đến THPT",
         divIconClass: "",
         iconClass: "w-16 h-16",
         contentClass: "text-right",
@@ -109,7 +109,7 @@ export default defineComponent({
         id: 3,
         icon: clock,
         description:
-          "Quản lí kho bài tập và giao \n bài tập dễ dàng cho học sinh \n kiểm soát được chất lượng dạy học.",
+          "Quản lí, giao bài tập dễ dàng, \nkiểm soát được chất lượng dạy học",
         divIconClass: "border-[#36437F]",
         iconClass: "w-16 h-16",
         contentClass: "text-right float-right",
@@ -123,7 +123,7 @@ export default defineComponent({
         title:
           "Hỗ trợ giáo viên thiết kế \n bài giảng tương tác trực tuyến \n với nhiều định dạng",
         description:
-          "+ Thiết kế trực tiếp trên hệ thống \n+ Gắn link bài giảng từ các nền tảng khác",
+          "• Thiết kế trực tiếp trên hệ thống \n• Gắn link bài giảng từ các nền tảng khác",
         divIconClass: "border-[#36437F]",
         iconClass: "w-16 h-16",
         contentClass: "",
@@ -135,7 +135,7 @@ export default defineComponent({
         id: 5,
         icon: computer,
         description:
-          "Hỗ trợ nộp và quản lý trực tuyến \n các KHGD, KHBD và các báo cáo \n khác theo lớp phân công, \n tiết kiệm thời gian tìm kiếm và \n lưu trữ sổ sách giấy tờ",
+          "Hỗ trợ nộp và quản lí trực tuyến \ncác báo cáo theo lớp phân công; \n tiết kiệm thời gian tìm kiếm \n và lưu trữ sổ sách giấy tờ",
         divIconClass: "border-[#36437F]",
         iconClass: "w-16 h-16",
         contentClass: "",
