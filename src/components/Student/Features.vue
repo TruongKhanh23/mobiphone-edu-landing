@@ -87,7 +87,7 @@ export default defineComponent({
 <style scoped>
 .feature-1 {
   position: absolute;
-  top: 70%;
+  top: 69%;
   left: 55%;
   transform: translate(-50%, -50%);
   color: white;
@@ -96,7 +96,7 @@ export default defineComponent({
 }
 .feature-2 {
   position: absolute;
-  top: 53%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -105,7 +105,7 @@ export default defineComponent({
 }
 .feature-3 {
   position: absolute;
-  top: 36%;
+  top: 35%;
   left: 55%;
   transform: translate(-50%, -50%);
   color: white;
