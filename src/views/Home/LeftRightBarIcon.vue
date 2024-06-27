@@ -26,10 +26,10 @@
         backgroundRepeat: 'no-repeat',
       }"
     >
-      <h1 class="text-white font-bold text-lg">
+      <h1 class="text-[#FAFF06] font-bold text-2xl mb-5">
         {{ randomText.title }}
       </h1>
-      <p class="text-white text-sm" v-html="formattedDescription"></p>
+      <p class="text-white text-sm" :class="activeIconIndex === 1 ? 'leading-8' : ''" v-html="formattedDescription"></p>
     </div>
   </div>
 </template>
@@ -42,7 +42,7 @@ import networkIcon from "@/assets/icon/network-icon.png";
 import personIcon from "@/assets/icon/person-icon.png";
 import settingIcon from "@/assets/icon/setting-icon.png";
 import leftRightBarData from "@/assets/data/leftRightBarData.json";
-import backgroundPopupDesription from "@/assets/image/background-popup-description.png";
+import backgroundPopupDesription from "@/assets/image/background-popup-description.svg";
 
 export default {
   name: "LeftRightBarIcon",
@@ -73,6 +73,8 @@ export default {
         isPopupVisible.value = true;
         activeIconIndex.value = index;
       }
+      console.log("activeIconIndex.value", activeIconIndex.value);
+      
     };
 
     const formattedDescription = computed(() => {
