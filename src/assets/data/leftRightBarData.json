@@ -1,19 +1,19 @@
 [
   {
-    "title": "Mô tả đầy đủ",
-    "description": "Bộ giải pháp Quản lí E-learning của mobiEdu là hệ sinh thái các giải pháp giáo dục quản lí chất lượng và hỗ trợ giáo viên, học sinh, nhà trường, sở-ban-ngành trong quá trình dạy và học. E-learning của mobiEdu hoạt động theo mô hình phần mềm dịch vụ (SaaS) trên nền tảng điện toán đám mây, cho phép người dùng truy cập và sử dụng kho học liệu số không giới hạn, không phụ thuộc vào thời gian và địa điểm. Giải pháp sử dụng dữ liệu lớn và học máy để theo dõi và phân tích hành vi học tập của học sinh, từ đó hỗ trợ quản lí chất lượng giáo dục và cải thiện quá trình dạy và học. Bên cạnh đó bộ giải pháp giúp đồng bộ dữ liệu giữa tất cả các cấp trong ngành giáo dục."
+    "title": "GIỚI THIỆU CHUNG",
+    "description": "Bộ giải pháp Quản lí E-learning của \n mobiEdu là hệ sinh thái các giải pháp \n giáo dục quản lí chất lượng \n và hỗ trợ giáo viên, học sinh, nhà trường, \n sở-ban-ngành trong quá trình dạy và học.\n \n E-learning của mobiEdu hoạt động \n theo mô hình phần mềm dịch vụ (SaaS) \n trên nền tảng điện toán đám mây, \n cho phép người dùng truy cập và sử dụng \n kho học liệu số không giới hạn, không phụ thuộc vào thời gian và địa điểm.\n \n Giải pháp sử dụng dữ liệu lớn và học máy để theo dõi và phân tích hành vi học tập của học sinh. Từ đó hỗ trợ quản lí chất lượng giáo dục và cải thiện quá trình dạy và học. \n \n Bên cạnh đó bộ giải pháp giúp đồng bộ \n dữ liệu giữa tất cả các cấp trong ngành \n giáo dục."
   },
   {
-    "title": "Tính năng",
-    "description": "- Quản lí, tra cứu tài liệu học tập\n- Theo dõi tiến độ và kế hoạch\n- Quản lí học tập và giảng dạy\n- Học và ôn luyện thần tốc\n- Báo cáo và liên lạc\n- Hỗ trợ tương tác và hỏi đáp"
+    "title": "CHỨC NĂNG",
+    "description": "• Quản lí, tra cứu tài liệu học tập\n• Theo dõi tiến độ và kế hoạch\n• Quản lí học tập và giảng dạy\n• Học và ôn luyện thần tốc\n• Báo cáo và liên lạc\n• Hỗ trợ tương tác và hỏi đáp"
   },
   {
     "title": "Lợi ích",
     "description": "<span class='font-bold'>1. Học sinh:</span><br/>Dễ dàng truy cập kho bài giảng và bài tập tất cả các bộ môn<br/>Tự giác học tập và tiết kiệm thời gian.<br/><br/><span class='font-bold'>2. Phụ huynh:</span><br/>Theo dõi tiến độ học tập một cách dễ dàng<br/>Tương tác với giáo viên để cập nhật thông tin<br/><br/><span class='font-bold'>3. Giáo viên:</span><br/>Tạo và quản lí dữ liệu học tập một cách dễ dàng<br/>Theo dõi tiến độ học tập của học sinh và cung cấp phản hồi.<br/><br/><span class='font-bold'>4. Nhà trường - Sở/Phòng GD&ĐT:</span><br/>Hỗ trợ quản lí hệ thống giáo dục.<br/>Đánh giá hiệu quả giáo dục thông qua báo cáo và thống kê.<br/>"
   },
   {
-    "title": "Đối tượng hướng đến",
-    "description": "- Cán bộ sở/ban/ngành: dùng để quản lí<br/>- Cán bộ hành chính/quản lí của nhà trường: dùng để quản lí<br/>- Các giáo viên: dùng để quản lí lớp/học sinh và thực hiện các nghiệp vụ sư phạm<br/>- Học sinh để ôn luyện theo chương trình Bộ GD và tự luyện."
+    "title": "ĐỐI TƯỢNG",
+    "description": "<span class='font-bold text-[#FAFF06]'>Cán bộ sở/ban/ngành:</span> <br/> dùng để quản lí<br/><br/><span class='font-bold text-[#FAFF06]'>Cán bộ hành chính/quản lí của \n nhà trường:</span> <br/> dùng để quản lí<br/><br/><span class='font-bold text-[#FAFF06]'>Các giáo viên</span>: <br/> dùng để quản lí lớp/học sinh <br/> và thực hiện các nghiệp vụ <br/> sư phạm<br/><br/><span class='font-bold text-[#FAFF06]'>Học sinh:</span> <br/> để ôn luyện theo chương trình <br/> Bộ GD và tự luyện."
   },
   {
     "title": "",
