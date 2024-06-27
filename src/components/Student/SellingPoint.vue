@@ -44,24 +44,24 @@ export default defineComponent({
       {
         icon: team,
         description:
-          "Học sinh có thể tự học, tự luyện tập \n theo từng chủ đề theo khả năng \n của mình.",
+          "Học sinh có thể tự học, tự luyện tập theo \n từng chủ đề theo khả năng của mình.",
         iconClass: "w-18 h-18 mb-4",
         contentClass: "",
         titleClass: "font-bold text-center text-2xl text-[#137BB5]",
         descriptionClass: "font-bold text-white text-center text-2xl px-6",
         parentClass:
-          "w-[35vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
+          "w-[36vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
       {
         icon: computerLight,
         description:
-          "Hệ thống phân tích trình độ và \n đưa ra bài luyện tập phù hợp",
+          "Hệ thống phân tích trình độ\n và đưa ra bài luyện tập phù hợp",
         iconClass: "w-18 h-18 mb-4",
         contentClass: "",
         titleClass: "font-bold text-xl text-[#137BB5] text-center",
         descriptionClass: "font-bold text-white text-center text-2xl px-6",
         parentClass:
-          "w-[35vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
+          "w-[36vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
     ];
 

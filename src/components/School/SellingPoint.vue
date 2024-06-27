@@ -71,7 +71,7 @@ export default defineComponent({
 .sellingPoint-1 {
   position: absolute;
   top: 60%;
-  left: 38%;
+  left: 30%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
 }
@@ -79,7 +79,7 @@ export default defineComponent({
 .sellingPoint-2 {
   position: absolute;
   top: 60%;
-  left: 77%;
+  left: 75%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
 }
