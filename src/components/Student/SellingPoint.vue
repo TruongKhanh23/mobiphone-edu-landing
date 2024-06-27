@@ -44,7 +44,7 @@ export default defineComponent({
       {
         icon: team,
         description:
-          "Học sinh có thể tự học, tự luyện tập theo \n từng chủ đề theo khả năng của mình.",
+          "Học sinh có thể tự học, tự luyện tập \n theo từng chủ đề theo khả năng của mình.",
         iconClass: "w-18 h-18 mb-4",
         contentClass: "",
         titleClass: "font-bold text-center text-2xl text-[#137BB5]",

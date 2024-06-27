@@ -44,7 +44,7 @@ export default defineComponent({
         number: "02",
         title: "THEO DÕI tỉ lệ chuyển đổi số DTI trong giáo dục phổ thông",
         description:
-          "Do Bộ Giáo dục và Đào tạo \n ban hành đối với toàn bộ trường \n mà Sở/Phòng quản lí",
+          "do Bộ Giáo dục và Đào tạo \n ban hành đối với toàn bộ trường \n mà Sở/Phòng quản lí",
         numberClass: "text-right font-black text-5xl text-[#FCBF19]",
         contentClass: "text-right",
         titleClass: "font-bold text-right text-[#0C9DEE] italic",
@@ -64,8 +64,8 @@ export default defineComponent({
       },
       {
         number: "04",
-        title: "THEO DÕI tiến độ, \n xem và đọc kết quả",
-        description: "của nhà trường, giáo viên",
+        title: "THEO DÕI tiến độ, \n kết quả học tập và giảng dạy",
+        description: "của giáo viên và học sinh",
         numberClass: "font-black text-5xl text-white w-[20%] text-center",
         contentClass: "float-right",
         titleClass: "font-bold text-left text-[#0C9DEE] italic leading-tight",

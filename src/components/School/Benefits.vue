@@ -45,7 +45,7 @@ export default defineComponent({
     const benefits = [
       {
         icon: humanHead,
-        title: "Hỗ trợ quản lý \n hệ thống giáo dục",
+        title: "Hỗ trợ quản lí \n hệ thống giáo dục",
         description: "cho nhà trường",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
@@ -57,7 +57,7 @@ export default defineComponent({
       {
         icon: phone,
         title: "Xây dựng kế hoạch \n năm học nhanh chóng",
-        description: "nhờ đồng bộ thông tin đa chiều",
+        description: "nhờ đồng bộ thông tin \n đa chiều",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass: "font-bold text-xl text-[#137BB5] min-h-[13vh]",
@@ -67,7 +67,7 @@ export default defineComponent({
       {
         icon: magnifyingGlass,
         title: "Đánh giá hiệu quả \n giáo dục",
-        description: "thông qua báo cáo và thống kê",
+        description: "thông qua báo cáo \n và thống kê",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass:

@@ -7,11 +7,9 @@
     >
       <div :class="`${sellingPoint.parentClass} hover:scale-110`">
         <div>
-          <div :class="`${sellingPoint.titleClass}`">
-            {{ sellingPoint.title }}
+          <div :class="`${sellingPoint.titleClass}`" v-html="formattedDescription(sellingPoint.title)">
           </div>
-          <div :class="sellingPoint.descriptionClass">
-            {{ sellingPoint.description }}
+          <div :class="sellingPoint.descriptionClass" v-html="formattedDescription(sellingPoint.description)">
           </div>
         </div>
       </div>
@@ -21,6 +19,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import formattedDescription from "@/utils/index.js";
 
 export default defineComponent({
   name: "SellingPoints",
@@ -28,18 +27,16 @@ export default defineComponent({
     // Đoạn text của các điểm bán hàng
     const sellingPoints = [
       {
-        title: "Nhà trường dễ dàng quản lý",
-        description: "giáo viên, học sinh, tổ chức các buổi thi",
+        title: "Nhà trường dễ dàng quản lí nhân sự \n và tổ chức các buổi thi",
         numberClass: "text-center font-black text-4xl text-[#EEBE3A]",
-        titleClass: "font-bold text-center text-2xl italic",
+        titleClass: "font-semibold text-xl italic",
         descriptionClass: "text-lg text-center text-sm",
         parentClass: "w-[35vw] h-[13vh] p-3",
       },
       {
-        title: "Sở/ Phòng GD & ĐT có thể tiếp nhận & đánh giá một cách",
-        description: "đồng bộ & dễ dàng.",
+        title: "Sở/ Phòng GD & ĐT có thể tiếp nhận \n & đánh giá báo cáo \n một cách đồng bộ dễ dàng",
         numberClass: "text-left font-black text-4xl text-white",
-        titleClass: "text-lg text-left italic",
+        titleClass: "text-lg text-left font-semibold italic",
         descriptionClass: "text-right font-bold text-2xl italic mt-2",
         parentClass: "w-[25vw] h-[13vh] p-3",
       },
@@ -47,6 +44,7 @@ export default defineComponent({
 
     return {
       sellingPoints,
+      formattedDescription,
     };
   },
 });
@@ -57,16 +55,16 @@ export default defineComponent({
 .sellingPoint-1 {
   position: absolute;
   top: 40%;
-  left: 37%;
+  left: 43%;
   transform: translate(-50%, -50%);
   color: white;
   padding: 10px;
   border-radius: 5px;
 }
 .sellingPoint-2 {
-  position: absolute;
-  top: 41%;
-  left: 80%;
+  position: absolute; 
+  top: 40%;
+  left: 84%;
   transform: translate(-50%, -50%);
   color: white;
   padding: 10px;
