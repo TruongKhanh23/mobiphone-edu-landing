@@ -135,7 +135,7 @@ export default defineComponent({
         id: 5,
         icon: computer,
         description:
-          "Hỗ trợ nộp và quản lí trực tuyến \ncác báo cáo theo lớp phân công; \n tiết kiệm thời gian tìm kiếm và \n lưu trữ sổ sách giấy tờ",
+          "Hỗ trợ nộp và quản lí trực tuyến \ncác báo cáo theo lớp phân công; \n tiết kiệm thời gian tìm kiếm \n và lưu trữ sổ sách giấy tờ",
         divIconClass: "border-[#36437F]",
         iconClass: "w-16 h-16",
         contentClass: "",

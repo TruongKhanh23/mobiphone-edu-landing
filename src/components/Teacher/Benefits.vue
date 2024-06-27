@@ -43,7 +43,7 @@ export default defineComponent({
       {
         title: "Đánh giá và theo dõi \n chính xác năng lực học sinh",
         description:
-          "\nGiúp đánh giá năng lực\ntừng học sinh một cách chính xác.\n \n Đồng thời theo dõi tiến độ học tập và cung cấp phản hồi chi tiết để \n cải thiện hiệu quả học tập",
+          "\nGiúp đánh giá năng lực\ntừng học sinh một cách chính xác.\n \n Đồng thời theo dõi tiến độ học tập và \n cung cấp phản hồi chi tiết để \n cải thiện hiệu quả học tập",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass: "text-2xl font-bold text-[#009AFE]",

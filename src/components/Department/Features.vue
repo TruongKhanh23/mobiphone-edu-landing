@@ -42,7 +42,7 @@ export default defineComponent({
       },
       {
         number: "02",
-        title: "THEO DÕI tỉ lệ chuyển đổi số DTI trong giáo dục phổ thông",
+        title: "THEO DÕI tỉ lệ chuyển đổi số DTI \n trong giáo dục phổ thông",
         description:
           "do Bộ Giáo dục và Đào tạo \n ban hành đối với toàn bộ trường \n mà Sở/Phòng quản lí",
         numberClass: "text-right font-black text-5xl text-[#FCBF19]",
