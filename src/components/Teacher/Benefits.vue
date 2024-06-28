@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex justify-center items-center space-x-16 benefit-school"
-  >
+  <div class="flex justify-center items-center space-x-16 benefit-school">
     <div
       v-for="(benefit, index) in benefits"
       :key="index"
@@ -43,7 +41,7 @@ export default defineComponent({
       {
         title: "Đánh giá và theo dõi \n chính xác năng lực học sinh",
         description:
-          "\nGiúp đánh giá năng lực\ntừng học sinh một cách chính xác.\n \n Đồng thời theo dõi tiến độ học tập và \n cung cấp phản hồi chi tiết để \n cải thiện hiệu quả học tập",
+          "\nGiúp đánh giá năng lực\ntừng học sinh một cách chính xác\n \n Đồng thời theo dõi tiến độ học tập và \n cung cấp phản hồi chi tiết để \n cải thiện hiệu quả học tập",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass: "text-2xl font-bold text-[#009AFE]",
@@ -53,7 +51,7 @@ export default defineComponent({
       {
         title: "Tiết kiệm thời gian và \n giảm tải công việc \n",
         description:
-          "\nVới nguồn học liệu phong phú và \n chuẩn hóa, giúp tiết kiệm 80% \n thời gian biên soạn đề. \n \n Hệ thống hỗ trợ giảm tải 70% các \n công việc hàng ngày như tìm kiếm \n nội dung, phân bổ chương trình, \n chấm điểm tự động, và theo dõi việc \n làm bài tập",
+          "\nVới nguồn học liệu phong phú và \n chuẩn hóa, giúp tiết kiệm 80% \n thời gian biên soạn đề \n \n Hệ thống hỗ trợ giảm tải 70% các \n công việc hàng ngày như tìm kiếm \n nội dung, phân bổ chương trình, \n chấm điểm tự động, và theo dõi việc \n làm bài tập",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass: "text-2xl font-bold text-[#009AFE]",
@@ -63,7 +61,7 @@ export default defineComponent({
       {
         title: "Quản lí dữ liệu học tập \n dễ dàng \n",
         description:
-          "\nCho phép tạo và quản lí dữ liệu \n học tập một cách dễ dàng. \n \n Giúp giáo viên và học sinh tổ chức và \n lưu trữ thông tin học tập một cách \n hiệu quả",
+          "\nCho phép tạo và quản lí dữ liệu \n học tập một cách dễ dàng \n \n Giúp giáo viên và học sinh tổ chức và \n lưu trữ thông tin học tập một cách \n hiệu quả",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "text-justify",
         titleClass: "text-2xl font-bold text-[#009AFE]",

@@ -10,12 +10,14 @@
       >
         <!--Column 1 30%-->
         <div class="w-3/10">
-          <img :src="feature.icon" :class="feature.iconClass" alt="icon">
+          <img :src="feature.icon" :class="feature.iconClass" alt="icon" />
         </div>
         <!-- Column 2 70%-->
         <div :class="`${feature.contentClass} w-7/10 ml-6`">
-          <div :class="feature.titleClass" v-html="formattedDescription(feature.title)">
-          </div>
+          <div
+            :class="feature.titleClass"
+            v-html="formattedDescription(feature.title)"
+          ></div>
         </div>
       </div>
     </div>
@@ -39,8 +41,7 @@ export default defineComponent({
     const features = [
       {
         icon: computerHeavy,
-        title:
-          "Tham gia các kì thi trực tuyến",
+        title: "Tham gia các kì thi trực tuyến",
         iconClass: "w-12 h-12",
         contentClass: "",
         titleClass: "font-semibold text-left text-md",
@@ -49,7 +50,8 @@ export default defineComponent({
       },
       {
         icon: card,
-        title: "Gợi ý bài luyện tập dựa theo năng lực \n của học sinh qua adaptive learning.",
+        title:
+          "Gợi ý bài luyện tập dựa theo năng lực \n của học sinh qua Adaptive Learning.",
         iconClass: "w-12 h-12",
         contentClass: "",
         titleClass: "font-semibold text-md",
@@ -58,7 +60,8 @@ export default defineComponent({
       },
       {
         icon: book,
-        title: "Cung cấp kho bài tập tự luyện có sẵn \n trên hệ thống và kho bài tập được giao \n bởi giáo viên bộ môn",
+        title:
+          "Cung cấp kho bài tập tự luyện có sẵn \n trên hệ thống và kho bài tập được giao \n bởi giáo viên bộ môn",
         iconClass: "w-12 h-12",
         contentClass: "",
         titleClass: "font-semibold text-md",
@@ -67,7 +70,8 @@ export default defineComponent({
       },
       {
         icon: universe,
-        title: "Cung cấp kho bài giảng với đầy đủ \n môn học bám sát chương trình GDPT \n giúp học sinh tự học",
+        title:
+          "Cung cấp kho bài giảng với đầy đủ \n môn học bám sát chương trình GDPT \n giúp học sinh tự học",
         iconClass: "w-12 h-12",
         contentClass: "",
         titleClass: "font-semibold text-md",

@@ -30,11 +30,7 @@
             }}</a>
           </template>
           <template v-else-if="content.type === 'image'">
-            <img
-              :src="content.text"
-              alt="Lesson"
-              class="mx-auto my-4 w-full max-w-xl"
-            />
+            <img :src="content.text" alt="Lesson" class="mx-auto my-4 w-full" />
           </template>
         </div>
       </div>
@@ -43,6 +39,25 @@
 </template>
 
 <script>
+import image1 from "@/assets/thirdfloor/teacher/2.3.1/h5p/image1.png";
+import image2 from "@/assets/thirdfloor/teacher/2.3.1/h5p/image2.webp";
+import image3 from "@/assets/thirdfloor/teacher/2.3.1/h5p/image3.webp";
+import image4 from "@/assets/thirdfloor/teacher/2.3.1/h5p/image4.png";
+import image5 from "@/assets/thirdfloor/teacher/2.3.1/h5p/image5.png";
+import image6 from "@/assets/thirdfloor/teacher/2.3.1/h5p/image6.png";
+import image7 from "@/assets/thirdfloor/teacher/2.3.1/h5p/image7.png";
+
+import image1Scrom from "@/assets/thirdfloor/teacher/2.3.1/scrom/image1.png";
+import image2Scrom from "@/assets/thirdfloor/teacher/2.3.1/scrom/image2.png";
+
+import image1YoutubeCanva from "@/assets/thirdfloor/teacher/2.3.1/youtube-canva/image1.webp";
+import image2YoutubeCanva from "@/assets/thirdfloor/teacher/2.3.1/youtube-canva/image2.png";
+
+import image1Test from "@/assets/thirdfloor/teacher/2.3.1/test/image1.webp";
+import image2Test from "@/assets/thirdfloor/teacher/2.3.1/test/image2.webp";
+
+import image1Embeded from "@/assets/thirdfloor/teacher/2.3.1/embeded/image1.webp";
+
 export default {
   name: "LessonDesign",
   setup() {
@@ -73,7 +88,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXc-Bq0bczFVn85pJ5VR_Jxl5wB99lgTGIDU7_Gi5IlMHOBn1zCRU57wJjWhX_ZjVwe-wCE2ZPZUQxcliUP4yRLoYTHqDLrH-wsS-iQo8DxpLfnKRjaEyo6xYd8nzb5w_KTIGEmTetczdDg2_8f0c0N0ZbQl?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image1,
           },
           {
             type: "subTitle",
@@ -97,7 +112,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXeho1K8uIzdR_u03UVXIprDA8HX8l8gPkoVMgtBb0hTQr-bS31htzooWqWsMWc3GO6Nyk5xcvPIy9Hop16q160smXCJhcDB-1rbjKngC9OPkzoOF7ZCLDhBkjYaktWXTSmvOEtIrSc8nYI7lqYSfB7L4iM?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image2,
           },
           {
             type: "paragraph",
@@ -105,7 +120,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXc6EGUU552GPDVuK1bmSRwo_ohUdJp79VUE1eMQt4dG21Z72_I8U2tfJOVnP64m5ebCNxDhWywTOxLXnL-mAFR6HsPu5WcYXfjqyGQcj6LZqBvsoyWDR5nCqBn2J6n-qtlTmRKhVa8hqrU4j-cXEFQauG5e?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image3,
           },
           {
             type: "paragraph",
@@ -113,16 +128,16 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXc6EGUU552GPDVuK1bmSRwo_ohUdJp79VUE1eMQt4dG21Z72_I8U2tfJOVnP64m5ebCNxDhWywTOxLXnL-mAFR6HsPu5WcYXfjqyGQcj6LZqBvsoyWDR5nCqBn2J6n-qtlTmRKhVa8hqrU4j-cXEFQauG5e?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image4,
           },
 
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXc6EGUU552GPDVuK1bmSRwo_ohUdJp79VUE1eMQt4dG21Z72_I8U2tfJOVnP64m5ebCNxDhWywTOxLXnL-mAFR6HsPu5WcYXfjqyGQcj6LZqBvsoyWDR5nCqBn2J6n-qtlTmRKhVa8hqrU4j-cXEFQauG5e?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image5,
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXc6EGUU552GPDVuK1bmSRwo_ohUdJp79VUE1eMQt4dG21Z72_I8U2tfJOVnP64m5ebCNxDhWywTOxLXnL-mAFR6HsPu5WcYXfjqyGQcj6LZqBvsoyWDR5nCqBn2J6n-qtlTmRKhVa8hqrU4j-cXEFQauG5e?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image6,
           },
           {
             type: "paragraph",
@@ -130,7 +145,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXc6EGUU552GPDVuK1bmSRwo_ohUdJp79VUE1eMQt4dG21Z72_I8U2tfJOVnP64m5ebCNxDhWywTOxLXnL-mAFR6HsPu5WcYXfjqyGQcj6LZqBvsoyWDR5nCqBn2J6n-qtlTmRKhVa8hqrU4j-cXEFQauG5e?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image7,
           },
         ],
       },
@@ -143,12 +158,24 @@ export default {
             text: "SCORM (Sharable Content Object Reference Model) có nghĩa là Mô hình tham chiếu đối tượng nội dung có thể chia sẻ. SCORM là một tiêu chuẩn quốc tế cho các bài giảng điện tử, giúp đảm bảo bài giảng sẽ tương thích với hầu hết mọi hệ thống quản lí học tập (LMS) trong quá trình triển khai đào tạo trực tuyến.",
           },
           {
-            type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXd2cEsIwYNxOVa6ybF4nSswHjQ2bOEDMfSOu1fR3Gu1654otmIHHfmkqwwTR_SgNKsP6ZKwOmfrdFmcCrrpCglINE4n884CrbNoOpHXD53PbGUS6s-lVWmQC0smEJfBgGq1n5YvCQJvxT__wX29aeOIshE?key=Z491W6RtqKIzS9KLnqskzA",
+            type: "paragraph",
+            text: "- Xây dựng bài giảng dạng SCORM:",
           },
           {
             type: "paragraph",
-            text: "Giáo viên chọn 'tải lên bài giảng SCORM' và tải file lên hệ thống. Hệ thống báo hiển thị tạo bài giảng thành công.",
+            text: "+ Giáo viên nhập tên bài, chọn loại bài giảng dạng SCORM.",
+          },
+          {
+            type: "image",
+            text: image1Scrom,
+          },
+          {
+            type: "paragraph",
+            text: "+ Giáo viên chọn 'tải lên bài giảng SCORM' và tải file lên hệ thống. Hệ thống báo hiển thị tạo bài giảng thành công ",
+          },
+          {
+            type: "image",
+            text: image2Scrom,
           },
         ],
       },
@@ -162,7 +189,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXdgS9M9ZVf3jmIgDQ5cFa_C6WTFCF7Ko6Y_evu3wEIBjd4QQ1NmF46k1V4MgO40vx1Lp9elhvfLbNrfAMRe2vdkD6aAckkJ9Xb7Frv9yu1CpkKg6QsRYYwekuYJgl3ihIORXFEgv1sc6uD3HJSs1t7F6A5j?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image1YoutubeCanva,
           },
           {
             type: "paragraph",
@@ -170,15 +197,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXeaMlasas5KkjC2UcfqrvNg_zAFD3NVhVo29kYoz1tUQa6MXXmfbJaXnRlVTDDfwtmTGdAch19vTQFhkooP9Fhs0tZr5OjDbXzhsuE2PaKa3mAHaNVZ10-lrRseLpSIbwJKn46beAei16MU7gJyZQb2rznT?key=Z491W6RtqKIzS9KLnqskzA",
-          },
-          {
-            type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXc6EGUU552GPDVuK1bmSRwo_ohUdJp79VUE1eMQt4dG21Z72_I8U2tfJOVnP64m5ebCNxDhWywTOxLXnL-mAFR6HsPu5WcYXfjqyGQcj6LZqBvsoyWDR5nCqBn2J6n-qtlTmRKhVa8hqrU4j-cXEFQauG5e?key=Z491W6RtqKIzS9KLnqskzA",
-          },
-          {
-            type: "paragraph",
-            text: "Giáo viên có thể chỉnh sửa, lồng ghép hoạt động tương tác vào video bài giảng.",
+            text: image2YoutubeCanva,
           },
         ],
       },
@@ -192,7 +211,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXcCnd2Ado2s9Z0mJ_c17AT-xCiuLkGLIhzBKXw_4KpJJpdnMNL3LIl-ClUStAGQq1D6Wgz5wmGtjh3AKBrDaWhjzeHFzkUJeDQaxmTd1-NViVRoe8LwiFp5TbUybOyVk4hRynzHME43kTNFW5ZPOmfJ0LQK?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image1Test,
           },
           {
             type: "paragraph",
@@ -200,7 +219,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXcCnd2Ado2s9Z0mJ_c17AT-xCiuLkGLIhzBKXw_4KpJJpdnMNL3LIl-ClUStAGQq1D6Wgz5wmGtjh3AKBrDaWhjzeHFzkUJeDQaxmTd1-NViVRoe8LwiFp5TbUybOyVk4hRynzHME43kTNFW5ZPOmfJ0LQK?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image2Test,
           },
         ],
       },
@@ -214,7 +233,7 @@ export default {
           },
           {
             type: "image",
-            text: "https://lh7-us.googleusercontent.com/docsz/AD_4nXcCnd2Ado2s9Z0mJ_c17AT-xCiuLkGLIhzBKXw_4KpJJpdnMNL3LIl-ClUStAGQq1D6Wgz5wmGtjh3AKBrDaWhjzeHFzkUJeDQaxmTd1-NViVRoe8LwiFp5TbUybOyVk4hRynzHME43kTNFW5ZPOmfJ0LQK?key=Z491W6RtqKIzS9KLnqskzA",
+            text: image1Embeded,
           },
         ],
       },

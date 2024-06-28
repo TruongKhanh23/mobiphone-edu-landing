@@ -5,25 +5,25 @@
       <img
         :src="department"
         alt="department"
-        class="h-28 department cursor-pointer bg-skyblue font-black hover:h-32"
+        class="h-2/5 department cursor-pointer bg-skyblue font-black hover:h-1/2"
         @click="onClickButton('department')"
       />
       <img
         :src="teacher"
         alt="teacher"
-        class="h-28 teacher cursor-pointer bg-skyblue font-black hover:h-32"
+        class="h-64 teacher cursor-pointer bg-skyblue font-black hover:h-72"
         @click="onClickButton('teacher')"
       />
       <img
         :src="student"
         alt="student"
-        class="h-28 student cursor-pointer bg-skyblue font-black hover:h-32"
+        class="h-60 student cursor-pointer bg-skyblue font-black hover:h-72"
         @click="onClickButton('student')"
       />
       <img
         :src="school"
         alt="school"
-        class="h-32 school cursor-pointer bg-skyblue font-black hover:h-36"
+        class="h-48 school cursor-pointer bg-skyblue font-black hover:h-52"
         @click="onClickButton('school')"
       />
       <img
@@ -88,7 +88,7 @@ export default defineComponent({
 
 .department {
   position: absolute;
-  top: 23%;
+  top: 25%;
   left: 62%;
   transition: transform 0.3s ease;
 }
@@ -109,7 +109,7 @@ export default defineComponent({
 
 .student {
   position: absolute;
-  top: 32%;
+  top: 33%;
   left: 32%;
   transition: transform 0.3s ease;
 }
