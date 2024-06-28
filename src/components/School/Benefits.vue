@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex justify-center items-center space-x-16 benefit-school"
-  >
+  <div class="flex justify-center items-center space-x-16 benefit-school">
     <div
       v-for="(benefit, index) in benefits"
       :key="index"
@@ -47,10 +45,9 @@ export default defineComponent({
         icon: humanHead,
         title: "Hỗ trợ quản lí \n hệ thống giáo dục",
         description: "cho nhà trường",
-        iconClass: "w-10 h-10 mb-4",
+        iconClass: "w-14 h-14 mb-4",
         contentClass: "",
-        titleClass:
-          "font-bold text-xl text-[#137BB5] min-h-[13vh]",
+        titleClass: "font-bold text-xl text-[#137BB5] min-h-[13vh]",
         descriptionClass: "text-lg",
         parentClass: "w-[18vw] h-[55vh] p-4 bg-white pt-8",
       },
@@ -58,7 +55,7 @@ export default defineComponent({
         icon: phone,
         title: "Xây dựng kế hoạch \n năm học nhanh chóng",
         description: "nhờ đồng bộ thông tin \n đa chiều",
-        iconClass: "w-10 h-10 mb-4",
+        iconClass: "w-14 h-14 mb-4",
         contentClass: "",
         titleClass: "font-bold text-xl text-[#137BB5] min-h-[13vh]",
         descriptionClass: "text-lg",
@@ -68,10 +65,9 @@ export default defineComponent({
         icon: magnifyingGlass,
         title: "Đánh giá hiệu quả \n giáo dục",
         description: "thông qua báo cáo \n và thống kê",
-        iconClass: "w-10 h-10 mb-4",
+        iconClass: "w-14 h-14 mb-4",
         contentClass: "",
-        titleClass:
-          "font-bold text-xl text-[#137BB5] min-h-[13vh]",
+        titleClass: "font-bold text-xl text-[#137BB5] min-h-[13vh]",
         descriptionClass: "text-lg",
         parentClass: "w-[18vw] h-[55vh] p-4 bg-[#F7C12F] pt-8 cursor-pointer",
       },
@@ -120,6 +116,6 @@ export default defineComponent({
   position: absolute;
   left: 50%;
   top: 53.5%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 </style>

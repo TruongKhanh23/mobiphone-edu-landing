@@ -1,16 +1,12 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
-    <iframe
-      src="https://mobiedu.vn/gioi-thieu"
-      class="w-full h-full"
-      frameborder="0"
-      allowfullscreen
-    ></iframe>
+    <img :src="mobiEdu" alt="mobiEdu" />
   </AntModal>
 </template>
 
 <script lang="ts">
 import AntModal from "@/components/reusable/AntModal.vue";
+import mobiEdu from "@/assets/image/mobiEdu.svg";
 
 export default {
   name: "ModalContent",
@@ -20,6 +16,9 @@ export default {
   props: {
     handleOk: Function,
     handleCancel: Function,
+  },
+  setup() {
+    return { mobiEdu };
   },
 };
 </script>
