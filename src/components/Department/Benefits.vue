@@ -14,10 +14,15 @@
         </div>
         <!-- Column 2 70%-->
         <div :class="`${benefit.contentClass}`">
-          <div :class="benefit.titleClass" v-html="formattedDescription(benefit.title)">
-          </div>
-          <div v-if="benefit.description" :class="benefit.descriptionClass" v-html="formattedDescription(benefit.description)">
-          </div>
+          <div
+            :class="benefit.titleClass"
+            v-html="formattedDescription(benefit.title)"
+          ></div>
+          <div
+            v-if="benefit.description"
+            :class="benefit.descriptionClass"
+            v-html="formattedDescription(benefit.description)"
+          ></div>
         </div>
       </div>
     </div>
