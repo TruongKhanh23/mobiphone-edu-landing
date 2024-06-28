@@ -7,7 +7,10 @@
       <div
         v-for="(icon, index) in icons"
         :key="index"
-        :class="{'scale-150': activeIconIndex === index, 'hover:scale-110': activeIconIndex !== index}"
+        :class="{
+          'scale-150': activeIconIndex === index,
+          'hover:scale-110': activeIconIndex !== index,
+        }"
         class="cursor-pointer transition-transform transform z-2"
         @click="showPopup(index)"
       >
@@ -26,15 +29,19 @@
         backgroundRepeat: 'no-repeat',
       }"
     >
-      <h1 class="text-[#FAFF06] font-bold text-2xl mb-5">
+      <h1 class="text-white font-bold text-2xl mb-5">
         {{ randomText.title }}
       </h1>
-      <p class="text-white text-sm" :class="activeIconIndex === 1 ? 'leading-8' : ''" v-html="formattedDescription"></p>
+      <p
+        class="text-white text-sm"
+        :class="[1].includes(activeIconIndex) ? 'leading-8' : ''"
+        v-html="formattedDescription"
+      ></p>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ref, computed } from "vue";
 import consultantIcon from "@/assets/icon/consultant-icon.png";
 import contributeIcon from "@/assets/icon/contribute-icon.png";
@@ -50,7 +57,7 @@ export default {
     const isPopupVisible = ref(false);
     const randomText = ref({ title: "", description: "" });
     const popupHeight = ref("auto");
-    const activeIconIndex = ref<number | null>(null);
+    const activeIconIndex = ref(null);
 
     const icons = [
       networkIcon,
@@ -60,7 +67,7 @@ export default {
       consultantIcon,
     ];
 
-    const showPopup = (index: number) => {
+    const showPopup = (index) => {
       if (activeIconIndex.value === index) {
         // If the same icon is clicked again, toggle the popup visibility
         isPopupVisible.value = !isPopupVisible.value;
@@ -74,7 +81,6 @@ export default {
         activeIconIndex.value = index;
       }
       console.log("activeIconIndex.value", activeIconIndex.value);
-      
     };
 
     const formattedDescription = computed(() => {
@@ -94,7 +100,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 /* Floating icons styles */

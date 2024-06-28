@@ -8,15 +8,15 @@
     "description": "• Quản lí, tra cứu tài liệu học tập\n• Theo dõi tiến độ và kế hoạch\n• Quản lí học tập và giảng dạy\n• Học và ôn luyện thần tốc\n• Báo cáo và liên lạc\n• Hỗ trợ tương tác và hỏi đáp"
   },
   {
-    "title": "Lợi ích",
-    "description": "<span class='font-bold'>1. Học sinh:</span><br/>Dễ dàng truy cập kho bài giảng và bài tập tất cả các bộ môn<br/>Tự giác học tập và tiết kiệm thời gian.<br/><br/><span class='font-bold'>2. Phụ huynh:</span><br/>Theo dõi tiến độ học tập một cách dễ dàng<br/>Tương tác với giáo viên để cập nhật thông tin<br/><br/><span class='font-bold'>3. Giáo viên:</span><br/>Tạo và quản lí dữ liệu học tập một cách dễ dàng<br/>Theo dõi tiến độ học tập của học sinh và cung cấp phản hồi.<br/><br/><span class='font-bold'>4. Nhà trường - Sở/Phòng GD&ĐT:</span><br/>Hỗ trợ quản lí hệ thống giáo dục.<br/>Đánh giá hiệu quả giáo dục thông qua báo cáo và thống kê.<br/>"
+    "title": "LỢI ÍCH",
+    "description": "<ul class='list-disc list-inside space-y-4'><li>Truy cập dễ dàng và toàn diện vào nội dung học tập</li><li>Tương tác và giao tiếp thuận tiện giữa nhà trường, giáo viên, học sinh</li><li>Quản lí dữ liệu học tập và theo dõi tiến độ học tập</li><li>Cá nhân hoá lộ trình học tập</li><li>Hỗ trợ quản lí và đánh giá hiệu suất hệ thống giáo dục</li></ul>"
   },
   {
     "title": "ĐỐI TƯỢNG",
-    "description": "<span class='font-bold text-[#FAFF06]'>Cán bộ sở/ban/ngành:</span> <br/> dùng để quản lí<br/><br/><span class='font-bold text-[#FAFF06]'>Cán bộ hành chính/quản lí của \n nhà trường:</span> <br/> dùng để quản lí<br/><br/><span class='font-bold text-[#FAFF06]'>Các giáo viên</span>: <br/> dùng để quản lí lớp/học sinh <br/> và thực hiện các nghiệp vụ <br/> sư phạm<br/><br/><span class='font-bold text-[#FAFF06]'>Học sinh:</span> <br/> để ôn luyện theo chương trình <br/> Bộ GD và tự luyện."
+    "description": "<span class='font-bold'>Cán bộ sở/ban/ngành:</span> <br/> dùng để quản lí<br/><br/><span class='font-bold'>Cán bộ hành chính/quản lí của \n nhà trường:</span> <br/> dùng để quản lí<br/><br/><span class='font-bold'>Các giáo viên</span>: <br/> dùng để quản lí lớp/học sinh <br/> và thực hiện các nghiệp vụ <br/> sư phạm<br/><br/><span class='font-bold'>Học sinh:</span> <br/> để ôn luyện theo chương trình <br/> Bộ GD và tự luyện."
   },
   {
     "title": "",
-    "description": "<span class='font-bold'>Thông tin liên hệ</span><br/>Số điện thoại: 0xx.xxxx.xxx<br/>Email: xxx@gmail.com<br/>Website: mobiedu.vn<br/><br/><span class='font-bold'>Câu hỏi thường gặp</span><br/>Giải đáp câu hỏi thường gặp phải tại mobiEdu<br/>Tìm hiểu thêm tại đây:<br/><a href='https://mobiedu.vn' target='_blank' class='underline cursor-pointer'>xxx.com.vn</a>"
+    "description": "<ul class='list-none space-y-4'><li><span class='font-extrabold text-2xl'>LIÊN HỆ</span></li><li>✉ <b>Email</b>: \n contact@mobiedu.vn</li><li>۞ <b>Website</b>: \n https://mobiedu.vn</li><li>⌨ <b>Fanpage:</b> \n https://www.facebook.com/mobiedu.vn</li></ul><ul class='list-none space-y-4'><li><span class='font-extrabold text-2xl'>CÂU HỎI \n THƯỜNG GẶP</span></li><li>Xem thêm các câu hỏi thường gặp</li><li><span class='font-bold text-lg'>>> Tại Đây</span></li></ul>"
   }
 ]
