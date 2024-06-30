@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex justify-center items-center space-x-16 sellingPoint-school"
-  >
+  <div class="flex justify-center items-center space-x-16 sellingPoint-school">
     <div
       v-for="(sellingPoint, index) in sellingPoints"
       :key="index"
@@ -12,7 +10,11 @@
         :class="`${sellingPoint.parentClass} hover:scale-110 text-white rounded-md flex flex-col items-center justify-center`"
       >
         <div class="flex justify-center items-center">
-          <img :src="sellingPoint.icon" :class="sellingPoint.iconClass" alt="icon"/>
+          <img
+            :src="sellingPoint.icon"
+            :class="sellingPoint.iconClass"
+            alt="icon"
+          />
         </div>
         <div :class="`${sellingPoint.contentClass} ml-2`">
           <div
@@ -32,8 +34,8 @@
 
 <script>
 import { defineComponent } from "vue";
-import team from "@/assets/icon/student/icon_team.svg"
-import computerLight from "@/assets/icon/student/icon_computerlight.svg"
+import team from "@/assets/icon/student/icon_team.svg";
+import computerLight from "@/assets/icon/student/icon_computerlight.svg";
 
 export default defineComponent({
   name: "SellingPoints",
@@ -44,7 +46,7 @@ export default defineComponent({
       {
         icon: team,
         description:
-          "Học sinh có thể tự học, tự luyện tập \n theo từng chủ đề theo khả năng của mình.",
+          "Học sinh có thể tự học, tự luyện tập \n theo từng chủ đề theo khả năng của mình",
         iconClass: "w-18 h-18 mb-4",
         contentClass: "",
         titleClass: "font-bold text-center text-2xl text-[#137BB5]",

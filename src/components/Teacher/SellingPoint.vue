@@ -74,7 +74,7 @@ export default defineComponent({
       {
         icon: multipleHuman,
         description:
-          "Giáo viên có thể giao bài tập, tổ chức \n kiểm tra trực tuyến và nhận đánh giá \n từ hệ thống AI.",
+          "Giáo viên có thể giao bài tập, tổ chức \n kiểm tra trực tuyến và nhận đánh giá \n từ hệ thống AI",
         divIconClass: "border-[#36437F]",
         iconClass: "w-10 h-10",
         contentClass: "",
@@ -85,7 +85,7 @@ export default defineComponent({
       {
         icon: idea,
         description:
-          "Đánh giá chi tiết về tính chuyên cần, năng lực, \nvà kết quả học tập của từng học sinh.",
+          "Đánh giá chi tiết về tính chuyên cần, năng lực, \nvà kết quả học tập của từng học sinh",
         divIconClass: "border-[#36437F]",
         iconClass: "w-10 h-10",
         contentClass: "",
@@ -113,7 +113,7 @@ export default defineComponent({
   position: absolute;
   top: 52.5%;
   left: 45%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 
 .sellingPoint-1 {
