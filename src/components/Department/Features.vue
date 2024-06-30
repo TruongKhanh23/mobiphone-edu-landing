@@ -11,10 +11,14 @@
           {{ feature.number }}
         </div>
         <div :class="feature.contentClass">
-          <div :class="`font-bold ${feature.titleClass}`" v-html="formattedDescription(feature.title)">
-          </div>
-          <div :class="feature.descriptionClass" v-html="formattedDescription(feature.description)">
-          </div>
+          <div
+            :class="`font-bold ${feature.titleClass}`"
+            v-html="formattedDescription(feature.title)"
+          ></div>
+          <div
+            :class="feature.descriptionClass"
+            v-html="formattedDescription(feature.description)"
+          ></div>
         </div>
       </div>
     </div>
@@ -33,7 +37,7 @@ export default defineComponent({
       {
         number: "01",
         title: "ĐỊNH DANH cây học liệu \n theo chương học",
-        description: "bài giảng chi tiết \n cho toàn Sở/Phòng.",
+        description: "bài giảng chi tiết \n cho toàn Sở/Phòng",
         numberClass: "text-right font-black text-5xl text-[#FCBF19]",
         contentClass: "text-right",
         titleClass: "font-bold text-right text-[#0C9DEE] italic",

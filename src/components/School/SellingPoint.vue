@@ -34,7 +34,7 @@ export default defineComponent({
     const sellingPoints = [
       {
         title: "Giải pháp cung cấp tính năng \n quản lí trường học",
-        description: "bao gồm giao bài tập, quản lí \n học sinh và tổ chức thi.",
+        description: "bao gồm giao bài tập, quản lí \n học sinh và tổ chức thi",
         iconClass: "w-10 h-10 mb-4",
         contentClass: "",
         titleClass: "font-semibold text-2xl text-white mb-2",
