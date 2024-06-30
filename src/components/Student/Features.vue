@@ -51,7 +51,7 @@ export default defineComponent({
       {
         icon: card,
         title:
-          "Gợi ý bài luyện tập dựa theo năng lực \n của học sinh qua Adaptive Learning.",
+          "Gợi ý bài luyện tập dựa theo năng lực \n của học sinh qua Adaptive Learning",
         iconClass: "w-12 h-12",
         contentClass: "",
         titleClass: "font-semibold text-md",
