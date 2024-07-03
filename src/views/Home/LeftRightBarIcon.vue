@@ -21,22 +21,40 @@
     <!-- Popup -->
     <div
       v-if="isPopupVisible"
-      class="absolute top-1/2 left-12 w-1/5 max-h-4/5 overflow-y-auto p-5 shadow-lg transform -translate-y-1/2 z-10 rounded-lg"
-      :style="{
-        height: popupHeight,
-        backgroundImage: `url(${backgroundPopupDesription})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-      }"
+      class="absolute top-1/2 left-12 w-fit max-h-4/5 overflow-y-auto px-5 py-10 shadow-lg transform -translate-y-1/2 z-10 rounded-lg bg-[#00142C] bg-opacity-[76%] flex items-center justify-center flex-col"
     >
-      <h1 class="text-white font-bold text-2xl mb-5">
+      <h1
+        v-if="randomText.title"
+        class="text-white text-center py-[8px] px-[15px] w-fit font-semibold text-[24px] mb-8 bg-gradient-to-b from-[#4A535C] to-[#92989D]"
+      >
         {{ randomText.title }}
       </h1>
-      <p
-        class="text-white text-sm"
-        :class="[1].includes(activeIconIndex) ? 'leading-8' : ''"
-        v-html="formattedDescription"
-      ></p>
+      <div v-if="randomText.id === 'gioi-thieu-chung'" class="w-[290px]">
+        <p
+          v-for="(paragraph, index) in randomText.description"
+          :key="index"
+          class="text-white text-[16px] text-justify mb-0"
+          v-html="formattedDescription(paragraph)"
+        ></p>
+      </div>
+      <div
+        v-if="randomText.id === 'chuc-nang'"
+        class="flex flex-col gap-[50px]"
+      >
+        <div
+          v-for="(item, index) in randomText.description"
+          :key="index"
+          class="text-white text-[14px] text-justify w-[290px] min-h-[50px] bg-gradient-to-b from-[#07B1B9] to-[#031C3B] flex"
+        >
+          <div class="w-[25%] flex items-center justify-center">
+            <!-- Thêm icon của bạn ở đây -->
+            <img :src="item.icon" alt="icon" />
+          </div>
+          <div class="w-[75%] flex items-center">
+            <div v-html="formattedDescription(item.text)"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -48,8 +66,9 @@ import contributeIcon from "@/assets/icon/contribute-icon.png";
 import networkIcon from "@/assets/icon/network-icon.png";
 import personIcon from "@/assets/icon/person-icon.png";
 import settingIcon from "@/assets/icon/setting-icon.png";
-import leftRightBarData from "@/assets/data/leftRightBarData.json";
+import { leftRightBarData } from "@/assets/data/leftRightBarData.js";
 import backgroundPopupDesription from "@/assets/image/background-popup-description.svg";
+import formattedDescription from "@/utils/index.js";
 
 export default {
   name: "LeftRightBarIcon",
@@ -82,10 +101,6 @@ export default {
       }
       console.log("activeIconIndex.value", activeIconIndex.value);
     };
-
-    const formattedDescription = computed(() => {
-      return randomText.value.description.replace(/\n/g, "<br>");
-    });
 
     return {
       icons,
