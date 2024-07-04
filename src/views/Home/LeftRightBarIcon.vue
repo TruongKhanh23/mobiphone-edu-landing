@@ -21,7 +21,7 @@
     <!-- Popup -->
     <div
       v-if="isPopupVisible"
-      class="absolute top-1/2 left-12 w-fit max-h-4/5 overflow-y-auto px-5 py-10 shadow-lg transform -translate-y-1/2 z-10 rounded-lg bg-[#00142C] bg-opacity-[76%] flex items-center justify-center flex-col"
+      class="absolute top-[55%] left-12 w-fit h-3/4 overflow-y-auto px-5 py-10 shadow-lg transform -translate-y-1/2 z-10 rounded-lg bg-[#00142C] bg-opacity-[76%] flex items-center flex-col"
     >
       <h1
         v-if="randomText.title"
@@ -41,7 +41,7 @@
       <!--Chuc nang-->
       <div
         v-if="randomText.id === 'chuc-nang'"
-        class="flex flex-col gap-[50px]"
+        class="flex flex-col gap-[40px]"
       >
         <div
           v-for="(item, index) in randomText.description"
@@ -60,7 +60,7 @@
       <!--Lien he-->
       <div
         v-if="randomText.id === 'lien-he'"
-        class="flex flex-col gap-[35px] text-white text-[14px] text-justify items-center justify-center"
+        class="flex flex-col gap-[25px] text-white text-[14px] text-justify items-center justify-center"
       >
         <div
           v-for="(item, index) in randomText.description"
