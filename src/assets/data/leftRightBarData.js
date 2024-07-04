@@ -8,6 +8,11 @@ import email from "@/assets/icon/home/email.svg";
 import website from "@/assets/icon/home/website.svg";
 import fanpage from "@/assets/icon/home/fanpage.svg";
 
+import woman from "@/assets/icon/home/woman.svg";
+import man from "@/assets/icon/home/man.svg";
+import student from "@/assets/icon/home/student.svg";
+import head from "@/assets/icon/home/head.svg";
+
 export const leftRightBarData = [
   {
     id: "gioi-thieu-chung",
@@ -44,10 +49,13 @@ export const leftRightBarData = [
     id: "doi-tuong",
     title: "ĐỐI TƯỢNG",
     description: [
-      "<span class='font-bold'>Cán bộ sở/ban/ngành:</span> dùng để quản lí",
-      "<span class='font-bold'>Cán bộ hành chính/quản lí của nhà trường:</span> dùng để quản lí",
-      "<span class='font-bold'>Các giáo viên</span>: dùng để quản lí lớp/học sinh và thực hiện các nghiệp vụ sư phạm",
-      "<span class='font-bold'>Học sinh:</span> để ôn luyện theo chương trình Bộ GD và tự luyện",
+      { icon: woman, text: "Cán bộ các sở - ban - ngành" },
+      { icon: man, text: "Cán bộ quản lí của nhà trường" },
+      {
+        icon: head,
+        text: "Thầy/cô giáo, cán bộ giảng dạy trong nhà trường",
+      },
+      { icon: student, text: "Học sinh trong nhà trường" },
     ],
   },
   {
@@ -56,7 +64,10 @@ export const leftRightBarData = [
     description: [
       { icon: email, text: "Email \n contact@mobiedu.vn" },
       { icon: website, text: "Website \n http://mobiedu.vn" },
-      { icon: fanpage, text: "Fanpage \n http://www.facebook.com/ \n mobiedu.vn" },
+      {
+        icon: fanpage,
+        text: "Fanpage \n http://www.facebook.com/ \n mobiedu.vn",
+      },
     ],
   },
 ];

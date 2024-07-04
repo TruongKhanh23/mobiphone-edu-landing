@@ -76,10 +76,34 @@
           </div>
         </div>
         <div class="flex items-center justify-center flex-col">
-          <div class="w-[250px] min-h-[70px] flex items-center justify-center text-white text-center font-semibold text-[20px] mb-6 bg-[#06D1D3]">
+          <div
+            class="w-[250px] min-h-[70px] flex items-center justify-center text-white text-center font-semibold text-[20px] mb-6 bg-[#06D1D3]"
+          >
             CÂU HỎI THƯỜNG GẶP
           </div>
-          <p class="text-[16px]">Xem thêm <span class="text-[#06D1D3] font-bold underline">TẠI ĐÂY</span></p>
+          <p class="text-[16px]">
+            Xem thêm
+            <span class="text-[#06D1D3] font-bold underline">TẠI ĐÂY</span>
+          </p>
+        </div>
+      </div>
+      <!--Doi tuong-->
+      <div
+        v-if="randomText.id === 'doi-tuong'"
+        class="flex flex-col gap-[30px] text-white text-[16px] text-justify items-center justify-center"
+      >
+        <div
+          v-for="(item, index) in randomText.description"
+          :key="index"
+          class="w-[290px] min-h-[50px] flex"
+        >
+          <div class="w-[20%] flex items-center justify-center">
+            <!-- Thêm icon của bạn ở đây -->
+            <img :src="item.icon" alt="icon" />
+          </div>
+          <div class="w-[80%] flex items-center">
+            <div v-html="formattedDescription(item.text)"></div>
+          </div>
         </div>
       </div>
     </div>
