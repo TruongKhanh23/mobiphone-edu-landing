@@ -41,7 +41,7 @@
       <!--Chuc nang-->
       <div
         v-if="randomText.id === 'chuc-nang'"
-        class="flex flex-col gap-[40px]"
+        class="flex flex-col gap-[35px]"
       >
         <div
           v-for="(item, index) in randomText.description"
@@ -83,7 +83,12 @@
           </div>
           <p class="text-[16px]">
             Xem thêm
-            <span class="text-[#06D1D3] font-bold underline">TẠI ĐÂY</span>
+            <a
+              class="text-[#06D1D3] font-bold underline"
+              href="https://mobiedu.vn/ho-tro-khach-hang"
+              target="_blank"
+              >TẠI ĐÂY</a
+            >
           </p>
         </div>
       </div>
@@ -99,7 +104,7 @@
         >
           <div class="w-[20%] flex items-center justify-center">
             <!-- Thêm icon của bạn ở đây -->
-            <img :src="item.icon" alt="icon" />
+            <img :src="item.icon" alt="icon" class="w-full h-full" />
           </div>
           <div class="w-[80%] flex items-center">
             <div v-html="formattedDescription(item.text)"></div>
@@ -109,7 +114,7 @@
       <!--Loi ich-->
       <div
         v-if="randomText.id === 'loi-ich'"
-        class="flex flex-col gap-[30px] text-white text-[12px] text-justify items-center justify-center"
+        class="flex flex-col gap-[25px] text-white text-[12px] text-justify items-center justify-center"
       >
         <div
           v-for="(item, index) in randomText.description"
