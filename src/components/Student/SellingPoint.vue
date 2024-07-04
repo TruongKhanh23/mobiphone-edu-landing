@@ -50,9 +50,9 @@ export default defineComponent({
         iconClass: "w-18 h-18 mb-4",
         contentClass: "",
         titleClass: "font-bold text-center text-2xl text-[#137BB5]",
-        descriptionClass: "font-bold text-white text-center text-2xl px-6",
+        descriptionClass: "font-bold text-white text-center text-2xl",
         parentClass:
-          "w-[36vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
+          "w-[38vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
       {
         icon: computerLight,
@@ -61,9 +61,9 @@ export default defineComponent({
         iconClass: "w-18 h-18 mb-4",
         contentClass: "",
         titleClass: "font-bold text-xl text-[#137BB5] text-center",
-        descriptionClass: "font-bold text-white text-center text-2xl px-6",
+        descriptionClass: "font-bold text-white text-center text-2xl",
         parentClass:
-          "w-[36vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
+          "w-[38vw] h-[35vh] p-4 bg-gradient-to-r from-[#0099FF] to-[#03578F]",
       },
     ];
 
