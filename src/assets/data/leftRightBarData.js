@@ -4,6 +4,10 @@ import universe from "@/assets/icon/home/universe.svg";
 import book from "@/assets/icon/home/book.svg";
 import phoneContact from "@/assets/icon/home/phone-contact.svg";
 
+import email from "@/assets/icon/home/email.svg";
+import website from "@/assets/icon/home/website.svg";
+import fanpage from "@/assets/icon/home/fanpage.svg";
+
 export const leftRightBarData = [
   {
     id: "gioi-thieu-chung",
@@ -48,15 +52,11 @@ export const leftRightBarData = [
   },
   {
     id: "lien-he",
-    title: "",
+    title: "LIÊN HỆ",
     description: [
-      "<span class='font-extrabold text-2xl'>LIÊN HỆ</span>",
-      "✉ <b>Email</b>: contact@mobiedu.vn",
-      "۞ <b>Website</b>: https://mobiedu.vn",
-      "⌨ <b>Fanpage:</b>: https://www.facebook.com/mobiedu.vn",
-      "<span class='font-extrabold text-2xl'>CÂU HỎI THƯỜNG GẶP</span>",
-      "Xem thêm các câu hỏi thường gặp",
-      "<a class='font-bold text-lg' href='https://mobiedu.vn/ho-tro-khach-hang'> >> Tại Đây</a>",
+      { icon: email, text: "Email \n contact@mobiedu.vn" },
+      { icon: website, text: "Website \n http://mobiedu.vn" },
+      { icon: fanpage, text: "Fanpage \n http://www.facebook.com/ \n mobiedu.vn" },
     ],
   },
 ];

@@ -25,10 +25,11 @@
     >
       <h1
         v-if="randomText.title"
-        class="text-white text-center py-[8px] px-[15px] w-fit font-semibold text-[24px] mb-8 bg-gradient-to-b from-[#4A535C] to-[#92989D]"
+        class="text-white text-center py-[8px] px-[15px] w-[250px] font-semibold text-[24px] mb-8 bg-gradient-to-b from-[#4A535C] to-[#92989D]"
       >
         {{ randomText.title }}
       </h1>
+      <!--Gioi thieu chung-->
       <div v-if="randomText.id === 'gioi-thieu-chung'" class="w-[290px]">
         <p
           v-for="(paragraph, index) in randomText.description"
@@ -37,6 +38,7 @@
           v-html="formattedDescription(paragraph)"
         ></p>
       </div>
+      <!--Chuc nang-->
       <div
         v-if="randomText.id === 'chuc-nang'"
         class="flex flex-col gap-[50px]"
@@ -53,6 +55,31 @@
           <div class="w-[75%] flex items-center">
             <div v-html="formattedDescription(item.text)"></div>
           </div>
+        </div>
+      </div>
+      <!--Lien he-->
+      <div
+        v-if="randomText.id === 'lien-he'"
+        class="flex flex-col gap-[35px] text-white text-[14px] text-justify items-center justify-center"
+      >
+        <div
+          v-for="(item, index) in randomText.description"
+          :key="index"
+          class="w-[290px] min-h-[50px] flex"
+        >
+          <div class="w-[30%] flex items-center justify-center">
+            <!-- Thêm icon của bạn ở đây -->
+            <img :src="item.icon" alt="icon" />
+          </div>
+          <div class="w-[75%] flex items-center">
+            <div v-html="formattedDescription(item.text)"></div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center flex-col">
+          <div class="w-[250px] min-h-[70px] flex items-center justify-center text-white text-center font-semibold text-[20px] mb-6 bg-[#06D1D3]">
+            CÂU HỎI THƯỜNG GẶP
+          </div>
+          <p class="text-[16px]">Xem thêm <span class="text-[#06D1D3] font-bold underline">TẠI ĐÂY</span></p>
         </div>
       </div>
     </div>
