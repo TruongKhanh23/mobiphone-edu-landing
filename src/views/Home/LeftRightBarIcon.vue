@@ -106,6 +106,42 @@
           </div>
         </div>
       </div>
+      <!--Loi ich-->
+      <div
+        v-if="randomText.id === 'loi-ich'"
+        class="flex flex-col gap-[30px] text-white text-[12px] text-justify items-center justify-center"
+      >
+        <div
+          v-for="(item, index) in randomText.description"
+          :key="index"
+          class="w-[290px]"
+        >
+          <div
+            v-if="item.positionIcon === 'left'"
+            class="flex min-h-[60px] bg-gradient-to-r from-[#178486] to-[#042037]"
+          >
+            <div class="w-[30%] flex items-center justify-center">
+              <!-- Thêm icon của bạn ở đây -->
+              <img :src="item.icon" alt="icon" />
+            </div>
+            <div class="w-[70%] flex items-center">
+              <div v-html="formattedDescription(item.text)"></div>
+            </div>
+          </div>
+          <div
+            v-else
+            class="flex min-h-[60px] bg-gradient-to-r from-[#178486] to-[#042037]"
+          >
+            <div class="w-[75%] flex items-center justify-center">
+              <div v-html="formattedDescription(item.text)"></div>
+            </div>
+            <div class="w-[25%] flex items-center justify-center">
+              <!-- Thêm icon của bạn ở đây -->
+              <img :src="item.icon" alt="icon" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

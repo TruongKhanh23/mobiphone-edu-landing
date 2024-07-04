@@ -13,6 +13,12 @@ import man from "@/assets/icon/home/man.svg";
 import student from "@/assets/icon/home/student.svg";
 import head from "@/assets/icon/home/head.svg";
 
+import personalize from "@/assets/icon/home/personalize.svg";
+import evaluate from "@/assets/icon/home/evaluate.svg";
+import interact from "@/assets/icon/home/interact.svg";
+import manage from "@/assets/icon/home/manage.svg";
+import access from "@/assets/icon/home/access.svg";
+
 export const leftRightBarData = [
   {
     id: "gioi-thieu-chung",
@@ -38,11 +44,31 @@ export const leftRightBarData = [
     id: "loi-ich",
     title: "LỢI ÍCH",
     description: [
-      "Truy cập dễ dàng và toàn diện vào nội dung học tập",
-      "Tương tác và giao tiếp thuận tiện giữa nhà trường, giáo viên, học sinh",
-      "Quản lí dữ liệu học tập và theo dõi tiến độ học tập",
-      "Cá nhân hoá lộ trình học tập",
-      "Hỗ trợ quản lí và đánh giá hiệu suất hệ thống giáo dục",
+      {
+        icon: access,
+        positionIcon: "left",
+        text: "Truy cập dễ dàng và toàn diện \n vào nội dung học tập",
+      },
+      {
+        icon: interact,
+        positionIcon: "right",
+        text: "Tương tác và giao tiếp thuận tiện \n giữa nhà trường - giáo viên - học sinh",
+      },
+      {
+        icon: manage,
+        positionIcon: "left",
+        text: "Quản lí dữ liệu học tập \n và theo dõi tiến độ học tập",
+      },
+      {
+        icon: personalize,
+        positionIcon: "right",
+        text: "Cá nhân hoá lộ trình học tập",
+      },
+      {
+        icon: evaluate,
+        positionIcon: "left",
+        text: "Hỗ trợ quản lí và đánh giá \n hiệu suất hệ thống giáo dục",
+      },
     ],
   },
   {
