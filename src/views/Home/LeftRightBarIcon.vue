@@ -104,7 +104,7 @@
         >
           <div class="w-[20%] flex items-center justify-center">
             <!-- Thêm icon của bạn ở đây -->
-            <img :src="item.icon" alt="icon" class="w-full h-full" />
+            <img :src="item.icon" alt="icon" class="w-[90%] h-[90%]" />
           </div>
           <div class="w-[80%] flex items-center">
             <div v-html="formattedDescription(item.text)"></div>
