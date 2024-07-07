@@ -11,19 +11,19 @@
       <img
         :src="teacher"
         alt="teacher"
-        class="h-64 teacher cursor-pointer bg-skyblue font-black hover:h-72"
+        class="h-60 teacher cursor-pointer bg-skyblue font-black hover:h-64"
         @click="onClickButton('teacher')"
       />
       <img
         :src="student"
         alt="student"
-        class="h-60 student cursor-pointer bg-skyblue font-black hover:h-72"
+        class="h-32 student cursor-pointer bg-skyblue font-black hover:h-36"
         @click="onClickButton('student')"
       />
       <img
         :src="school"
         alt="school"
-        class="h-48 school cursor-pointer bg-skyblue font-black hover:h-52"
+        class="h-36 school cursor-pointer bg-skyblue font-black hover:h-40"
         @click="onClickButton('school')"
       />
       <img
@@ -39,9 +39,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import school from "@/assets/image/home/school.png";
+import school from "@/assets/image/home/school.svg";
 import teacher from "@/assets/image/home/teacher.png";
-import student from "@/assets/image/home/student.png";
+import student from "@/assets/image/home/student.svg";
 import department from "@/assets/image/home/department.png";
 import mobiEdu from "@/assets/image/home/mobiEdu.png";
 
