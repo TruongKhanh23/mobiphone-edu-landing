@@ -30,7 +30,7 @@ export default {
   },
   computed: {
     currentComponent() {
-      return this.itemNumber === 1
+      return this.itemNumber === 2
         ? "DevelopeSchoolPlan"
         : "EvaluateEducationalEffectiveness";
     },
