@@ -74,7 +74,7 @@ export default {
         },
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-4",
           content: "● Ban giám hiệu nhà trường duyệt kế hoạch giảng dạy: ",
         },
         {
@@ -84,7 +84,7 @@ export default {
         },
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-4",
           content: "● Giáo viên bộ môn nộp kế hoạch giáo dục:",
         },
         {
@@ -99,7 +99,7 @@ export default {
         },
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-4",
           content: "● Trưởng bộ môn nộp kế hoạch giáo dục của tổ chuyên môn:",
         },
         {

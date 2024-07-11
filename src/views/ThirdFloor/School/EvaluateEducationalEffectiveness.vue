@@ -55,12 +55,11 @@ export default {
   name: "EvaluateEducationalEffectiveness",
   data() {
     return {
-      title:
-        "Xây dựng kế hoạch năm học nhanh chóng nhờ đồng bộ thông tin đa chiều",
+      title: "Đánh giá hiệu quả giáo dục thông qua báo cáo và thống kê",
       contents: [
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-4",
           content: "● Nhà trường xem báo cáo thống kê kỳ thi toàn trường: ",
         },
         {
@@ -75,7 +74,7 @@ export default {
         },
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-4",
           content:
             "● Nhà trường xem báo cáo thống kê toàn trường theo môn học:",
         },
@@ -86,19 +85,19 @@ export default {
         },
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-8",
           content:
-            "Thông qua việc phân tích dữ liệu và số liệu thống kê, nhà trường có thể đánh giá mức độ tiến bộ của học sinh và nhận biết những khía cạnh cần cải thiện.",
+            "     Thông qua việc phân tích dữ liệu và số liệu thống kê, nhà trường có thể đánh giá mức độ tiến bộ của học sinh và nhận biết những khía cạnh cần cải thiện.",
         },
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-8",
           content:
-            "Với thông tin từ báo cáo, nhà trường có thể xác định những điểm mạnh và yếu của học sinh, từ đó tạo ra một lộ trình học tập cá nhân hóa. Lộ trình này sẽ tập trung vào việc củng cố những kỹ năng cần thiết và đưa ra các bài học và tài liệu phù hợp để giúp học sinh phát triển. Nhà trường cũng có thể theo dõi tiến độ của từng học viên và cung cấp sự hỗ trợ và chỉ đạo để đảm bảo sự tiến bộ liên tục.",
+            "     Với thông tin từ báo cáo, nhà trường có thể xác định những điểm mạnh và yếu của học sinh, từ đó tạo ra một lộ trình học tập cá nhân hóa. Lộ trình này sẽ tập trung vào việc củng cố những kỹ năng cần thiết và đưa ra các bài học và tài liệu phù hợp để giúp học sinh phát triển. Nhà trường cũng có thể theo dõi tiến độ của từng học viên và cung cấp sự hỗ trợ và chỉ đạo để đảm bảo sự tiến bộ liên tục.",
         },
         {
           type: "text",
-          cssClass: "mt-4 mb-4",
+          cssClass: "mt-4 mb-4 indent-8",
           content:
             "Nhà trường không chỉ có khả năng quản lý học tập một cách hiệu quả mà còn tạo ra môi trường học tập tốt nhất cho học sinh. đáp ứng nhu cầu học tập đa dạng và giúp học sinh đạt được thành công trong học tập và phát triển toàn diện",
         },
