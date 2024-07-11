@@ -1,10 +1,6 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
-    <img
-      :src="getFeatureImage(featureNumber)"
-      alt="long image"
-      class="w-full h-auto"
-    />
+    <component :is="currentComponent" />
   </AntModal>
 </template>
 
@@ -14,10 +10,15 @@ import AntModal from "@/components/reusable/AntModal.vue";
 import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
 
+import IdentificationLearningMaterials from "@/views/ThirdFloor/Department/IdentificationLearningMaterials.vue";
+import MonitorDTI from "@/views/ThirdFloor/Department/MonitorDTI.vue";
+
 export default {
-  name: "ModalContent",
+  name: "DepartmentFeatures",
   components: {
     AntModal,
+    MonitorDTI,
+    IdentificationLearningMaterials,
   },
   props: {
     handleOk: Function,
@@ -25,6 +26,13 @@ export default {
     featureNumber: {
       type: Number,
       default: 1,
+    },
+  },
+  computed: {
+    currentComponent() {
+      return this.featureNumber === 1
+        ? "IdentificationLearningMaterials"
+        : "MonitorDTI";
     },
   },
   setup() {
