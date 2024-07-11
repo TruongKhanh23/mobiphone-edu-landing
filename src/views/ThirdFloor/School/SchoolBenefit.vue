@@ -1,15 +1,13 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
-    <img
-      :src="getItemImage(itemNumber)"
-      alt="long image"
-      class="w-full h-auto"
-    />
+    <component :is="currentComponent" />
   </AntModal>
 </template>
 
 <script>
 import AntModal from "@/components/reusable/AntModal.vue";
+import DevelopeSchoolPlan from "@/views/ThirdFloor/School/DevelopeSchoolPlan.vue";
+import EvaluateEducationalEffectiveness from "@/views/ThirdFloor/School/EvaluateEducationalEffectiveness.vue";
 
 import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
@@ -19,6 +17,8 @@ export default {
   name: "ModalContent",
   components: {
     AntModal,
+    DevelopeSchoolPlan,
+    EvaluateEducationalEffectiveness,
   },
   props: {
     handleOk: Function,
@@ -26,6 +26,13 @@ export default {
     itemNumber: {
       type: Number,
       default: 1,
+    },
+  },
+  computed: {
+    currentComponent() {
+      return this.itemNumber === 1
+        ? "DevelopeSchoolPlan"
+        : "EvaluateEducationalEffectiveness";
     },
   },
   setup() {
