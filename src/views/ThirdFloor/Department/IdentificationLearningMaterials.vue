@@ -5,7 +5,11 @@
         <p class="text-2xl text-center font-bold">{{ title }}</p>
         <br />
         <div v-for="(item, index) in contents" :key="index">
-          <p v-if="item.type === 'text'" class="text-base mt-2">
+          <p
+            v-if="item.type === 'text'"
+            class="text-base mt-2"
+            :class="item.cssClass"
+          >
             {{ item.content }}
           </p>
           <p v-if="item.type === 'subTitle'" class="text-base mt-2 font-bold">
@@ -56,6 +60,7 @@ export default {
       contents: [
         {
           type: "text",
+          cssClass: " indent-4",
           content:
             "● Giáo viên tìm kiếm và lựa chọn được cây giáo trình của bộ môn mong muốn nhân bản và tiến hành nhân bản cây học liệu:",
         },
@@ -67,6 +72,7 @@ export default {
         },
         {
           type: "text",
+          cssClass: " indent-4",
           content:
             "● Giáo viên có thể chỉnh sửa danh sách giáo trình theo ý muốn:",
         },

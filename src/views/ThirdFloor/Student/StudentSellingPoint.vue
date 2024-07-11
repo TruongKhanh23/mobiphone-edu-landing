@@ -14,7 +14,7 @@ import AntModal from "@/components/reusable/AntModal.vue";
 import inforgraphic1 from "@/assets/inforgraphic-1.jpg";
 import inforgraphic2 from "@/assets/inforgraphic-2.jpg";
 import AdaptiveLearning from "./AdaptiveLearning.vue";
-import AnalyzeRecommend from "./AnalyzeRecommend.vue"
+import AnalyzeRecommend from "./AnalyzeRecommend.vue";
 
 export default {
   name: "StudentSellingPoint",
@@ -33,7 +33,9 @@ export default {
   },
   computed: {
     currentComponent() {
-      return this.sellingPointNumber === 1 ? 'AdaptiveLearning' : 'AnalyzeRecommend';
+      return this.sellingPointNumber === 1
+        ? "AdaptiveLearning"
+        : "AnalyzeRecommend";
     },
   },
   setup() {
