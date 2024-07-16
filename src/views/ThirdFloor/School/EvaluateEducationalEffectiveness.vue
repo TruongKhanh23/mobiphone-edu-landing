@@ -99,7 +99,7 @@ export default {
           type: "text",
           cssClass: "mt-4 mb-4 indent-8",
           content:
-            "Nhà trường không chỉ có khả năng quản lý học tập một cách hiệu quả mà còn tạo ra môi trường học tập tốt nhất cho học sinh. đáp ứng nhu cầu học tập đa dạng và giúp học sinh đạt được thành công trong học tập và phát triển toàn diện",
+            "Nhà trường không chỉ có khả năng quản lý học tập một cách hiệu quả mà còn tạo ra môi trường học tập tốt nhất cho học sinh. đáp ứng nhu cầu học tập đa dạng và giúp học sinh đạt được thành công trong học tập và phát triển toàn diện.",
         },
       ],
     };
