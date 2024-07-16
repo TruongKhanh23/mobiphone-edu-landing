@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 flex justify-center items-center bg-[#021929] h-full">
+  <div class="p-4 flex justify-center items-center bg-[#021929]">
     <div class="mx-auto w-[70vw] text-white">
       <div class="p-6">
         <p class="text-2xl text-center font-bold">{{ title }}</p>
