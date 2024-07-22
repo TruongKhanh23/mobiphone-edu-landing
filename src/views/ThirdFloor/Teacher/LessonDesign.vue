@@ -1,25 +1,25 @@
 <template>
   <div class="p-4 flex justify-center items-center bg-[#021929]">
-    <div class="mx-auto w-[70vw] text-3xl text-white">
-      <p class="text-2xl text-center font-bold p-6 space-y-4">
+    <div class="mx-auto w-[80vw] text-3xl text-white">
+      <p class="text-[2.2rem] text-center font-bold p-6 space-y-4">
         {{ "Đa dạng cách thức thiết kế bài giảng" }}
       </p>
       <!-- Loop through lessons -->
       <div v-for="lesson in newData" :key="lesson.id" class="my-2">
         <!-- Lesson Title -->
-        <p class="text-xl font-bold">{{ lesson.title }}</p>
+        <p class="text-[1.4rem] font-bold">{{ lesson.title }}</p>
 
         <!-- Lesson Content -->
         <div v-for="(content, index) in lesson.content" :key="index">
           <template v-if="content.type === 'subTitle'">
-            <p class="text-xl font-bold">{{ content.text }}</p>
+            <p class="text-[1.4rem] font-bold">{{ content.text }}</p>
           </template>
           <template v-else-if="content.type === 'paragraph'">
-            <p class="text-base">{{ content.text }}</p>
+            <p class="text-[1.2rem]">{{ content.text }}</p>
           </template>
           <template v-else-if="content.type === 'list'">
             <ul class="list-disc list-inside ml-4">
-              <li v-for="item in content.text" :key="item" class="text-base">
+              <li v-for="item in content.text" :key="item" class="text-[1.2rem]">
                 {{ item }}
               </li>
             </ul>

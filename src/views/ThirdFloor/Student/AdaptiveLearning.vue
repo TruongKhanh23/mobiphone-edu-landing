@@ -1,14 +1,14 @@
 <template>
   <div class="p-4 flex justify-center items-center bg-[#021929]">
-    <div class="mx-auto w-[70vw] text-white">
+    <div class="mx-auto w-[80vw] text-white">
       <div class="p-6">
-        <p class="text-2xl text-center font-bold">{{ title }}</p>
+        <p class="text-[2.2rem] text-center font-bold">{{ title }}</p>
         <br />
         <div v-for="(item, index) in contents" :key="index">
-          <p v-if="item.type === 'text'" class="text-base mt-2">
+          <p v-if="item.type === 'text'" class="text-[1.2rem] mt-2">
             {{ item.content }}
           </p>
-          <p v-if="item.type === 'subTitle'" class="text-base mt-2 font-bold">
+          <p v-if="item.type === 'subTitle'" class="text-[1.4rem] mt-2 font-bold">
             {{ item.content }}
           </p>
           <a
@@ -27,11 +27,11 @@
             v-if="item.type === 'image'"
             :src="item.imgUrl"
             :alt="item.altText"
-            class="mt-4 mx-auto w-full"
+            class="my-4 mx-auto w-full"
           />
           <p
             v-if="item.type === 'paragraph'"
-            class="text-base mt-2 text-justify"
+            class="text-[1.2rem] mt-2 text-justify"
           >
             {{ item.content }}
           </p>
@@ -50,7 +50,7 @@ export default {
   name: "AdaptiveLearning",
   data() {
     return {
-      title: "Tính năng Adaptive learning cho học sinh:",
+      title: "Tính năng Adaptive learning cho học sinh",
       contents: [
         {
           type: "text",
