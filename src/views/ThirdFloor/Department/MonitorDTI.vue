@@ -1,14 +1,14 @@
 <template>
   <div class="p-4 flex justify-center items-center bg-[#021929]">
-    <div class="mx-auto w-[70vw] text-white">
+    <div class="mx-auto w-[80vw] text-white">
       <div class="p-6">
-        <p class="text-2xl text-center font-bold">{{ title }}</p>
+        <p class="text-[2.2rem] text-center font-bold" v-html="formattedDescription(title)"></p>
         <br />
         <div v-for="(item, index) in contents" :key="index">
-          <p v-if="item.type === 'text'" class="text-base mt-2">
+          <p v-if="item.type === 'text'" class="text-[1.2rem] mt-2">
             {{ item.content }}
           </p>
-          <p v-if="item.type === 'subTitle'" class="text-base mt-2 font-bold">
+          <p v-if="item.type === 'subTitle'" class="text-[1.2rem] mt-2 font-bold">
             {{ item.content }}
           </p>
           <a
@@ -31,7 +31,7 @@
           />
           <p
             v-if="item.type === 'paragraph'"
-            class="text-base mt-2 text-justify"
+            class="text-[1.2rem] mt-2 text-justify"
           >
             {{ item.content }}
           </p>
@@ -44,13 +44,14 @@
 
 <script>
 import image4 from "@/assets/thirdfloor/department/image4.png";
+import formattedDescription from "@/utils/index.js";
 
 export default {
   name: "MonitorDTI",
   data() {
     return {
       title:
-        "Theo dõi được tỉ lệ chuyển đổi số DTI trong giáo dục phổ thông do Bộ Giáo dục và Đào tạo ban hành đối với toàn bộ trường mà Sở/Phòng quản lí",
+        "Theo dõi được tỉ lệ chuyển đổi số DTI trong giáo dục phổ thông\ndo Bộ Giáo dục và Đào tạo ban hành đối với toàn bộ trường\nmà Sở/Phòng quản lí",
       contents: [
         {
           type: "text",
@@ -64,6 +65,9 @@ export default {
         },
       ],
     };
+  },
+  setup(){
+    return { formattedDescription }
   },
 };
 </script>

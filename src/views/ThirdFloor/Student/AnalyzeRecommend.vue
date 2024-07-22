@@ -1,14 +1,14 @@
 <template>
   <div class="p-6 flex justify-center bg-[#021929] min-h-screen">
-    <div class="mx-auto w-[70vw] text-white">
+    <div class="mx-auto w-[80vw] text-white">
       <div class="">
-        <p class="text-2xl text-center font-bold">{{ title }}</p>
+        <p class="text-[2.2rem] text-center font-bold" v-html="formattedDescription(title)"></p>
         <br />
         <div v-for="(item, index) in contents" :key="index">
-          <p v-if="item.type === 'text'" class="text-base mt-2">
+          <p v-if="item.type === 'text'" class="text-[1.2rem] mt-2">
             {{ item.content }}
           </p>
-          <p v-if="item.type === 'subTitle'" class="text-base mt-2 font-bold">
+          <p v-if="item.type === 'subTitle'" class="text-[1.4rem] mt-2 font-bold">
             {{ item.content }}
           </p>
           <a
@@ -31,7 +31,7 @@
           />
           <p
             v-if="item.type === 'paragraph'"
-            class="text-base mt-2 text-justify"
+            class="text-[1.2rem] mt-2 text-justify"
           >
             {{ item.content }}
           </p>
@@ -44,12 +44,15 @@
 
 <script>
 import image1 from "@/assets/thirdfloor/student/2.4.2/trang3_hocsinh_strong2_thongkenangluc.png";
+
+import formattedDescription from "@/utils/index.js";
+
 export default {
   name: "AnalyzeRecommend",
   data() {
     return {
       title:
-        "Báo cáo thống kê năng lực của bản thân, điểm mạnh điểm yếu của từng môn học",
+        "Báo cáo thống kê năng lực của bản thân\nđiểm mạnh điểm yếu của từng môn học",
       contents: [
         {
           type: "paragraph",
@@ -62,6 +65,9 @@ export default {
         },
       ],
     };
+  },
+  setup(){
+    return { formattedDescription }
   },
 };
 </script>

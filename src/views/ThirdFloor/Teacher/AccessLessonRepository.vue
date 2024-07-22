@@ -28,10 +28,10 @@ export default {
   setup() {
     const styles = {
       container: "p-4 flex justify-center items-center bg-[#021929]",
-      innerContainer: "mx-auto w-[70vw] text-3xl text-white",
+      innerContainer: "mx-auto w-[80vw] text-3xl text-white",
       contentContainer: "p-4 space-y-4",
-      heading: "text-2xl font-bold text-center space-y-4 p-6",
-      paragraph: "text-sm",
+      heading: "text-[2.2rem] font-bold text-center space-y-4 p-6",
+      paragraph: "text-[1.2rem]",
       image: "w-full h-auto mx-auto",
       link: "text-blue-700 underline",
     };

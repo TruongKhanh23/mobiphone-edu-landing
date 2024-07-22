@@ -1,7 +1,7 @@
 <template>
   <AntModal :handleOk="handleOk" :handleCancel="handleCancel">
     <div class="p-4 flex justify-center items-center bg-[#021929]">
-      <div class="mx-auto w-[70vw] text-3xl text-white">
+      <div class="mx-auto w-[80vw] text-3xl text-white">
         <component :is="currentComponent" />
       </div>
     </div>

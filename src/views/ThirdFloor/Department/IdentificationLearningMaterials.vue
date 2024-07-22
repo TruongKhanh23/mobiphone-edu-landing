@@ -1,18 +1,18 @@
 <template>
   <div class="p-4 flex justify-center items-center bg-[#021929]">
-    <div class="mx-auto w-[70vw] text-white">
+    <div class="mx-auto w-[80vw] text-white">
       <div class="p-6">
-        <p class="text-2xl text-center font-bold">{{ title }}</p>
+        <p class="text-[2.2rem] text-center font-bold" v-html=formattedDescription(title)></p>
         <br />
         <div v-for="(item, index) in contents" :key="index">
           <p
             v-if="item.type === 'text'"
-            class="text-base mt-2"
+            class="text-base my-4 text-[1.2rem]"
             :class="item.cssClass"
           >
             {{ item.content }}
           </p>
-          <p v-if="item.type === 'subTitle'" class="text-base mt-2 font-bold">
+          <p v-if="item.type === 'subTitle'" class="text-base my-4 text-[1.2rem] font-bold">
             {{ item.content }}
           </p>
           <a
@@ -31,11 +31,11 @@
             v-if="item.type === 'image'"
             :src="item.imgUrl"
             :alt="item.altText"
-            class="mt-4 mx-auto w-full"
+            class="my-4 mx-auto w-full"
           />
           <p
             v-if="item.type === 'paragraph'"
-            class="text-base mt-2 text-justify"
+            class="text-base my-4 text-[1.2rem] text-justify"
           >
             {{ item.content }}
           </p>
@@ -51,12 +51,14 @@ import image1 from "@/assets/thirdfloor/department/image1.png";
 import image2 from "@/assets/thirdfloor/department/image2.webp";
 import image3 from "@/assets/thirdfloor/department/image3.webp";
 
+import formattedDescription from "@/utils/index.js";
+
 export default {
   name: "IdentificationLearningMaterials",
   data() {
     return {
       title:
-        "Định danh cây học liệu theo chương học - bài giảng chi tiết cho toàn Sở/Phòng",
+        "Định danh cây học liệu theo chương học\nbài giảng chi tiết cho toàn Sở/Phòng",
       contents: [
         {
           type: "text",
@@ -90,6 +92,9 @@ export default {
         },
       ],
     };
+  },
+  setup(){
+    return { formattedDescription }
   },
 };
 </script>
