@@ -50,7 +50,7 @@ export default {
   name: "AdaptiveLearning",
   data() {
     return {
-      title: "Tính năng Adaptive learning cho học sinh:",
+      title: "Tính năng Adaptive learning cho học sinh",
       contents: [
         {
           type: "text",
