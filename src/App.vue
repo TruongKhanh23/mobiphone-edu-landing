@@ -1,9 +1,20 @@
 <template>
-  <router-view />
+  <router-view v-if="!isMobile" />
+  <MobileNotSupport v-else />
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { isMobile } from "mobile-device-detect";
+import MobileNotSupport from "@/views/MobileNotSupport.vue";
 
-export default defineComponent({});
+export default {
+  components: {
+    MobileNotSupport,
+  },
+  setup() {
+    return {
+      isMobile,
+    };
+  },
+};
 </script>
